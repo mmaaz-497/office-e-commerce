@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+build
+coverage
+package-lock.json
+next-env.d.ts
+
+# Spec-Driven Development artifacts and agent tooling — hand-authored docs and
+# templates outside the application's source tree, not reformatted by this project.
+.specify
+.claude
+CLAUDE.md
+history
+specs
+.next-dev

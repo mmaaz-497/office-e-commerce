@@ -1,0 +1,1035 @@
+{
+  "home": {
+    "metadata": {
+      "title": "Tokoshopee — Sandal Gemoy Empuk, Anti Slip, All Size",
+      "description": "Belanja Sandal Gemoy di Tokoshopee: empuk, anti slip, desain lucu, dan all size. Bisa COD atau bayar online, dikirim cepat ke seluruh Indonesia. Pesan sekarang!"
+    },
+    "hero": {
+      "region": "Banner promosi Sandal Gemoy",
+      "goToSlide": "Lihat banner ke-{number}",
+      "viewProduct": "Lihat produk {name}",
+      "previous": "Banner sebelumnya",
+      "next": "Banner berikutnya",
+      "viewDetail": "Lihat detail produk"
+    },
+    "featured": {
+      "title": "Produk pilihan"
+    },
+    "comingSoon": {
+      "title": "Segera hadir",
+      "subtitle": "Produk yang sedang kami siapkan dan belum bisa dipesan.",
+      "viewAll": "Lihat semua"
+    },
+    "nav": {
+      "label": "Navigasi utama",
+      "howToOrder": "Cara Pemesanan",
+      "checkOrder": "Cek Pesanan",
+      "writeReview": "Tulis Ulasan",
+      "openMenu": "Buka menu",
+      "closeMenu": "Tutup menu",
+      "languageLabel": "Bahasa",
+      "categories": "Kategori",
+      "help": "Bantuan",
+      "menuTitle": "Menu",
+      "buy": "Beli"
+    },
+    "announce": {
+      "noAccount": "Pesan tanpa perlu membuat akun"
+    },
+    "benefits": {
+      "eyebrow": "Kenapa Sandal Gemoy",
+      "title": "Dibuat untuk dipakai seharian",
+      "subtitle": "Empat hal yang paling sering ditanyakan pembeli, dan jawabannya ada pada sandalnya sendiri.",
+      "empukNyaman": "Busa tebal yang meredam langkah, nyaman dipakai dari pagi sampai malam.",
+      "antiSlip": "Telapak bertekstur supaya pijakan tetap mantap di lantai keramik yang licin.",
+      "designLucu": "Desain gemoy yang bikin betah di rumah dan enak dilihat saat dipakai.",
+      "allSize": "Satu ukuran untuk semua, jadi Anda tidak perlu memilih nomor saat memesan."
+    },
+    "benefitTitles": {
+      "empukNyaman": "Empuk & nyaman",
+      "antiSlip": "Anti slip",
+      "designLucu": "Desain lucu",
+      "allSize": "All size untuk semua"
+    },
+    "steps": {
+      "eyebrow": "Cara pesan",
+      "title": "Empat langkah, tanpa bikin akun",
+      "subtitle": "Dari memilih jumlah sampai paket di tangan — semuanya lewat satu halaman.",
+      "s1": {
+        "title": "Pilih jumlah",
+        "body": "Buka halaman produk, tentukan jumlah pasang, lalu tekan Beli Sekarang."
+      },
+      "s2": {
+        "title": "Isi alamat",
+        "body": "Masukkan nama, nomor HP/WhatsApp, dan alamat pengiriman lengkap Anda."
+      },
+      "s3": {
+        "title": "Pilih pembayaran",
+        "body": "Bayar online lewat Midtrans, atau COD bila tersedia untuk provinsi Anda."
+      },
+      "s4": {
+        "title": "Simpan nomor pesanan",
+        "body": "Nomor pesanan dan nomor HP Anda adalah kunci untuk mengecek status kapan saja."
+      },
+      "link": "Baca panduan lengkapnya"
+    },
+    "paymentDelivery": {
+      "eyebrow": "Pembayaran & pengiriman",
+      "title": "Cara bayar dan pengiriman",
+      "online": "Bayar online lewat Midtrans.",
+      "codAll": "Bayar di tempat (COD) tersedia untuk semua provinsi.",
+      "codExcept": "Bayar di tempat (COD) tersedia, kecuali untuk alamat di {provinces}.",
+      "codFee": "Biaya COD, bila ada, tampil di ringkasan pesanan sebelum pesanan dibuat.",
+      "shipping": "Ongkos kirim dihitung dari provinsi tujuan dan tampil sebelum Anda membayar."
+    },
+    "quickAccess": {
+      "title": "Akses cepat",
+      "featured": "Produk unggulan",
+      "checkOrder": "Cek pesanan",
+      "howToOrder": "Cara pesan",
+      "cod": "Bayar di tempat",
+      "writeReview": "Tulis ulasan"
+    },
+    "sideBanner": {
+      "label": "Lihat {name} di halaman ini"
+    }
+  },
+  "faq": {
+    "eyebrow": "Pertanyaan umum",
+    "title": "Yang paling sering ditanyakan",
+    "subtitle": "Belum terjawab? Panduan lengkapnya ada di halaman Cara Pemesanan.",
+    "items": {
+      "cod": {
+        "q": "Apakah bisa bayar di tempat (COD)?",
+        "a": "Bisa, untuk provinsi yang kami layani dengan COD. Saat Anda mengisi alamat, pilihan COD muncul dengan sendirinya bila tersedia di provinsi tersebut, lengkap dengan biaya COD-nya. Bila tidak tersedia, pesanan tetap bisa dibuat dengan pembayaran online."
+      },
+      "ongkir": {
+        "q": "Berapa ongkos kirimnya?",
+        "a": "Ongkos kirim dihitung dari provinsi tujuan dan jumlah pasang yang Anda pesan, lalu ditampilkan pada ringkasan pesanan sebelum Anda menekan Buat Pesanan. Tidak ada biaya tambahan yang muncul setelah pesanan dibuat."
+      },
+      "ukuran": {
+        "q": "Tersedia ukuran apa saja?",
+        "a": "Sandal Gemoy dibuat all size — satu ukuran untuk semua — sehingga Anda tidak perlu memilih nomor ketika memesan."
+      },
+      "pengembalian": {
+        "q": "Bagaimana kalau barangnya tidak sesuai?",
+        "a": "Barang yang rusak, cacat, atau tidak sesuai pesanan bisa diajukan untuk pengembalian dalam batas waktu yang tercantum di halaman Kebijakan Pengembalian. Hubungi kami dengan nomor pesanan dan foto barang, lalu tunggu konfirmasi kami sebelum mengirim barang kembali."
+      },
+      "lacak": {
+        "q": "Bagaimana cara melacak pesanan saya?",
+        "a": "Buka halaman Cek Pesanan, lalu masukkan nomor pesanan bersama nomor HP yang Anda pakai saat memesan. Status pembayaran, status pengiriman, dan nomor resi tampil di sana."
+      },
+      "akun": {
+        "q": "Perlu membuat akun dulu?",
+        "a": "Tidak perlu. Pesanan dibuat langsung dari halaman produk, dan nomor pesanan bersama nomor HP Anda menggantikan fungsi akun untuk mengecek atau membatalkan pesanan."
+      }
+    }
+  },
+  "product": {
+    "metadata": {
+      "title": "Sandal Gemoy Rp169.999 - Empuk & Anti Slip | Tokoshopee",
+      "description": "Sandal Gemoy: empuk, anti slip, desain lucu, all size. Rp169.999, bisa COD atau bayar online, pengiriman cepat ke seluruh Indonesia. Pesan sekarang!"
+    },
+    "name": "Sandal Gemoy",
+    "buyNow": "Beli Sekarang",
+    "sold": "Terjual {count}",
+    "gallery": {
+      "label": "Galeri produk",
+      "thumb": "Lihat foto {number}",
+      "videoThumb": "Putar video produk",
+      "thumbs": "Pilih foto atau video"
+    },
+    "quantity": {
+      "label": "Jumlah",
+      "decrease": "Kurangi jumlah",
+      "increase": "Tambah jumlah"
+    },
+    "alt": {
+      "seharian": "Sandal Gemoy dipakai seharian di rumah",
+      "nyaman": "Sandal Gemoy yang empuk dan nyaman di kaki",
+      "hadiah": "Sandal Gemoy sebagai ide hadiah",
+      "santai": "Sandal Gemoy untuk bersantai di rumah",
+      "collage": "Kumpulan foto Sandal Gemoy dari berbagai sisi",
+      "newArrival": "Sandal Gemoy koleksi terbaru",
+      "video": "Video Sandal Gemoy: bahan empuk dan telapak anti slip"
+    },
+    "benefit": {
+      "empukNyaman": "Empuk & nyaman",
+      "antiSlip": "Anti slip",
+      "designLucu": "Desain lucu",
+      "allSize": "All size untuk semua"
+    },
+    "comingSoon": {
+      "badge": "Segera Hadir"
+    },
+    "stock": {
+      "inStock": "Stok tersedia",
+      "low": "Sisa {count}",
+      "out": "Stok habis"
+    },
+    "total": "Total",
+    "sections": {
+      "description": "Deskripsi",
+      "specs": "Spesifikasi"
+    },
+    "ratingLine": "({count} ulasan)",
+    "trust": {
+      "online": "Bayar online lewat Midtrans",
+      "codAll": "Bisa bayar di tempat (COD)",
+      "codSome": "Bisa bayar di tempat (COD), kecuali beberapa provinsi",
+      "returns": "Kebijakan pengembalian"
+    }
+  },
+  "trust": {
+    "aman": "Aman dipakai",
+    "premium": "Kualitas premium",
+    "fastDelivery": "Pengiriman cepat"
+  },
+  "checkout": {
+    "metadata": {
+      "title": "Checkout Sandal Gemoy | Tokoshopee",
+      "description": "Selesaikan pesanan Sandal Gemoy Anda: isi alamat, pilih jumlah, dan bayar dengan COD atau pembayaran online lewat Midtrans. Proses cepat, aman, dan mudah."
+    },
+    "address": {
+      "province": "Provinsi",
+      "provincePlaceholder": "Pilih provinsi",
+      "city": "Kota/Kabupaten",
+      "cityPlaceholder": "Pilih kota/kabupaten",
+      "district": "Kecamatan",
+      "postalCode": "Kode Pos",
+      "streetAddress": "Alamat Lengkap"
+    },
+    "summary": {
+      "subtotal": "Subtotal",
+      "shipping": "Ongkos Kirim",
+      "codFee": "Biaya COD",
+      "total": "Total"
+    },
+    "form": {
+      "name": "Nama Lengkap",
+      "phone": "Nomor HP/WhatsApp",
+      "email": "Email (opsional)",
+      "quantity": "Jumlah",
+      "paymentMethod": "Metode Pembayaran",
+      "paymentOnline": "Bayar Online",
+      "paymentCod": "Bayar di Tempat (COD)",
+      "codUnavailableExplanation": "COD tidak tersedia untuk provinsi ini. Silakan pilih pembayaran online.",
+      "note": "Catatan (opsional)",
+      "submitting": "Memproses...",
+      "submit": "Buat Pesanan"
+    }
+  },
+  "confirmation": {
+    "metadata": {
+      "title": "Pesanan Diterima | Tokoshopee",
+      "description": "Terima kasih! Pesanan Sandal Gemoy Anda sudah kami terima dan sedang diproses. Simpan nomor pesanan ini untuk melacak status pembayaran dan pengiriman kapan saja."
+    },
+    "title": "Pesanan Berhasil Dibuat!",
+    "nextSteps": "Simpan nomor pesanan Anda. Untuk pesanan online, selesaikan pembayaran melalui Midtrans. Kami akan memproses pesanan Anda segera.",
+    "lookupLink": "Cek Status Pesanan",
+    "continueShopping": "Lihat produk lagi"
+  },
+  "reviews": {
+    "title": "Ulasan Pembeli",
+    "previous": "Sebelumnya",
+    "next": "Berikutnya"
+  },
+  "review": {
+    "metadata": {
+      "title": "Tulis Ulasan Sandal Gemoy | Tokoshopee",
+      "description": "Sudah menerima Sandal Gemoy pesanan Anda? Bagikan pengalaman lewat ulasan jujur tentang kenyamanan, kualitas, dan pengiriman agar membantu pembeli lain memutuskan."
+    },
+    "title": "Tulis Ulasan",
+    "submitted": "Terima kasih! Ulasan Anda telah dikirim dan menunggu persetujuan.",
+    "form": {
+      "orderNumber": "Nomor Pesanan",
+      "phone": "Nomor HP/WhatsApp",
+      "verify": "Lanjutkan",
+      "verifying": "Memeriksa...",
+      "rating": "Rating",
+      "starLabel": "{star} bintang",
+      "reviewerName": "Nama Anda",
+      "comment": "Komentar (opsional)",
+      "submit": "Kirim Ulasan",
+      "submitting": "Mengirim..."
+    }
+  },
+  "errors": {
+    "insufficientStock": "Stok tidak mencukupi. Tersedia: {available}",
+    "codUnavailable": "COD tidak tersedia untuk provinsi ini",
+    "paymentProviderUnavailable": "Pembayaran online sedang tidak tersedia. Silakan coba lagi, atau pesan dengan Bayar di Tempat (COD).",
+    "paymentProviderUnreachable": "Tidak dapat menghubungi penyedia pembayaran. Pesanan tidak diubah — silakan coba lagi sebentar lagi.",
+    "validation": "Periksa kembali data yang Anda masukkan",
+    "unknownCity": "Kota/kabupaten tidak dikenali",
+    "unknownProvince": "Provinsi tidak dikenali",
+    "invalidPostalCode": "Kode pos harus 5 digit",
+    "cityProvinceMismatch": "Kota/kabupaten tidak sesuai dengan provinsi",
+    "invalidTransition": "Perubahan status tidak diizinkan",
+    "rateLimited": "Terlalu banyak percobaan. Coba lagi nanti.",
+    "orderLookupFailed": "Pesanan tidak ditemukan. Periksa kembali nomor pesanan dan nomor HP.",
+    "reviewNotEligible": "Anda belum bisa memberikan ulasan untuk pesanan ini",
+    "duplicateReview": "Anda sudah memberikan ulasan untuk pesanan ini",
+    "unauthorized": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+    "fulfilmentConflict": "Pesanan ini memiliki konflik stok yang belum diselesaikan dan tidak bisa dikirim.",
+    "invalidCredentials": "Username atau password salah",
+    "cancellationAlreadyRequested": "Anda sudah mengajukan pembatalan untuk pesanan ini",
+    "productUnavailable": "Produk ini sedang tidak tersedia untuk dibeli.",
+    "productChanged": "Produk ini telah diubah di tempat lain. Muat ulang untuk melihat versi terbaru.",
+    "stockChanged": "Stok berubah menjadi {current} sejak halaman ini dibuka. Periksa lalu simpan lagi.",
+    "statusLocked": "Status ini belum dapat dipilih.",
+    "slugLocked": "Alamat web tidak dapat diubah setelah produk diterbitkan.",
+    "sampleStatusLocked": "Produk contoh hanya dapat berstatus segera hadir. Tandai sebagai produk asli terlebih dahulu.",
+    "sampleStockLocked": "Stok produk contoh tidak dapat diatur. Tandai sebagai produk asli terlebih dahulu.",
+    "unpublishNeedsConfirmation": "Konfirmasi dulu sebelum menghentikan penjualan produk ini."
+  },
+  "orderStatus": {
+    "PENDING_PAYMENT": "Menunggu Pembayaran",
+    "PAID": "Sudah Dibayar",
+    "COD_PENDING": "Menunggu Konfirmasi COD",
+    "CONFIRMED": "Dikonfirmasi",
+    "SHIPPED": "Dikirim",
+    "COMPLETED": "Selesai",
+    "CANCELLED": "Dibatalkan",
+    "EXPIRED": "Kedaluwarsa",
+    "RETURNED": "Dikembalikan"
+  },
+  "timelineActor": {
+    "CUSTOMER": "Pelanggan",
+    "OWNER": "Pemilik Toko",
+    "PAYMENT_PROVIDER": "Penyedia Pembayaran",
+    "SYSTEM": "Sistem"
+  },
+  "lookup": {
+    "metadata": {
+      "title": "Cek Status Pesanan | Tokoshopee",
+      "description": "Lacak status pesanan Sandal Gemoy dengan nomor pesanan dan nomor telepon Anda. Lihat status pembayaran, pengiriman, dan ajukan pembatalan bila memenuhi syarat."
+    },
+    "title": "Cek Status Pesanan",
+    "form": {
+      "orderNumber": "Nomor Pesanan",
+      "phone": "Nomor HP/WhatsApp",
+      "submit": "Cek Pesanan",
+      "submitting": "Memeriksa..."
+    },
+    "results": {
+      "status": "Status",
+      "quantity": "Jumlah",
+      "unitPrice": "Harga Satuan",
+      "shipping": "Ongkos Kirim",
+      "codFee": "Biaya COD",
+      "total": "Total",
+      "trackingNumber": "Nomor Resi",
+      "trackingNumberPending": "Belum tersedia",
+      "timeline": "Riwayat Status"
+    },
+    "cancellation": {
+      "cancelButton": "Batalkan Pesanan",
+      "reasonPlaceholder": "Alasan pembatalan (opsional)",
+      "requestButton": "Ajukan Pembatalan",
+      "requestSubmitted": "Permintaan pembatalan Anda telah dikirim dan menunggu persetujuan pemilik toko."
+    }
+  },
+  "footer": {
+    "navLabel": "Informasi Toko",
+    "links": {
+      "howToOrder": "Cara Pemesanan",
+      "terms": "Syarat & Ketentuan",
+      "privacy": "Kebijakan Privasi",
+      "returns": "Kebijakan Pengembalian"
+    },
+    "tagline": "Toko sandal rumah Sandal Gemoy. Pesan langsung tanpa akun, bayar online atau COD, dikirim ke seluruh Indonesia.",
+    "columns": {
+      "shop": "Belanja",
+      "help": "Bantuan",
+      "legal": "Ketentuan"
+    },
+    "shopLinks": {
+      "checkOrder": "Cek Pesanan",
+      "writeReview": "Tulis Ulasan"
+    },
+    "payment": {
+      "title": "Pembayaran & pengiriman",
+      "online": "Bayar online lewat Midtrans",
+      "cod": "COD di provinsi terpilih",
+      "shipping": "Ongkir tampil sebelum bayar"
+    },
+    "copyright": "© {year} Tokoshopee. Seluruh hak cipta dilindungi.",
+    "backToTop": "Kembali ke atas"
+  },
+  "howToOrder": {
+    "metadata": {
+      "title": "Cara Pemesanan | Tokoshopee",
+      "description": "Panduan cara memesan Sandal Gemoy di Tokoshopee: pilih jumlah, isi alamat pengiriman, pilih pembayaran COD atau online, lalu tunggu paket sampai di rumah Anda."
+    },
+    "title": "Cara Pemesanan",
+    "intro": "Pesan langsung dari halaman produk. Anda tidak perlu membuat akun.",
+    "steps": {
+      "heading": "Langkah Pemesanan",
+      "s1": "Pilih jumlah pada halaman produk, lalu tekan Beli Sekarang.",
+      "s2": "Isi nama, nomor HP/WhatsApp, dan alamat pengiriman lengkap.",
+      "s3": "Pilih metode pembayaran: bayar online, atau bayar di tempat (COD) bila tersedia untuk provinsi Anda.",
+      "s4": "Periksa ringkasan pesanan — harga barang, ongkos kirim, dan biaya COD bila ada — lalu buat pesanan.",
+      "s5": "Simpan nomor pesanan Anda. Nomor pesanan dan nomor HP diperlukan untuk mengecek status pesanan."
+    },
+    "payment": {
+      "heading": "Pembayaran",
+      "online": "Pembayaran online diproses melalui Midtrans. Anda membayar dengan metode yang tersedia di halaman pembayaran Midtrans.",
+      "cod": "Bayar di tempat (COD) berarti Anda membayar kepada kurir saat pesanan tiba. COD tidak tersedia di semua provinsi dan dikenakan biaya COD, yang ditampilkan pada ringkasan pesanan sebelum Anda memesan.",
+      "expiry": "Pesanan online yang belum dibayar akan kedaluwarsa secara otomatis, dan stok yang ditahan dilepaskan kembali."
+    },
+    "delivery": {
+      "heading": "Pengiriman",
+      "body": "Ongkos kirim dihitung dari provinsi tujuan dan jumlah barang yang dipesan, dan selalu ditampilkan sebelum Anda menyelesaikan pesanan.",
+      "tracking": "Setelah pesanan dikirim, nomor resi tampil pada halaman Cek Pesanan."
+    },
+    "help": {
+      "heading": "Butuh Bantuan?",
+      "body": "Hubungi kami di [PLACEHOLDER: alamat email kontak toko]."
+    }
+  },
+  "terms": {
+    "metadata": {
+      "title": "Syarat & Ketentuan | Tokoshopee",
+      "description": "Baca syarat dan ketentuan belanja di Tokoshopee: proses pemesanan, harga, ongkos kirim, biaya COD, pembatalan, ulasan, dan tanggung jawab penjual sebelum berbelanja."
+    },
+    "title": "Syarat & Ketentuan",
+    "intro": "Dengan memesan di toko ini, Anda menyetujui syarat dan ketentuan berikut.",
+    "seller": {
+      "heading": "Identitas Penjual",
+      "legalName": "Nama badan usaha: [PLACEHOLDER: nama badan usaha toko]",
+      "address": "Alamat: [PLACEHOLDER: alamat lengkap toko]",
+      "contactEmail": "Email kontak: [PLACEHOLDER: alamat email kontak toko]"
+    },
+    "orders": {
+      "heading": "Pesanan",
+      "formation": "Pesanan terbentuk ketika Anda menyelesaikan formulir pemesanan dan menerima nomor pesanan. Nomor pesanan bersama nomor HP Anda adalah satu-satunya cara mengakses rincian pesanan.",
+      "stock": "Pesanan hanya dapat dibuat selama stok tersedia. Bila stok tidak mencukupi, pesanan tidak terbentuk.",
+      "expiry": "Pesanan dengan pembayaran online yang tidak dibayar sampai batas waktu akan kedaluwarsa dan dibatalkan secara otomatis."
+    },
+    "pricing": {
+      "heading": "Harga dan Biaya",
+      "currency": "Seluruh harga ditampilkan dalam Rupiah (IDR) dalam nilai bulat, tanpa pecahan sen.",
+      "shipping": "Ongkos kirim dihitung berdasarkan provinsi tujuan dan jumlah barang, dan ditampilkan sebelum pesanan dibuat.",
+      "cod": "Biaya COD, bila berlaku, ditampilkan terpisah pada ringkasan pesanan."
+    },
+    "cancellation": {
+      "heading": "Pembatalan",
+      "body": "Pesanan yang belum dibayar dapat Anda batalkan sendiri melalui halaman Cek Pesanan. Pesanan yang sudah dibayar atau sudah dikonfirmasi hanya dapat dibatalkan melalui pengajuan pembatalan, yang disetujui atau ditolak oleh pemilik toko."
+    },
+    "reviews": {
+      "heading": "Ulasan",
+      "body": "Ulasan hanya dapat ditulis oleh pembeli dengan pesanan yang telah selesai, dan tampil setelah disetujui pemilik toko. Ulasan yang dimasukkan pemilik toko dari penjualan di luar situs ditandai sebagai ulasan pemilik."
+    },
+    "liability": {
+      "heading": "Tanggung Jawab",
+      "body": "Kami bertanggung jawab atas barang yang dikirim sesuai deskripsi produk. Kami tidak bertanggung jawab atas keterlambatan yang disebabkan kurir, atau atas alamat pengiriman yang keliru Anda masukkan."
+    },
+    "changes": {
+      "heading": "Perubahan Ketentuan",
+      "body": "Syarat dan ketentuan ini dapat berubah sewaktu-waktu. Ketentuan yang berlaku bagi pesanan Anda adalah yang tampil pada halaman ini saat Anda memesan."
+    }
+  },
+  "privacy": {
+    "metadata": {
+      "title": "Kebijakan Privasi | Tokoshopee",
+      "description": "Pelajari cara Tokoshopee mengumpulkan, menggunakan, membagikan, dan menyimpan data pribadi Anda saat berbelanja, termasuk hak Anda atas data itu sebagai pelanggan."
+    },
+    "title": "Kebijakan Privasi",
+    "intro": "Halaman ini menjelaskan data apa yang kami kumpulkan ketika Anda memesan, untuk apa data itu dipakai, dan berapa lama kami menyimpannya.",
+    "controller": {
+      "heading": "Pengelola Data",
+      "legalName": "Nama badan usaha: [PLACEHOLDER: nama badan usaha toko]",
+      "address": "Alamat: [PLACEHOLDER: alamat lengkap toko]",
+      "contactEmail": "Email kontak: [PLACEHOLDER: alamat email kontak toko]"
+    },
+    "collected": {
+      "heading": "Data yang Kami Kumpulkan",
+      "contact": "Nama, nomor HP/WhatsApp, dan email bila Anda mengisinya.",
+      "address": "Alamat pengiriman: provinsi, kota/kabupaten, kecamatan, kode pos, dan alamat lengkap.",
+      "order": "Rincian pesanan: jumlah, harga, ongkos kirim, metode pembayaran, catatan yang Anda tulis, status pesanan, dan nomor resi.",
+      "payment": "Untuk pembayaran online, status pembayaran yang kami terima dari Midtrans. Kami tidak pernah menerima atau menyimpan data kartu Anda.",
+      "review": "Bila Anda menulis ulasan: nama pengulas, rating, dan komentar.",
+      "technical": "Alamat IP permintaan Anda, dipakai hanya untuk membatasi jumlah percobaan pada formulir cek pesanan, ulasan, dan masuk admin.",
+      "noAccount": "Toko ini tidak memiliki akun pelanggan, sehingga tidak ada kata sandi pelanggan yang disimpan."
+    },
+    "purpose": {
+      "heading": "Penggunaan Data",
+      "body": "Data dipakai untuk memproses, mengirim, dan menindaklanjuti pesanan Anda, serta untuk menampilkan status pesanan ketika Anda memasukkan nomor pesanan dan nomor HP.",
+      "noMarketing": "Kami tidak mengirim email pemasaran dan tidak melakukan profiling."
+    },
+    "sharing": {
+      "heading": "Pembagian Data",
+      "payment": "Data pesanan yang diperlukan untuk pembayaran dibagikan kepada Midtrans sebagai penyedia pembayaran.",
+      "courier": "Nama, nomor HP, dan alamat pengiriman dibagikan kepada kurir untuk keperluan pengiriman.",
+      "noSale": "Kami tidak menjual atau menyewakan data Anda kepada pihak mana pun."
+    },
+    "retention": {
+      "heading": "Penyimpanan Data",
+      "orders": "Data pesanan disimpan selama diperlukan untuk pembukuan dan penanganan pengembalian.",
+      "reviews": "Ulasan yang telah disetujui tampil di halaman produk sampai dihapus oleh pemilik toko.",
+      "technical": "Catatan pembatasan percobaan hanya disimpan singkat dan dihapus setelah jendela pembatasan berakhir."
+    },
+    "rights": {
+      "heading": "Hak Anda",
+      "body": "Anda dapat meminta salinan, perbaikan, atau penghapusan data pribadi Anda dengan menghubungi kami di [PLACEHOLDER: alamat email kontak toko]. Penghapusan tidak berlaku bagi data yang wajib kami simpan untuk pembukuan."
+    }
+  },
+  "returns": {
+    "metadata": {
+      "title": "Kebijakan Pengembalian | Tokoshopee",
+      "description": "Ketahui jangka waktu, syarat kelayakan, dan cara mengajukan pengembalian atau pembatalan pesanan Sandal Gemoy, termasuk proses refund untuk pembayaran online."
+    },
+    "title": "Kebijakan Pengembalian",
+    "intro": "Halaman ini menjelaskan kapan pesanan dapat dikembalikan dan bagaimana dana dikembalikan.",
+    "window": {
+      "heading": "Batas Waktu Pengembalian",
+      "body": "Pengajuan pengembalian kami terima paling lambat [PLACEHOLDER: jumlah hari batas pengembalian] hari setelah pesanan Anda terima."
+    },
+    "eligibility": {
+      "heading": "Syarat Pengembalian",
+      "e1": "Barang belum dipakai dan masih dalam kondisi serta kemasan seperti saat diterima.",
+      "e2": "Barang yang diterima rusak, cacat, atau tidak sesuai dengan pesanan.",
+      "e3": "Nomor pesanan dan nomor HP yang dipakai saat memesan dapat Anda tunjukkan."
+    },
+    "how": {
+      "heading": "Cara Mengajukan",
+      "s1": "Hubungi kami di [PLACEHOLDER: alamat email kontak toko] dengan nomor pesanan Anda dan foto barang.",
+      "s2": "Tunggu konfirmasi dari kami sebelum mengirim barang kembali.",
+      "s3": "Kirim barang ke alamat yang kami berikan pada konfirmasi tersebut."
+    },
+    "refunds": {
+      "heading": "Pengembalian Dana",
+      "manual": "Pengembalian dana untuk pembayaran online diproses secara manual oleh pemilik toko dan tidak otomatis. Toko ini tidak menjalankan pengembalian dana otomatis melalui sistem pembayaran: pemilik toko mentransfer dana sendiri dan mencatat nomor referensi pengembalian pada pesanan Anda.",
+      "cod": "Untuk pesanan COD yang dibatalkan sebelum diterima, tidak ada dana yang perlu dikembalikan karena pembayaran baru dilakukan saat barang diterima.",
+      "timing": "Kami memberi tahu Anda ketika pengembalian dana telah dikirim. Waktu dana sampai di rekening Anda bergantung pada bank atau penyedia pembayaran Anda."
+    },
+    "cancellation": {
+      "heading": "Pembatalan Pesanan",
+      "body": "Pesanan yang belum dibayar dapat Anda batalkan sendiri melalui halaman Cek Pesanan. Pesanan yang sudah dibayar atau sudah dikonfirmasi memerlukan pengajuan pembatalan yang disetujui pemilik toko."
+    },
+    "contact": {
+      "heading": "Kontak",
+      "body": "Pertanyaan mengenai pengembalian dapat Anda kirim ke [PLACEHOLDER: alamat email kontak toko]."
+    }
+  },
+  "notFound": {
+    "title": "Halaman Tidak Ditemukan",
+    "body": "Halaman yang Anda cari tidak ada atau sudah dipindahkan.",
+    "backToHome": "Kembali ke Beranda"
+  },
+  "error": {
+    "title": "Terjadi Kesalahan",
+    "body": "Maaf, ada yang tidak berjalan semestinya. Silakan coba lagi sebentar lagi.",
+    "retry": "Coba Lagi",
+    "backToHome": "Kembali ke Beranda"
+  },
+  "admin": {
+    "login": {
+      "title": "Masuk Admin",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Masuk",
+      "submitting": "Memproses..."
+    },
+    "dashboard": {
+      "title": "Dasbor",
+      "todayOrders": "Pesanan Hari Ini",
+      "codAwaitingConfirmation": "COD Menunggu Konfirmasi",
+      "awaitingShipment": "Menunggu Pengiriman",
+      "currentStock": "Stok Saat Ini",
+      "conflicts": {
+        "title": "Konflik Pesanan Perlu Ditindaklanjuti",
+        "reason": {
+          "PAID_STOCK_UNAVAILABLE": "Sudah dibayar tapi stok tidak cukup",
+          "PAID_AFTER_EXPIRY": "Pembayaran diterima setelah pesanan kedaluwarsa"
+        }
+      },
+      "nav": {
+        "orders": "Daftar Pesanan",
+        "stock": "Kelola Stok",
+        "reviews": "Kelola Ulasan",
+        "settings": "Pengaturan"
+      },
+      "asOf": "Angka per {timestamp} WIB",
+      "primaryAction": "Buka daftar pesanan",
+      "range": {
+        "legend": "Periode",
+        "d7": "7 hari",
+        "d30": "30 hari",
+        "d90": "90 hari",
+        "caption": "{days} hari terakhir sampai hari ini, Waktu Indonesia Barat"
+      },
+      "kpi": {
+        "todayHint": "Dibuat hari ini, Waktu Indonesia Barat",
+        "revenueToday": "Pendapatan Hari Ini",
+        "revenueHint": "Dibayar online atau COD dikonfirmasi hari ini",
+        "needsAction": "Perlu Tindakan Anda",
+        "needsActionHint": "{cod} COD perlu konfirmasi · {ship} siap kirim",
+        "stockHint": "Sekitar {days} hari persediaan pada laju periode ini",
+        "stockHintUnknown": "Belum ada unit terjual pada periode ini",
+        "comparedUp": "▲ {percent}% dari kemarin",
+        "comparedDown": "▼ {percent}% dari kemarin",
+        "comparedFlat": "Sama dengan kemarin",
+        "comparedNew": "Kemarin tidak ada aktivitas untuk dibandingkan"
+      },
+      "trend": {
+        "title": "Pendapatan & Pesanan",
+        "caption": "Pendapatan dihitung pada hari pesanan dibayar online atau COD dikonfirmasi, memakai total yang dibekukan pada pesanan itu.",
+        "revenue": "Pendapatan",
+        "orders": "Pesanan masuk",
+        "peak": "Tertinggi {revenue}",
+        "empty": "Tidak ada pesanan masuk dan tidak ada pembayaran pada periode ini.",
+        "point": "{day} — {revenue} · {orders} masuk · {paid} dibayar"
+      },
+      "mix": {
+        "title": "Komposisi Status",
+        "caption": "Pesanan yang dibuat pada periode ini, menurut statusnya sekarang.",
+        "total": "pesanan",
+        "empty": "Tidak ada pesanan yang dibuat pada periode ini.",
+        "legendRow": "{status}: {count} ({percent}%)",
+        "paymentMix": "Metode pembayaran"
+      },
+      "pipeline": {
+        "title": "Pesanan Berjalan",
+        "caption": "Pesanan yang masih berjalan, dinilai dari total yang dibekukan pada masing-masing.",
+        "empty": "Tidak ada yang berjalan — semua pesanan sudah berstatus akhir.",
+        "count": "{count, plural, other {# pesanan}}",
+        "conversion": "Konversi pembayaran",
+        "conversionHint": "{paid} dari {created} pesanan pada periode ini dibayar atau dikonfirmasi",
+        "fulfilment": "Selesai",
+        "fulfilmentHint": "{completed} dari {total} pesanan sepanjang waktu mencapai Selesai",
+        "noBasis": "Belum ada pesanan"
+      },
+      "attention": {
+        "title": "Perlu Perhatian",
+        "allClear": "Tidak ada yang perlu perhatian saat ini.",
+        "cancellations": "Permintaan pembatalan menunggu keputusan Anda",
+        "expiring": "Pesanan belum dibayar yang kedaluwarsa dalam 6 jam",
+        "expired": "Sudah kedaluwarsa",
+        "expiresIn": "Sisa {hours} jam",
+        "stale": "Menunggu pengiriman, tidak berubah 48 jam atau lebih",
+        "staleFor": "Tidak berubah {hours} jam",
+        "reviews": "Ulasan menunggu moderasi",
+        "reviewsCount": "{count, plural, other {# ulasan}}",
+        "moderate": "Moderasi",
+        "stock": "Stok kosong — toko tidak dapat menerima pesanan baru",
+        "restock": "Ubah stok",
+        "noReason": "Tanpa alasan",
+        "staleForDays": "Tidak berubah {days} hari"
+      },
+      "quickActions": {
+        "title": "Tindakan Cepat",
+        "confirmCod": "Konfirmasi pesanan COD",
+        "shipPaid": "Kirim pesanan terbayar",
+        "chaseUnpaid": "Tagih pesanan belum dibayar",
+        "adjustStock": "Ubah stok",
+        "moderateReviews": "Moderasi ulasan",
+        "shipConfirmed": "Kirim pesanan COD terkonfirmasi"
+      },
+      "recentOrders": {
+        "title": "Pesanan Terbaru",
+        "viewAll": "Lihat semua",
+        "empty": "Belum ada pesanan.",
+        "columns": {
+          "order": "Pesanan",
+          "status": "Status",
+          "payment": "Pembayaran",
+          "customer": "Pelanggan",
+          "total": "Total",
+          "placed": "Dibuat"
+        }
+      },
+      "activity": {
+        "title": "Aktivitas Terbaru",
+        "empty": "Belum ada perubahan status.",
+        "placed": "Dibuat",
+        "by": "oleh {actor}"
+      },
+      "unavailable": {
+        "title": "Angka Tidak Tersedia",
+        "body": "Dasbor tidak dapat membaca angka toko. Tidak ada yang berubah — halaman admin lain tetap berfungsi, dan memuat ulang biasanya mengatasinya.",
+        "retry": "Coba lagi"
+      },
+      "links": {
+        "products": "Produk",
+        "categories": "Kategori"
+      }
+    },
+    "orders": {
+      "title": "Daftar Pesanan",
+      "filters": {
+        "allStatuses": "Semua Status",
+        "allPaymentMethods": "Semua Metode Bayar",
+        "searchPlaceholder": "Cari nomor pesanan atau HP",
+        "apply": "Terapkan",
+        "status": "Status",
+        "paymentMethod": "Metode pembayaran",
+        "period": "Periode",
+        "search": "Cari",
+        "applying": "Menerapkan...",
+        "reset": "Atur ulang filter"
+      },
+      "table": {
+        "orderNumber": "No. Pesanan",
+        "status": "Status",
+        "paymentMethod": "Metode Bayar",
+        "customer": "Pelanggan",
+        "total": "Total",
+        "placed": "Dibuat"
+      },
+      "periods": {
+        "all": "Sepanjang waktu",
+        "today": "Hari ini",
+        "7d": "7 hari terakhir",
+        "30d": "30 hari terakhir"
+      },
+      "resultCount": "{count, plural, =0 {Tidak ada pesanan} other {# pesanan}}",
+      "filtered": "difilter",
+      "backToDashboard": "Kembali ke dasbor",
+      "empty": "Belum ada pesanan.",
+      "emptyFiltered": "Tidak ada pesanan yang cocok dengan filter ini.",
+      "emptyFilteredHint": "Perluas periodenya, hapus status atau metode pembayaran, atau periksa kata pencariannya.",
+      "impossiblePair": "{status} dan {paymentMethod} tidak bisa bersamaan: pesanan COD dikonfirmasi, bukan dibayar, dan pesanan online dibayar, bukan dikonfirmasi. Hapus salah satunya."
+    },
+    "orderDetail": {
+      "status": "Status",
+      "paymentMethod": "Metode Bayar",
+      "customer": "Pelanggan",
+      "address": "Alamat",
+      "quantity": "Jumlah",
+      "total": "Total",
+      "trackingNumber": "No. Resi",
+      "conflict": "Konflik",
+      "cancellationRequestPending": "Permintaan pembatalan menunggu keputusan Anda.",
+      "timeline": "Riwayat Status",
+      "actions": {
+        "confirmCod": "Konfirmasi COD",
+        "markShipped": "Tandai Dikirim",
+        "trackingNumberPlaceholder": "Nomor resi",
+        "markCompleted": "Tandai Selesai",
+        "markReturned": "Tandai Dikembalikan",
+        "cancel": "Batalkan Pesanan",
+        "refundReferencePlaceholder": "Referensi refund (opsional)",
+        "recheckPayment": "Cek Ulang Status Pembayaran",
+        "approveCancellation": "Setujui Pembatalan",
+        "rejectCancellation": "Tolak Pembatalan",
+        "submitting": "Memproses..."
+      }
+    },
+    "stock": {
+      "title": "Stok",
+      "current": "Stok saat ini",
+      "form": {
+        "delta": "Perubahan (+/-)",
+        "note": "Alasan",
+        "submit": "Simpan",
+        "submitting": "Memproses..."
+      },
+      "log": "Riwayat Perubahan Stok",
+      "logTable": {
+        "date": "Tanggal",
+        "delta": "Perubahan",
+        "resulting": "Hasil",
+        "reason": "Alasan",
+        "note": "Catatan",
+        "order": "Pesanan"
+      }
+    },
+    "reviews": {
+      "title": "Ulasan",
+      "addOwnerReview": "Tambah Ulasan Offline",
+      "list": "Semua Ulasan",
+      "published": "Ditampilkan",
+      "unpublished": "Belum Ditampilkan",
+      "form": {
+        "rating": "Rating",
+        "reviewerName": "Nama Pengulas",
+        "comment": "Komentar",
+        "reviewedAt": "Tanggal Ulasan",
+        "submit": "Simpan",
+        "submitting": "Memproses..."
+      },
+      "actions": {
+        "approve": "Setujui",
+        "unpublish": "Sembunyikan",
+        "delete": "Hapus"
+      }
+    },
+    "settings": {
+      "title": "Pengaturan",
+      "form": {
+        "baseline": "Baseline Jumlah Terjual (offline)",
+        "submit": "Simpan",
+        "submitting": "Memproses..."
+      }
+    },
+    "orderStatus": {
+      "PENDING_PAYMENT": "Menunggu pembayaran",
+      "PAID": "Dibayar",
+      "COD_PENDING": "COD perlu konfirmasi",
+      "CONFIRMED": "Dikonfirmasi",
+      "SHIPPED": "Dikirim",
+      "COMPLETED": "Selesai",
+      "CANCELLED": "Dibatalkan",
+      "EXPIRED": "Kedaluwarsa",
+      "RETURNED": "Dikembalikan"
+    },
+    "paymentMethod": {
+      "ONLINE": "Online",
+      "COD": "COD"
+    },
+    "actor": {
+      "CUSTOMER": "pelanggan",
+      "OWNER": "Anda",
+      "PAYMENT_PROVIDER": "penyedia pembayaran",
+      "SYSTEM": "sistem"
+    },
+    "products": {
+      "title": "Produk",
+      "filters": {
+        "legend": "Saring produk",
+        "status": "Status",
+        "statusAll": "Semua status",
+        "category": "Kategori",
+        "categoryAll": "Semua kategori",
+        "search": "Cari",
+        "searchPlaceholder": "Nama, alamat web, atau SKU",
+        "clear": "Hapus saringan"
+      },
+      "table": {
+        "caption": "Produk, diurutkan menurut posisi",
+        "image": "Gambar",
+        "name": "Nama",
+        "category": "Kategori",
+        "status": "Status",
+        "price": "Harga",
+        "stock": "Stok"
+      },
+      "noImage": "Tanpa gambar",
+      "noPrice": "—",
+      "noStock": "—",
+      "sample": "Contoh",
+      "status": {
+        "ACTIVE": "Aktif",
+        "COMING_SOON": "Segera hadir",
+        "DRAFT": "Draf"
+      },
+      "empty": {
+        "title": "Produk tidak ditemukan",
+        "body": "Tidak ada produk yang cocok dengan saringan ini."
+      },
+      "backToList": "Kembali ke daftar produk",
+      "newButton": "Produk baru",
+      "create": {
+        "title": "Produk baru",
+        "help": "Produk baru disimpan sebagai draf dan tidak tampil di toko sampai diterbitkan."
+      },
+      "edit": {
+        "title": "Ubah produk",
+        "currentStock": "Stok saat ini",
+        "stockHelp": "Stok diubah dari daftar produk atau halaman Stok, bukan dari formulir ini."
+      },
+      "markReal": {
+        "button": "Tandai sebagai produk asli",
+        "title": "Tandai sebagai produk asli?",
+        "body": "Tindakan ini tidak dapat dibatalkan. Produk ini tidak lagi dianggap contoh, dan pembersihan produk contoh tidak akan pernah menghapusnya.",
+        "confirm": "Ya, tandai sebagai produk asli",
+        "cancel": "Batal",
+        "done": "Produk ini sekarang produk asli."
+      },
+      "unpublish": {
+        "title": "Hentikan penjualan produk ini?",
+        "body": "Pelanggan tidak dapat lagi melihat atau membeli produk ini. Pesanan, riwayat stok, dan ulasan tetap disimpan.",
+        "lastActive": "Ini satu-satunya produk yang sedang dijual. Setelah disimpan, toko tidak memiliki produk yang dapat dibeli.",
+        "confirm": "Ya, hentikan penjualan",
+        "cancel": "Batal"
+      }
+    },
+    "productForm": {
+      "sections": {
+        "basics": "Dasar",
+        "price": "Harga",
+        "images": "Gambar",
+        "id": "Bahasa Indonesia",
+        "en": "Bahasa Inggris"
+      },
+      "optional": "(opsional)",
+      "slug": "Alamat web",
+      "slugHelp": "Huruf kecil, angka, dan tanda hubung tunggal, 3–80 karakter.",
+      "slugLockedHelp": "Terkunci karena produk sudah diterbitkan.",
+      "sku": "SKU",
+      "skuHelp": "3–32 huruf kapital, angka, atau tanda hubung.",
+      "category": "Kategori",
+      "status": "Status",
+      "statusFixedHelp": "Untuk saat ini hanya status ini yang dapat dipilih.",
+      "sampleStatusHelp": "Produk contoh selalu berstatus segera hadir. Tandai sebagai produk asli untuk mengubahnya.",
+      "position": "Posisi",
+      "positionHelp": "Angka lebih kecil tampil lebih dulu, 0–9999.",
+      "priceIDR": "Harga jual (IDR)",
+      "priceHelp": "Rupiah bulat, dari 1.000 hingga 100.000.000.",
+      "compareAtPriceIDR": "Harga asli (IDR)",
+      "compareAtHelp": "Ditampilkan dicoret. Harus lebih tinggi dari harga jual.",
+      "pricePreview": "Ditampilkan sebagai {price}",
+      "name": "Nama",
+      "shortDescription": "Deskripsi singkat",
+      "shortDescriptionHelp": "20–200 karakter.",
+      "longDescription": "Deskripsi lengkap",
+      "highlights": "Keunggulan",
+      "highlightsHelp": "Hingga 6 poin singkat.",
+      "highlightLabel": "Keunggulan {index}",
+      "addHighlight": "Tambah keunggulan",
+      "removeHighlight": "Hapus keunggulan {index}",
+      "specs": "Spesifikasi",
+      "specsHelp": "Hingga 20 baris.",
+      "specLabel": "Label {index}",
+      "specValue": "Nilai {index}",
+      "addSpec": "Tambah baris",
+      "removeSpec": "Hapus baris {index}",
+      "seoTitle": "Judul hasil pencarian",
+      "seoDescription": "Deskripsi hasil pencarian",
+      "counter": "{count}/{max}",
+      "imageList": {
+        "count": "{count} dari {max} gambar",
+        "empty": "Belum ada gambar.",
+        "preview": "Gambar {index}",
+        "altId": "Teks alternatif, bahasa Indonesia",
+        "altEn": "Teks alternatif, bahasa Inggris",
+        "moveUp": "Naikkan",
+        "moveDown": "Turunkan",
+        "remove": "Lepaskan"
+      },
+      "save": "Simpan",
+      "saving": "Memproses…",
+      "saved": "Tersimpan",
+      "reload": "Muat ulang",
+      "errorSummary": "Beberapa kolom perlu diperbaiki. Periksa pesan di sampingnya.",
+      "signInAgain": "Masuk lagi di tab baru",
+      "errors": {
+        "tooShort": "Masukkan minimal {minimum} karakter.",
+        "tooLong": "Gunakan maksimal {maximum} karakter.",
+        "tooFew": "Tambahkan minimal {minimum}.",
+        "tooMany": "Gunakan maksimal {maximum} butir.",
+        "tooManyImages": "Satu produk maksimal memiliki {maximum} gambar.",
+        "numberMin": "Masukkan minimal {minimum}.",
+        "numberMax": "Masukkan maksimal {maximum}.",
+        "slugFormat": "Gunakan huruf kecil, angka, dan tanda hubung tunggal.",
+        "skuFormat": "Gunakan 3–32 huruf kapital, angka, atau tanda hubung.",
+        "required": "Kolom ini wajib diisi.",
+        "wholeNumber": "Masukkan bilangan bulat.",
+        "invalid": "Periksa kolom ini.",
+        "compareAtNeedsPrice": "Harga asli memerlukan harga jual.",
+        "compareAtAbovePrice": "Harga asli harus lebih tinggi dari harga jual.",
+        "videoNeedsAlt": "Video memerlukan deskripsi dalam kedua bahasa.",
+        "activeNeedsPrice": "Produk aktif memerlukan harga.",
+        "listedNeedsImage": "Produk yang ditampilkan memerlukan minimal satu gambar.",
+        "marketplaceBrand": "Nama marketplace lain tidak diperbolehkan.",
+        "slugTaken": "Alamat web ini sudah dipakai produk lain.",
+        "skuTaken": "SKU ini sudah dipakai produk lain.",
+        "slugLocked": "Alamat web tidak dapat diubah setelah produk diterbitkan.",
+        "categoryUnknown": "Pilih kategori yang ada.",
+        "imageUnknown": "Gambar ini bukan milik produk dan bukan berkas unggahan.",
+        "stockRequired": "Produk aktif memerlukan stok. Atur stok di daftar produk terlebih dahulu.",
+        "sampleStatusLocked": "Produk contoh hanya dapat berstatus segera hadir."
+      }
+    },
+    "categories": {
+      "title": "Kategori",
+      "new": "Kategori baru",
+      "table": {
+        "nameId": "Nama (Indonesia)",
+        "nameEn": "Nama (Inggris)",
+        "slug": "Alamat web",
+        "position": "Posisi",
+        "products": "Produk"
+      },
+      "slug": "Alamat web",
+      "nameId": "Nama, bahasa Indonesia",
+      "nameEn": "Nama, bahasa Inggris",
+      "position": "Posisi",
+      "edit": "Ubah",
+      "cancel": "Batal",
+      "save": "Simpan",
+      "saving": "Memproses…",
+      "saved": "Tersimpan",
+      "empty": {
+        "title": "Belum ada kategori",
+        "body": "Buat kategori pertama di atas."
+      },
+      "errorSummary": "Beberapa isian perlu diperbaiki. Lihat pesan di sampingnya.",
+      "errors": {
+        "slugTaken": "Alamat web ini sudah dipakai kategori lain.",
+        "slugFormat": "Gunakan huruf kecil, angka, dan tanda hubung tunggal.",
+        "tooShort": "Masukkan minimal {minimum} karakter.",
+        "tooLong": "Gunakan maksimal {maximum} karakter.",
+        "numberMin": "Masukkan minimal {minimum}.",
+        "numberMax": "Masukkan maksimal {maximum}.",
+        "required": "Kolom ini wajib diisi.",
+        "wholeNumber": "Masukkan bilangan bulat.",
+        "invalid": "Periksa kolom ini."
+      }
+    },
+    "uploads": {
+      "label": "Tambah gambar",
+      "help": "JPEG, PNG, atau WebP, maksimal 2 MB, minimal 800×800, dan persegi. Disarankan 1200×1200.",
+      "uploading": "Mengunggah…",
+      "full": "Produk ini sudah memiliki jumlah gambar maksimal.",
+      "errors": {
+        "unauthorized": "Sesi Anda telah berakhir. Masuk lagi, lalu unggah gambar.",
+        "forbidden": "Unggahan ditolak. Muat ulang halaman lalu coba lagi.",
+        "lengthRequired": "Unggahan ditolak. Muat ulang halaman lalu coba lagi.",
+        "tooLarge": "Ukuran berkas lebih dari 2 MB.",
+        "validation": "Pilih tepat satu berkas gambar.",
+        "unsupportedFormat": "Hanya gambar JPEG, PNG, dan WebP yang diterima.",
+        "unreadable": "Gambar tidak dapat dibaca. Ekspor ulang lalu coba lagi.",
+        "animated": "Gambar animasi tidak diterima.",
+        "tooSmall": "Gambar minimal berukuran {minSide}×{minSide} piksel.",
+        "notSquare": "Gambar harus persegi, dengan selisih maksimal {tolerancePercent}%.",
+        "failed": "Unggahan gagal. Coba lagi."
+      }
+    },
+    "stockInline": {
+      "label": "Stok untuk {name}",
+      "edit": "Ubah",
+      "target": "Jumlah baru",
+      "note": "Alasan",
+      "save": "Simpan",
+      "saving": "Memproses…",
+      "saved": "Tersimpan",
+      "cancel": "Batal",
+      "low": "Sisa {count}",
+      "out": "Stok habis"
+    }
+  },
+  "category": {
+    "metadata": {
+      "title": "{name} — Tokoshopee",
+      "description": "Belanja {name} di Tokoshopee. Pesan tanpa membuat akun, bayar online lewat Midtrans atau COD di provinsi terpilih, dan ongkir tampil sebelum Anda bayar."
+    }
+  },
+  "card": {
+    "comingSoonPrice": "Segera hadir",
+    "outOfStock": "Stok habis",
+    "discount": "-{n}%",
+    "compareAtSr": "Harga sebelumnya"
+  },
+  "ui": {
+    "loading": "Memproses…",
+    "optional": "(opsional)"
+  },
+  "search": {
+    "metadata": {
+      "title": "Cari produk | Tokoshopee",
+      "description": "Cari produk di Tokoshopee: sandal empuk dan anti slip, bisa dibayar online lewat Midtrans atau COD, dengan ongkos kirim yang tampil sebelum Anda membayar."
+    },
+    "label": "Cari produk",
+    "placeholder": "Cari di Tokoshopee",
+    "submit": "Cari",
+    "promptTitle": "Cari produk",
+    "promptBody": "Ketik nama atau jenis produk di kolom pencarian di atas.",
+    "resultsTitle": "Hasil untuk “{q}”",
+    "resultsCount": "{count} produk ditemukan",
+    "emptyTitle": "Produk tidak ditemukan",
+    "emptyBody": "Coba kata lain, atau lihat semua produk di beranda.",
+    "emptyAction": "Kembali belanja"
+  }
+}

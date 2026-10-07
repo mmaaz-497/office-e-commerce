@@ -1,0 +1,1 @@
+export { toErrorResult } from "../result";

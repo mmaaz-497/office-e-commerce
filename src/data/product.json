@@ -1,0 +1,63 @@
+[
+  {
+    "slug": "slippers-gemoy",
+    "priceIDR": 169999,
+    "images": [
+      {
+        "src": "/images/product/banner-seharian-landscape.png",
+        "altKey": "product.alt.seharian",
+        "orientation": "landscape",
+        "width": 1740,
+        "height": 904
+      },
+      {
+        "src": "/images/product/banner-nyaman-portrait.png",
+        "altKey": "product.alt.nyaman",
+        "orientation": "portrait",
+        "width": 1086,
+        "height": 1448
+      },
+      {
+        "src": "/images/product/banner-hadiah-landscape.png",
+        "altKey": "product.alt.hadiah",
+        "orientation": "landscape",
+        "width": 1742,
+        "height": 903
+      },
+      {
+        "src": "/images/product/banner-santai-portrait.png",
+        "altKey": "product.alt.santai",
+        "orientation": "portrait",
+        "width": 1086,
+        "height": 1448
+      },
+      {
+        "src": "/images/product/banner-collage-portrait.png",
+        "altKey": "product.alt.collage",
+        "orientation": "portrait",
+        "width": 1024,
+        "height": 1536
+      },
+      {
+        "src": "/images/product/banner-new-arrival-square.png",
+        "altKey": "product.alt.newArrival",
+        "orientation": "square",
+        "width": 1254,
+        "height": 1254
+      }
+    ],
+    "video": {
+      "src": "/videos/slippers-gemoy.mp4",
+      "poster": "/videos/slippers-gemoy-poster.jpg",
+      "altKey": "product.alt.video"
+    },
+    "nameKey": "product.name",
+    "benefitKeys": [
+      "product.benefit.empukNyaman",
+      "product.benefit.antiSlip",
+      "product.benefit.designLucu",
+      "product.benefit.allSize"
+    ],
+    "trustBadgeKeys": ["trust.aman", "trust.premium", "trust.fastDelivery"]
+  }
+]

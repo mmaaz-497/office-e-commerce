@@ -1,0 +1,370 @@
+// Tokoshopee Storefront — Prisma schema
+// Mirrors specs/001-tokoshopee-storefront/data-model.md and, for the catalogue,
+// specs/003-catalogue-database/data-model.md (ADR-0004). The 003 additions are
+// additive only — new tables and nullable columns — so the previous release
+// keeps working against a migrated database and rollback is a redeploy.
+// Every monetary column is Int — whole IDR. No Float, no Decimal (Principle IV).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum OrderStatus {
+  PENDING_PAYMENT
+  PAID
+  COD_PENDING
+  CONFIRMED
+  SHIPPED
+  COMPLETED
+  CANCELLED
+  EXPIRED
+  RETURNED
+}
+
+enum PaymentMethod {
+  ONLINE
+  COD
+}
+
+enum Actor {
+  CUSTOMER
+  OWNER
+  PAYMENT_PROVIDER
+  SYSTEM
+}
+
+/// FR-075 — a paid order that cannot be fulfilled, surfaced for the owner to resolve.
+enum ConflictFlag {
+  NONE
+  PAID_STOCK_UNAVAILABLE
+  PAID_AFTER_EXPIRY
+}
+
+enum StockChangeReason {
+  ORDER_PAID
+  ORDER_CONFIRMED
+  ORDER_CANCELLED
+  ORDER_EXPIRED
+  ORDER_RETURNED
+  MANUAL_ADJUSTMENT
+}
+
+enum ReviewOrigin {
+  VERIFIED_PURCHASE
+  OWNER_ENTERED
+}
+
+enum CancellationResolution {
+  OPEN
+  APPROVED
+  REJECTED
+}
+
+/// The central record. Holds the frozen amount snapshot (FR-018).
+model Order {
+  id String @id @default(cuid())
+
+  /// TKS-YYMMDD-XXXXX (R-013). Unique so a colliding insert fails atomically —
+  /// the database, not a probability, is what makes this a guarantee. Order
+  /// creation retries generation up to 3 times against this constraint.
+  orderNumber String @unique
+
+  status        OrderStatus
+  paymentMethod PaymentMethod
+
+  customerName    String
+  phone           String
+  phoneNormalized String
+  email           String?
+
+  provinceCode  String
+  provinceName  String
+  cityCode      String
+  cityName      String
+  district      String
+  postalCode    String
+  streetAddress String
+  note          String?
+
+  quantity Int
+
+  /// 003: the product this order is for. Nullable so the pre-catalogue release
+  /// can still insert orders; a null belongs to the legacy product (R-202).
+  productId           String?
+  product             Product? @relation(fields: [productId], references: [id], onDelete: Restrict)
+  /// Indonesian product name at order time — frozen like the price snapshot.
+  productNameSnapshot String?
+
+  // Snapshot — frozen at order creation, never recomputed from the catalogue (FR-018).
+  unitPriceIDR     Int
+  shippingCostIDR  Int
+  codFeeIDR        Int
+  totalIDR         Int
+  billableWeightKg Int
+
+  /// Sole authority for whether a restore is owed on cancel/expire/return (R-005).
+  stockDecremented Boolean @default(false)
+
+  /// FR-075 — payment succeeded but the order cannot be fulfilled or was already expired.
+  conflictFlag       ConflictFlag @default(NONE)
+  conflictDetectedAt DateTime?
+
+  trackingNumber  String?
+  refundReference String?
+
+  /// What we send as Snap order_id.
+  midtransOrderId String? @unique
+
+  /// Set for ONLINE at creation, createdAt + 24h.
+  expiresAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  statusEvents        OrderStatusEvent[]
+  stockChanges        StockChange[]
+  review              Review?
+  cancellationRequest CancellationRequest?
+
+  @@index([status])
+  @@index([phoneNormalized])
+  @@index([createdAt])
+  @@index([status, expiresAt])
+  @@index([conflictFlag])
+  @@index([productId])
+}
+
+/// Append-only timeline (FR-025). Never updated, never deleted.
+model OrderStatusEvent {
+  id String @id @default(cuid())
+
+  orderId String
+  order   Order  @relation(fields: [orderId], references: [id])
+
+  fromStatus OrderStatus?
+  toStatus   OrderStatus
+  actor      Actor
+  note       String?
+
+  createdAt DateTime @default(now())
+
+  @@index([orderId])
+}
+
+/// One row per product. The original row keeps id = "default" and is linked to the
+/// imported product (R-201), so the pre-catalogue release still finds it; new
+/// products use id = productId.
+model StockLevel {
+  id        String   @id
+  quantity  Int
+  updatedAt DateTime @updatedAt
+
+  productId String?  @unique
+  product   Product? @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  // CHECK (quantity >= 0) is added as raw SQL in the initial migration (T046) —
+  // Prisma's schema language cannot express a CHECK constraint directly.
+}
+
+/// Append-only ledger (FR-036). SC-006 requires the current level to be
+/// reconstructible from it exactly.
+model StockChange {
+  id String @id @default(cuid())
+
+  delta             Int
+  resultingQuantity Int
+  reason            StockChangeReason
+  note              String?
+
+  orderId String?
+  order   Order?  @relation(fields: [orderId], references: [id])
+
+  /// 003: the product whose stock changed. Null rows belong to the legacy product (R-202).
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([orderId])
+  @@index([productId])
+}
+
+model Review {
+  id String @id @default(cuid())
+
+  /// Enforces one review per order (FR-048). Null for owner-entered reviews.
+  orderId String? @unique
+  order   Order?  @relation(fields: [orderId], references: [id])
+
+  origin       ReviewOrigin
+  rating       Int
+  comment      String?
+  reviewerName String
+
+  published  Boolean  @default(false)
+  reviewedAt DateTime
+
+  /// 003: the product reviewed. Null rows belong to the legacy product (R-202).
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  createdAt DateTime @default(now())
+
+  @@index([published, reviewedAt])
+  @@index([productId])
+}
+
+model CancellationRequest {
+  id String @id @default(cuid())
+
+  /// One open request per order.
+  orderId String @unique
+  order   Order  @relation(fields: [orderId], references: [id])
+
+  reason     String?
+  resolution CancellationResolution @default(OPEN)
+  resolvedAt DateTime?
+
+  createdAt DateTime @default(now())
+}
+
+/// Webhook idempotency (research R-007, FR-029). The handler inserts first —
+/// a unique-constraint violation IS the duplicate check.
+///
+/// Stores only the dispute-relevant payload fields, never the entire raw
+/// notification (T074) — the notification also carries customer name, phone
+/// and email, which already live on the Order and would otherwise be an
+/// unbounded, undeclared second copy of PII (ADR-0002 negative consequence).
+/// grossAmount/paymentType/transactionTime/signatureKey are nulled by a
+/// 90-day purge (T075) while the idempotency key and `applied` are retained,
+/// so a late retry still dedupes correctly after the purge.
+model ProcessedNotification {
+  id String @id @default(cuid())
+
+  transactionId     String
+  transactionStatus String
+  statusCode        String
+
+  orderNumber String
+  applied     Boolean
+
+  grossAmount     Int?
+  paymentType     String?
+  transactionTime DateTime?
+  signatureKey    String?
+
+  createdAt DateTime @default(now())
+
+  @@unique([transactionId, transactionStatus, statusCode])
+}
+
+/// Fixed-window counters (research R-011, FR-041, FR-056).
+model RateLimit {
+  bucket      String
+  identifier  String
+  windowStart DateTime
+  count       Int
+
+  @@unique([bucket, identifier, windowStart])
+}
+
+/// Small key/value store for the one owner-editable operational value (FR-063).
+model Setting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+// ---------------------------------------------------------------------------
+// Catalogue (003-catalogue-database, Constitution v2.0.0 Principle III)
+// ---------------------------------------------------------------------------
+
+enum ProductStatus {
+  ACTIVE
+  COMING_SOON
+  DRAFT
+}
+
+model Category {
+  id        String    @id @default(cuid())
+  slug      String    @unique
+  nameId    String
+  nameEn    String
+  position  Int       @default(0)
+  products  Product[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+/// Money is whole IDR (Principle IV). CHECK constraints in the add_catalogue
+/// migration: price > 0, compare-at > price, ACTIVE requires a price,
+/// soldCountBaseline >= 0 — Prisma's schema language cannot express them.
+model Product {
+  id                String        @id @default(cuid())
+  slug              String        @unique
+  sku               String?       @unique
+  status            ProductStatus @default(DRAFT)
+  categoryId        String
+  category          Category      @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  priceIDR          Int?
+  compareAtPriceIDR Int?
+  /// CHECK Product_sample_coming_soon (sample_coming_soon_check migration):
+  /// a sample is always COMING_SOON (Constitution VII, R-402).
+  isSample          Boolean       @default(false)
+  position          Int           @default(0)
+  videoUrl          String?
+  videoPosterUrl    String?
+  soldCountBaseline Int           @default(0)
+  publishedAt       DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  translations ProductTranslation[]
+  images       ProductImage[]
+  stockLevel   StockLevel?
+  stockChanges StockChange[]
+  orders       Order[]
+  reviews      Review[]
+
+  @@index([status, categoryId])
+}
+
+/// One row per locale; CHECK (locale IN ('id','en')) in the migration.
+model ProductTranslation {
+  productId        String
+  product          Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  locale           String
+  name             String
+  shortDescription String
+  longDescription  String
+  highlights       String[]
+  /// [{ label, value }] — validated by productInputSchema on write.
+  specs            Json
+  seoTitle         String?
+  seoDescription   String?
+  videoAlt         String?
+
+  @@id([productId, locale])
+}
+
+model ProductImage {
+  id          String  @id @default(cuid())
+  productId   String
+  product     Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url         String
+  width       Int
+  height      Int
+  /// landscape | portrait | square — drives the hero's art direction.
+  orientation String
+  altId       String
+  altEn       String
+  position    Int
+
+  @@index([productId, position])
+}

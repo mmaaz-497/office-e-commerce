@@ -1,0 +1,1035 @@
+{
+  "home": {
+    "metadata": {
+      "title": "Tokoshopee — Gemoy Slippers: Soft, Anti-Slip, All Size",
+      "description": "Shop Gemoy Slippers at Tokoshopee: soft, anti-slip, a cute design and one size for all. Pay online or cash on delivery, shipped fast across Indonesia."
+    },
+    "hero": {
+      "region": "Gemoy Slippers promotional banners",
+      "goToSlide": "Go to banner {number}",
+      "viewProduct": "View product {name}",
+      "previous": "Previous banner",
+      "next": "Next banner",
+      "viewDetail": "View product details"
+    },
+    "featured": {
+      "title": "Featured products"
+    },
+    "comingSoon": {
+      "title": "Coming soon",
+      "subtitle": "Products we are still preparing. They cannot be ordered yet.",
+      "viewAll": "See all"
+    },
+    "nav": {
+      "label": "Main navigation",
+      "howToOrder": "How to Order",
+      "checkOrder": "Check Order",
+      "writeReview": "Write a Review",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "languageLabel": "Language",
+      "categories": "Categories",
+      "help": "Help",
+      "menuTitle": "Menu",
+      "buy": "Buy"
+    },
+    "announce": {
+      "noAccount": "Order without creating an account"
+    },
+    "benefits": {
+      "eyebrow": "Why Gemoy Slippers",
+      "title": "Built to be worn all day",
+      "subtitle": "The four things buyers ask about most, answered by the slippers themselves.",
+      "empukNyaman": "Thick foam that softens every step, comfortable from morning to night.",
+      "antiSlip": "A textured sole that keeps your footing sure on slippery tiled floors.",
+      "designLucu": "A gemoy design that makes staying home nicer and still looks good on.",
+      "allSize": "One size for everyone, so there is no number to pick when you order."
+    },
+    "benefitTitles": {
+      "empukNyaman": "Soft & comfy",
+      "antiSlip": "Anti-slip",
+      "designLucu": "Cute design",
+      "allSize": "One size fits all"
+    },
+    "steps": {
+      "eyebrow": "How to order",
+      "title": "Four steps, no account needed",
+      "subtitle": "From choosing a quantity to the parcel in your hands — all from one page.",
+      "s1": {
+        "title": "Choose a quantity",
+        "body": "Open the product page, pick how many pairs you want, then press Buy Now."
+      },
+      "s2": {
+        "title": "Fill in your address",
+        "body": "Enter your name, phone/WhatsApp number and full delivery address."
+      },
+      "s3": {
+        "title": "Choose how to pay",
+        "body": "Pay online through Midtrans, or cash on delivery where it is available for your province."
+      },
+      "s4": {
+        "title": "Keep your order number",
+        "body": "Your order number and phone number are what let you check the status at any time."
+      },
+      "link": "Read the full guide"
+    },
+    "paymentDelivery": {
+      "eyebrow": "Payment & delivery",
+      "title": "How payment and delivery work",
+      "online": "Pay online through Midtrans.",
+      "codAll": "Cash on delivery (COD) is available in every province.",
+      "codExcept": "Cash on delivery (COD) is available, except for addresses in {provinces}.",
+      "codFee": "Any COD fee is shown in the order summary before the order is placed.",
+      "shipping": "Shipping is calculated from the destination province and shown before you pay."
+    },
+    "quickAccess": {
+      "title": "Quick access",
+      "featured": "Featured product",
+      "checkOrder": "Check order",
+      "howToOrder": "How to order",
+      "cod": "Cash on delivery",
+      "writeReview": "Write a review"
+    },
+    "sideBanner": {
+      "label": "See {name} on this page"
+    }
+  },
+  "faq": {
+    "eyebrow": "Common questions",
+    "title": "What buyers ask most",
+    "subtitle": "Still unanswered? The full guide lives on the How to Order page.",
+    "items": {
+      "cod": {
+        "q": "Can I pay cash on delivery (COD)?",
+        "a": "Yes, for the provinces where we offer it. As you fill in your address, the COD option appears by itself when it is available there, along with its COD fee. Where it is not available, you can still order with an online payment."
+      },
+      "ongkir": {
+        "q": "How much is shipping?",
+        "a": "Shipping is calculated from the destination province and the number of pairs you order, then shown in the order summary before you press Place Order. Nothing extra is added after the order is made."
+      },
+      "ukuran": {
+        "q": "What sizes are available?",
+        "a": "Gemoy Slippers are made in one size for all, so there is no number to choose when you order."
+      },
+      "pengembalian": {
+        "q": "What if the item is not what I expected?",
+        "a": "Items that arrive damaged, faulty or not as ordered can be submitted for a return within the window stated on the Return Policy page. Contact us with your order number and photos of the item, and wait for our confirmation before sending anything back."
+      },
+      "lacak": {
+        "q": "How do I track my order?",
+        "a": "Open the Check Order page and enter your order number together with the phone number you used when ordering. Payment status, delivery status and the tracking number all appear there."
+      },
+      "akun": {
+        "q": "Do I need to create an account first?",
+        "a": "No. Orders are placed straight from the product page, and your order number together with your phone number takes the place of an account for checking or cancelling an order."
+      }
+    }
+  },
+  "product": {
+    "metadata": {
+      "title": "Gemoy Slippers Rp169,999 - Soft & Anti-Slip | Tokoshopee",
+      "description": "Gemoy Slippers: soft, anti-slip, cute design, one size fits all. Rp169,999, pay Cash on Delivery or online, fast delivery across Indonesia. Order now!"
+    },
+    "name": "Slippers Gemoy",
+    "buyNow": "Buy Now",
+    "sold": "{count} sold",
+    "gallery": {
+      "label": "Product gallery",
+      "thumb": "View photo {number}",
+      "videoThumb": "Play product video",
+      "thumbs": "Choose a photo or video"
+    },
+    "quantity": {
+      "label": "Quantity",
+      "decrease": "Decrease quantity",
+      "increase": "Increase quantity"
+    },
+    "alt": {
+      "seharian": "Gemoy Slippers worn all day at home",
+      "nyaman": "Gemoy Slippers, soft and comfortable on the feet",
+      "hadiah": "Gemoy Slippers as a gift idea",
+      "santai": "Gemoy Slippers for relaxing at home",
+      "collage": "A collage of Gemoy Slippers seen from several angles",
+      "newArrival": "Gemoy Slippers, the newest arrival",
+      "video": "Video of Gemoy Slippers: soft padding and an anti-slip sole"
+    },
+    "benefit": {
+      "empukNyaman": "Soft & comfy",
+      "antiSlip": "Anti-slip",
+      "designLucu": "Cute design",
+      "allSize": "One size fits all"
+    },
+    "comingSoon": {
+      "badge": "Coming soon"
+    },
+    "stock": {
+      "inStock": "In stock",
+      "low": "Only {count} left",
+      "out": "Out of stock"
+    },
+    "total": "Total",
+    "sections": {
+      "description": "Description",
+      "specs": "Specifications"
+    },
+    "ratingLine": "({count} reviews)",
+    "trust": {
+      "online": "Pay online via Midtrans",
+      "codAll": "Cash on delivery (COD) available",
+      "codSome": "Cash on delivery (COD) available, except in some provinces",
+      "returns": "Return policy"
+    }
+  },
+  "trust": {
+    "aman": "Safe to wear",
+    "premium": "Premium quality",
+    "fastDelivery": "Fast delivery"
+  },
+  "checkout": {
+    "metadata": {
+      "title": "Checkout Gemoy Slippers | Tokoshopee",
+      "description": "Complete your Gemoy Slippers order: enter your address, choose a quantity, and pay by Cash on Delivery or online via Midtrans. Fast, secure checkout from your phone."
+    },
+    "address": {
+      "province": "Province",
+      "provincePlaceholder": "Select province",
+      "city": "City/Regency",
+      "cityPlaceholder": "Select city/regency",
+      "district": "District",
+      "postalCode": "Postal Code",
+      "streetAddress": "Full Street Address"
+    },
+    "summary": {
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "codFee": "COD Fee",
+      "total": "Total"
+    },
+    "form": {
+      "name": "Full Name",
+      "phone": "Phone/WhatsApp Number",
+      "email": "Email (optional)",
+      "quantity": "Quantity",
+      "paymentMethod": "Payment Method",
+      "paymentOnline": "Pay Online",
+      "paymentCod": "Cash on Delivery (COD)",
+      "codUnavailableExplanation": "COD is not available for this province. Please choose online payment.",
+      "note": "Note (optional)",
+      "submitting": "Processing...",
+      "submit": "Place Order"
+    }
+  },
+  "confirmation": {
+    "metadata": {
+      "title": "Order Received | Tokoshopee",
+      "description": "Thank you! Your Gemoy Slippers order has been received and is being processed. Save this order number to track your payment and shipping status at any time."
+    },
+    "title": "Order Placed Successfully!",
+    "nextSteps": "Save your order number. For online orders, complete payment through Midtrans. We'll process your order shortly.",
+    "lookupLink": "Check Order Status",
+    "continueShopping": "Continue shopping"
+  },
+  "reviews": {
+    "title": "Customer Reviews",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "review": {
+    "metadata": {
+      "title": "Write a Review for Gemoy Slippers | Tokoshopee",
+      "description": "Already received your Gemoy Slippers? Share an honest review about comfort, quality, and delivery speed to help other shoppers decide with more confidence."
+    },
+    "title": "Write a Review",
+    "submitted": "Thank you! Your review has been submitted and is awaiting approval.",
+    "form": {
+      "orderNumber": "Order Number",
+      "phone": "Phone/WhatsApp Number",
+      "verify": "Continue",
+      "verifying": "Checking...",
+      "rating": "Rating",
+      "starLabel": "{star} stars",
+      "reviewerName": "Your Name",
+      "comment": "Comment (optional)",
+      "submit": "Submit Review",
+      "submitting": "Submitting..."
+    }
+  },
+  "errors": {
+    "insufficientStock": "Insufficient stock. Available: {available}",
+    "codUnavailable": "COD is not available for this province",
+    "paymentProviderUnavailable": "Online payment is temporarily unavailable. Please try again, or place the order with Cash on Delivery.",
+    "paymentProviderUnreachable": "Could not reach the payment provider. The order was left unchanged — try again shortly.",
+    "validation": "Please check the information you entered",
+    "unknownCity": "City/regency not recognised",
+    "unknownProvince": "Province not recognised",
+    "invalidPostalCode": "Postal code must be 5 digits",
+    "cityProvinceMismatch": "City/regency does not belong to the selected province",
+    "invalidTransition": "This status change is not allowed",
+    "rateLimited": "Too many attempts. Please try again later.",
+    "orderLookupFailed": "Order not found. Please check the order number and phone number.",
+    "reviewNotEligible": "You are not yet eligible to review this order",
+    "duplicateReview": "You have already reviewed this order",
+    "unauthorized": "Your session has expired. Please sign in again.",
+    "fulfilmentConflict": "This order has an unresolved stock conflict and cannot be shipped.",
+    "invalidCredentials": "Incorrect username or password",
+    "cancellationAlreadyRequested": "You have already requested cancellation for this order",
+    "productUnavailable": "This product is not available for purchase right now.",
+    "productChanged": "This product was changed elsewhere. Reload to see the latest version.",
+    "stockChanged": "Stock changed to {current} since you opened this page. Check it and save again.",
+    "statusLocked": "This status can't be chosen yet.",
+    "slugLocked": "The web address can't change after the product has been published.",
+    "sampleStatusLocked": "A sample product can only be coming soon. Mark it as a real product first.",
+    "sampleStockLocked": "A sample product's stock can't be set. Mark it as a real product first.",
+    "unpublishNeedsConfirmation": "Confirm before taking this product off sale."
+  },
+  "orderStatus": {
+    "PENDING_PAYMENT": "Awaiting Payment",
+    "PAID": "Paid",
+    "COD_PENDING": "Awaiting COD Confirmation",
+    "CONFIRMED": "Confirmed",
+    "SHIPPED": "Shipped",
+    "COMPLETED": "Completed",
+    "CANCELLED": "Cancelled",
+    "EXPIRED": "Expired",
+    "RETURNED": "Returned"
+  },
+  "timelineActor": {
+    "CUSTOMER": "Customer",
+    "OWNER": "Shop Owner",
+    "PAYMENT_PROVIDER": "Payment Provider",
+    "SYSTEM": "System"
+  },
+  "lookup": {
+    "metadata": {
+      "title": "Check Your Order Status | Tokoshopee",
+      "description": "Track your Gemoy Slippers order using your order number and phone number. See payment and shipping status, and request cancellation while your order still qualifies."
+    },
+    "title": "Check Order Status",
+    "form": {
+      "orderNumber": "Order Number",
+      "phone": "Phone/WhatsApp Number",
+      "submit": "Check Order",
+      "submitting": "Checking..."
+    },
+    "results": {
+      "status": "Status",
+      "quantity": "Quantity",
+      "unitPrice": "Unit Price",
+      "shipping": "Shipping",
+      "codFee": "COD Fee",
+      "total": "Total",
+      "trackingNumber": "Tracking Number",
+      "trackingNumberPending": "Not yet available",
+      "timeline": "Status Timeline"
+    },
+    "cancellation": {
+      "cancelButton": "Cancel Order",
+      "reasonPlaceholder": "Cancellation reason (optional)",
+      "requestButton": "Request Cancellation",
+      "requestSubmitted": "Your cancellation request has been sent and is awaiting the shop owner's decision."
+    }
+  },
+  "footer": {
+    "navLabel": "Store information",
+    "links": {
+      "howToOrder": "How to Order",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "returns": "Return Policy"
+    },
+    "tagline": "The home of Gemoy Slippers. Order without an account, pay online or cash on delivery, shipped across Indonesia.",
+    "columns": {
+      "shop": "Shop",
+      "help": "Help",
+      "legal": "Legal"
+    },
+    "shopLinks": {
+      "checkOrder": "Check Order",
+      "writeReview": "Write a Review"
+    },
+    "payment": {
+      "title": "Payment & delivery",
+      "online": "Pay online through Midtrans",
+      "cod": "COD in selected provinces",
+      "shipping": "Shipping shown before you pay"
+    },
+    "copyright": "© {year} Tokoshopee. All rights reserved.",
+    "backToTop": "Back to top"
+  },
+  "howToOrder": {
+    "metadata": {
+      "title": "How to Order | Tokoshopee",
+      "description": "A guide to ordering Gemoy Slippers from Tokoshopee: choose a quantity, enter your shipping address, pick Cash on Delivery or online payment, then await delivery."
+    },
+    "title": "How to Order",
+    "intro": "Order straight from the product page. You do not need to create an account.",
+    "steps": {
+      "heading": "Ordering Steps",
+      "s1": "Choose a quantity on the product page, then press Buy Now.",
+      "s2": "Fill in your name, phone/WhatsApp number and full delivery address.",
+      "s3": "Choose a payment method: pay online, or cash on delivery (COD) where it is available for your province.",
+      "s4": "Check the order summary — item price, shipping and the COD fee where it applies — then place the order.",
+      "s5": "Save your order number. The order number and your phone number are what you need to check the order's status."
+    },
+    "payment": {
+      "heading": "Payment",
+      "online": "Online payments are processed through Midtrans. You pay using any method offered on the Midtrans payment page.",
+      "cod": "Cash on delivery (COD) means you pay the courier when the order arrives. COD is not available in every province and carries a COD fee, shown in the order summary before you place the order.",
+      "expiry": "An online order that is not paid expires automatically, and the stock held for it is released."
+    },
+    "delivery": {
+      "heading": "Delivery",
+      "body": "Shipping is calculated from the destination province and the quantity ordered, and is always shown before you complete the order.",
+      "tracking": "Once the order has shipped, the tracking number appears on the Check Order page."
+    },
+    "help": {
+      "heading": "Need Help?",
+      "body": "Contact us at [PLACEHOLDER: store contact email]."
+    }
+  },
+  "terms": {
+    "metadata": {
+      "title": "Terms & Conditions | Tokoshopee",
+      "description": "Read Tokoshopee's terms for shopping: order formation, pricing, shipping costs, Cash on Delivery fees, cancellation rules, reviews, and seller liability details."
+    },
+    "title": "Terms & Conditions",
+    "intro": "By placing an order with this store, you agree to the terms below.",
+    "seller": {
+      "heading": "Seller Details",
+      "legalName": "Legal name: [PLACEHOLDER: store legal name]",
+      "address": "Address: [PLACEHOLDER: store full address]",
+      "contactEmail": "Contact email: [PLACEHOLDER: store contact email]"
+    },
+    "orders": {
+      "heading": "Orders",
+      "formation": "An order is formed when you complete the order form and receive an order number. That order number together with your phone number is the only way to access the order's details.",
+      "stock": "Orders can only be placed while stock is available. If stock is insufficient, no order is created.",
+      "expiry": "An online order that is not paid within the payment window expires and is cancelled automatically."
+    },
+    "pricing": {
+      "heading": "Prices and Fees",
+      "currency": "All prices are shown in Indonesian Rupiah (IDR) as whole amounts, with no fractional units.",
+      "shipping": "Shipping is calculated from the destination province and the quantity ordered, and is shown before the order is placed.",
+      "cod": "The COD fee, where it applies, is shown separately in the order summary."
+    },
+    "cancellation": {
+      "heading": "Cancellation",
+      "body": "An unpaid order can be cancelled by you directly from the Check Order page. An order that has been paid or confirmed can only be cancelled by submitting a cancellation request, which the shop owner approves or rejects."
+    },
+    "reviews": {
+      "heading": "Reviews",
+      "body": "Reviews can only be written by customers whose order is completed, and appear once the shop owner approves them. Reviews the owner enters from sales made outside this site are marked as owner-entered."
+    },
+    "liability": {
+      "heading": "Liability",
+      "body": "We are responsible for delivering goods that match the product description. We are not responsible for delays caused by the courier, or for an incorrect delivery address you supplied."
+    },
+    "changes": {
+      "heading": "Changes to These Terms",
+      "body": "These terms may change over time. The terms that apply to your order are the ones shown on this page when you placed it."
+    }
+  },
+  "privacy": {
+    "metadata": {
+      "title": "Privacy Policy | Tokoshopee",
+      "description": "Learn how Tokoshopee collects, uses, shares, and retains your personal data when you shop with us, including the rights you hold over that data as a customer."
+    },
+    "title": "Privacy Policy",
+    "intro": "This page explains what data we collect when you order, what it is used for, and how long we keep it.",
+    "controller": {
+      "heading": "Data Controller",
+      "legalName": "Legal name: [PLACEHOLDER: store legal name]",
+      "address": "Address: [PLACEHOLDER: store full address]",
+      "contactEmail": "Contact email: [PLACEHOLDER: store contact email]"
+    },
+    "collected": {
+      "heading": "What We Collect",
+      "contact": "Your name, phone/WhatsApp number, and email address if you provide one.",
+      "address": "Your delivery address: province, city/regency, district, postal code and street address.",
+      "order": "Order details: quantity, price, shipping, payment method, any note you write, order status and tracking number.",
+      "payment": "For online payments, the payment status we receive from Midtrans. We never receive or store your card details.",
+      "review": "If you write a review: the reviewer name, rating and comment.",
+      "technical": "The IP address of your request, used only to limit how many attempts can be made against the order lookup, review and admin sign-in forms.",
+      "noAccount": "This store has no customer accounts, so no customer passwords are stored."
+    },
+    "purpose": {
+      "heading": "How We Use It",
+      "body": "Your data is used to process, ship and follow up your order, and to show the order's status when you enter your order number and phone number.",
+      "noMarketing": "We do not send marketing email and we do not profile customers."
+    },
+    "sharing": {
+      "heading": "Who We Share It With",
+      "payment": "The order data needed to take payment is shared with Midtrans, our payment provider.",
+      "courier": "Your name, phone number and delivery address are shared with the courier so the order can be delivered.",
+      "noSale": "We do not sell or rent your data to anyone."
+    },
+    "retention": {
+      "heading": "How Long We Keep It",
+      "orders": "Order data is kept for as long as it is needed for bookkeeping and for handling returns.",
+      "reviews": "Approved reviews stay on the product page until the shop owner deletes them.",
+      "technical": "Rate-limiting records are kept briefly and are discarded once the limiting window has passed."
+    },
+    "rights": {
+      "heading": "Your Rights",
+      "body": "You can request a copy of, a correction to, or the deletion of your personal data by contacting us at [PLACEHOLDER: store contact email]. Deletion does not extend to data we are required to keep for bookkeeping."
+    }
+  },
+  "returns": {
+    "metadata": {
+      "title": "Returns Policy | Tokoshopee",
+      "description": "Learn the time window, eligibility rules, and process for returning or cancelling a Gemoy Slippers order, including the refund process for online payments."
+    },
+    "title": "Return Policy",
+    "intro": "This page explains when an order can be returned and how money is refunded.",
+    "window": {
+      "heading": "Return Window",
+      "body": "We accept return requests up to [PLACEHOLDER: return window in days] days after you receive the order."
+    },
+    "eligibility": {
+      "heading": "What Can Be Returned",
+      "e1": "Items that are unused and in the condition and packaging in which they arrived.",
+      "e2": "Items that arrived damaged, defective, or not matching what was ordered.",
+      "e3": "Orders for which you can provide the order number and the phone number used to place it."
+    },
+    "how": {
+      "heading": "How to Request a Return",
+      "s1": "Contact us at [PLACEHOLDER: store contact email] with your order number and photographs of the item.",
+      "s2": "Wait for our confirmation before sending anything back.",
+      "s3": "Send the item to the address we give you in that confirmation."
+    },
+    "refunds": {
+      "heading": "Refunds",
+      "manual": "Refunds for online payments are processed manually by the shop owner and are not automated. This store performs no automatic refund through the payment system: the owner transfers the money themselves and records a refund reference against your order.",
+      "cod": "For a COD order cancelled before delivery there is nothing to refund, because payment only happens when the item arrives.",
+      "timing": "We will tell you once a refund has been sent. How long it takes to reach your account depends on your bank or payment provider."
+    },
+    "cancellation": {
+      "heading": "Cancelling an Order",
+      "body": "An unpaid order can be cancelled by you directly from the Check Order page. An order that has been paid or confirmed needs a cancellation request that the shop owner approves."
+    },
+    "contact": {
+      "heading": "Contact",
+      "body": "Questions about returns can be sent to [PLACEHOLDER: store contact email]."
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "body": "The page you are looking for does not exist, or it has moved.",
+    "backToHome": "Back to Home"
+  },
+  "error": {
+    "title": "Something Went Wrong",
+    "body": "Sorry, something did not work as it should. Please try again in a moment.",
+    "retry": "Try Again",
+    "backToHome": "Back to Home"
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Sign In",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Sign In",
+      "submitting": "Processing..."
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "todayOrders": "Today's Orders",
+      "codAwaitingConfirmation": "COD Awaiting Confirmation",
+      "awaitingShipment": "Awaiting Shipment",
+      "currentStock": "Current Stock",
+      "conflicts": {
+        "title": "Order Conflicts Need Attention",
+        "reason": {
+          "PAID_STOCK_UNAVAILABLE": "Paid but stock is unavailable",
+          "PAID_AFTER_EXPIRY": "Payment received after the order expired"
+        }
+      },
+      "nav": {
+        "orders": "Order List",
+        "stock": "Manage Stock",
+        "reviews": "Manage Reviews",
+        "settings": "Settings"
+      },
+      "asOf": "Figures as of {timestamp} WIB",
+      "primaryAction": "Open order list",
+      "range": {
+        "legend": "Period",
+        "d7": "7 days",
+        "d30": "30 days",
+        "d90": "90 days",
+        "caption": "{days} days to today, Western Indonesian Time"
+      },
+      "kpi": {
+        "todayHint": "Placed today, Western Indonesian Time",
+        "revenueToday": "Revenue Today",
+        "revenueHint": "Paid online or confirmed for COD today",
+        "needsAction": "Needs Your Action",
+        "needsActionHint": "{cod} COD to confirm · {ship} to ship",
+        "stockHint": "About {days} days of cover at this period's rate",
+        "stockHintUnknown": "No units committed in this period",
+        "comparedUp": "▲ {percent}% vs yesterday",
+        "comparedDown": "▼ {percent}% vs yesterday",
+        "comparedFlat": "Level with yesterday",
+        "comparedNew": "No activity yesterday to compare"
+      },
+      "trend": {
+        "title": "Revenue & Orders",
+        "caption": "Revenue is recognised on the day an order is paid online or confirmed for COD, from the total frozen on that order.",
+        "revenue": "Revenue",
+        "orders": "Orders placed",
+        "peak": "Peak {revenue}",
+        "empty": "No orders placed and no payments received in this period.",
+        "point": "{day} — {revenue} · {orders} placed · {paid} paid"
+      },
+      "mix": {
+        "title": "Status Mix",
+        "caption": "Orders placed in this period, by the status they hold now.",
+        "total": "orders",
+        "empty": "No orders placed in this period.",
+        "legendRow": "{status}: {count} ({percent}%)",
+        "paymentMix": "Payment method"
+      },
+      "pipeline": {
+        "title": "Open Pipeline",
+        "caption": "Orders still in flight, valued at the total frozen on each one.",
+        "empty": "Nothing in flight — every order has reached a final status.",
+        "count": "{count, plural, one {# order} other {# orders}}",
+        "conversion": "Paid conversion",
+        "conversionHint": "{paid} of {created} orders placed in this period were paid or confirmed",
+        "fulfilment": "Completed",
+        "fulfilmentHint": "{completed} of {total} orders ever placed reached Completed",
+        "noBasis": "No orders yet"
+      },
+      "attention": {
+        "title": "Requires Attention",
+        "allClear": "Nothing needs attention right now.",
+        "cancellations": "Cancellation requests awaiting your decision",
+        "expiring": "Unpaid orders expiring within 6 hours",
+        "expired": "Past expiry",
+        "expiresIn": "{hours}h left",
+        "stale": "Awaiting shipment, unchanged for 48 hours or more",
+        "staleFor": "Unchanged {hours}h",
+        "reviews": "Reviews awaiting moderation",
+        "reviewsCount": "{count, plural, one {# review} other {# reviews}}",
+        "moderate": "Moderate",
+        "stock": "Stock is empty — the storefront cannot take new orders",
+        "restock": "Adjust stock",
+        "noReason": "No reason given",
+        "staleForDays": "Unchanged {days}d"
+      },
+      "quickActions": {
+        "title": "Quick Actions",
+        "confirmCod": "Confirm COD orders",
+        "shipPaid": "Ship paid orders",
+        "chaseUnpaid": "Chase unpaid orders",
+        "adjustStock": "Adjust stock",
+        "moderateReviews": "Moderate reviews",
+        "shipConfirmed": "Ship confirmed COD orders"
+      },
+      "recentOrders": {
+        "title": "Latest Orders",
+        "viewAll": "View all",
+        "empty": "No orders yet.",
+        "columns": {
+          "order": "Order",
+          "status": "Status",
+          "payment": "Payment",
+          "customer": "Customer",
+          "total": "Total",
+          "placed": "Placed"
+        }
+      },
+      "activity": {
+        "title": "Recent Activity",
+        "empty": "No status changes yet.",
+        "placed": "Placed",
+        "by": "by {actor}"
+      },
+      "unavailable": {
+        "title": "Figures Unavailable",
+        "body": "The dashboard could not read the store's figures. Nothing has changed — the other admin pages still work, and reloading usually resolves it.",
+        "retry": "Try again"
+      },
+      "links": {
+        "products": "Products",
+        "categories": "Categories"
+      }
+    },
+    "orders": {
+      "title": "Order List",
+      "filters": {
+        "allStatuses": "All Statuses",
+        "allPaymentMethods": "All Payment Methods",
+        "searchPlaceholder": "Search order number or phone",
+        "apply": "Apply",
+        "status": "Status",
+        "paymentMethod": "Payment method",
+        "period": "Period",
+        "search": "Search",
+        "applying": "Applying...",
+        "reset": "Reset filters"
+      },
+      "table": {
+        "orderNumber": "Order No.",
+        "status": "Status",
+        "paymentMethod": "Payment Method",
+        "customer": "Customer",
+        "total": "Total",
+        "placed": "Placed"
+      },
+      "periods": {
+        "all": "All time",
+        "today": "Today",
+        "7d": "Last 7 days",
+        "30d": "Last 30 days"
+      },
+      "resultCount": "{count, plural, =0 {No orders} one {# order} other {# orders}}",
+      "filtered": "filtered",
+      "backToDashboard": "Back to dashboard",
+      "empty": "No orders yet.",
+      "emptyFiltered": "No orders match these filters.",
+      "emptyFilteredHint": "Widen the period, clear the status or payment method, or check the search term.",
+      "impossiblePair": "{status} and {paymentMethod} cannot occur together: COD orders are confirmed rather than paid, and online orders are paid rather than confirmed. Clear one of the two."
+    },
+    "orderDetail": {
+      "status": "Status",
+      "paymentMethod": "Payment Method",
+      "customer": "Customer",
+      "address": "Address",
+      "quantity": "Quantity",
+      "total": "Total",
+      "trackingNumber": "Tracking Number",
+      "conflict": "Conflict",
+      "cancellationRequestPending": "A cancellation request is awaiting your decision.",
+      "timeline": "Status Timeline",
+      "actions": {
+        "confirmCod": "Confirm COD",
+        "markShipped": "Mark Shipped",
+        "trackingNumberPlaceholder": "Tracking number",
+        "markCompleted": "Mark Completed",
+        "markReturned": "Mark Returned",
+        "cancel": "Cancel Order",
+        "refundReferencePlaceholder": "Refund reference (optional)",
+        "recheckPayment": "Re-check Payment Status",
+        "approveCancellation": "Approve Cancellation",
+        "rejectCancellation": "Reject Cancellation",
+        "submitting": "Processing..."
+      }
+    },
+    "stock": {
+      "title": "Stock",
+      "current": "Current stock",
+      "form": {
+        "delta": "Change (+/-)",
+        "note": "Reason",
+        "submit": "Save",
+        "submitting": "Processing..."
+      },
+      "log": "Stock Change Log",
+      "logTable": {
+        "date": "Date",
+        "delta": "Change",
+        "resulting": "Resulting",
+        "reason": "Reason",
+        "note": "Note",
+        "order": "Order"
+      }
+    },
+    "reviews": {
+      "title": "Reviews",
+      "addOwnerReview": "Add Offline Review",
+      "list": "All Reviews",
+      "published": "Published",
+      "unpublished": "Not Published",
+      "form": {
+        "rating": "Rating",
+        "reviewerName": "Reviewer Name",
+        "comment": "Comment",
+        "reviewedAt": "Review Date",
+        "submit": "Save",
+        "submitting": "Processing..."
+      },
+      "actions": {
+        "approve": "Approve",
+        "unpublish": "Unpublish",
+        "delete": "Delete"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "form": {
+        "baseline": "Offline Sold-Count Baseline",
+        "submit": "Save",
+        "submitting": "Processing..."
+      }
+    },
+    "orderStatus": {
+      "PENDING_PAYMENT": "Awaiting payment",
+      "PAID": "Paid",
+      "COD_PENDING": "COD to confirm",
+      "CONFIRMED": "Confirmed",
+      "SHIPPED": "Shipped",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled",
+      "EXPIRED": "Expired",
+      "RETURNED": "Returned"
+    },
+    "paymentMethod": {
+      "ONLINE": "Online",
+      "COD": "COD"
+    },
+    "actor": {
+      "CUSTOMER": "customer",
+      "OWNER": "you",
+      "PAYMENT_PROVIDER": "payment provider",
+      "SYSTEM": "system"
+    },
+    "products": {
+      "title": "Products",
+      "filters": {
+        "legend": "Filter products",
+        "status": "Status",
+        "statusAll": "All statuses",
+        "category": "Category",
+        "categoryAll": "All categories",
+        "search": "Search",
+        "searchPlaceholder": "Name, web address or SKU",
+        "clear": "Clear filters"
+      },
+      "table": {
+        "caption": "Products, ordered by position",
+        "image": "Image",
+        "name": "Name",
+        "category": "Category",
+        "status": "Status",
+        "price": "Price",
+        "stock": "Stock"
+      },
+      "noImage": "No image",
+      "noPrice": "—",
+      "noStock": "—",
+      "sample": "Sample",
+      "status": {
+        "ACTIVE": "Active",
+        "COMING_SOON": "Coming soon",
+        "DRAFT": "Draft"
+      },
+      "empty": {
+        "title": "No products found",
+        "body": "No product matches these filters."
+      },
+      "backToList": "Back to products",
+      "newButton": "New product",
+      "create": {
+        "title": "New product",
+        "help": "A new product is saved as a draft. It stays off the shop until it is published."
+      },
+      "edit": {
+        "title": "Edit product",
+        "currentStock": "Current stock",
+        "stockHelp": "Stock is changed from the products list or the Stock page, never from this form."
+      },
+      "markReal": {
+        "button": "Mark as a real product",
+        "title": "Mark as a real product?",
+        "body": "This can't be undone. The product stops being a sample, and the sample cleanup will never remove it.",
+        "confirm": "Yes, mark as a real product",
+        "cancel": "Cancel",
+        "done": "This is now a real product."
+      },
+      "unpublish": {
+        "title": "Take this product off sale?",
+        "body": "Customers can no longer see or buy this product. Orders, stock history and reviews are kept.",
+        "lastActive": "This is the only product on sale. Once saved, the store has no product that can be bought.",
+        "confirm": "Yes, take it off sale",
+        "cancel": "Cancel"
+      }
+    },
+    "productForm": {
+      "sections": {
+        "basics": "Basics",
+        "price": "Price",
+        "images": "Images",
+        "id": "Indonesian",
+        "en": "English"
+      },
+      "optional": "(optional)",
+      "slug": "Web address",
+      "slugHelp": "Lowercase letters, numbers and single hyphens, 3–80 characters.",
+      "slugLockedHelp": "Locked because the product has been published.",
+      "sku": "SKU",
+      "skuHelp": "3–32 capital letters, numbers or hyphens.",
+      "category": "Category",
+      "status": "Status",
+      "statusFixedHelp": "Only this status can be chosen for now.",
+      "sampleStatusHelp": "A sample product is always coming soon. Mark it as a real product to change this.",
+      "position": "Position",
+      "positionHelp": "Lower numbers appear first, 0–9999.",
+      "priceIDR": "Selling price (IDR)",
+      "priceHelp": "Whole rupiah, from 1,000 to 100,000,000.",
+      "compareAtPriceIDR": "Original price (IDR)",
+      "compareAtHelp": "Shown struck through. Must be higher than the selling price.",
+      "pricePreview": "Shown as {price}",
+      "name": "Name",
+      "shortDescription": "Short description",
+      "shortDescriptionHelp": "20–200 characters.",
+      "longDescription": "Long description",
+      "highlights": "Highlights",
+      "highlightsHelp": "Up to 6 short points.",
+      "highlightLabel": "Highlight {index}",
+      "addHighlight": "Add highlight",
+      "removeHighlight": "Remove highlight {index}",
+      "specs": "Specifications",
+      "specsHelp": "Up to 20 rows.",
+      "specLabel": "Label {index}",
+      "specValue": "Value {index}",
+      "addSpec": "Add row",
+      "removeSpec": "Remove row {index}",
+      "seoTitle": "Search result title",
+      "seoDescription": "Search result description",
+      "counter": "{count}/{max}",
+      "imageList": {
+        "count": "{count} of {max} images",
+        "empty": "No images yet.",
+        "preview": "Image {index}",
+        "altId": "Alt text, Indonesian",
+        "altEn": "Alt text, English",
+        "moveUp": "Move up",
+        "moveDown": "Move down",
+        "remove": "Remove"
+      },
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Saved",
+      "reload": "Reload",
+      "errorSummary": "Some fields need attention. Check the messages beside them.",
+      "signInAgain": "Sign in again in a new tab",
+      "errors": {
+        "tooShort": "Enter at least {minimum} characters.",
+        "tooLong": "Use at most {maximum} characters.",
+        "tooFew": "Add at least {minimum}.",
+        "tooMany": "Use at most {maximum} items.",
+        "tooManyImages": "A product can have at most {maximum} images.",
+        "numberMin": "Enter at least {minimum}.",
+        "numberMax": "Enter at most {maximum}.",
+        "slugFormat": "Use lowercase letters, numbers and single hyphens.",
+        "skuFormat": "Use 3–32 capital letters, numbers or hyphens.",
+        "required": "This field is required.",
+        "wholeNumber": "Enter a whole number.",
+        "invalid": "Check this field.",
+        "compareAtNeedsPrice": "An original price needs a selling price.",
+        "compareAtAbovePrice": "The original price must be higher than the selling price.",
+        "videoNeedsAlt": "A video needs a description in both languages.",
+        "activeNeedsPrice": "An active product needs a price.",
+        "listedNeedsImage": "A listed product needs at least one image.",
+        "marketplaceBrand": "Names of other marketplaces are not allowed.",
+        "slugTaken": "Another product already uses this web address.",
+        "skuTaken": "Another product already uses this SKU.",
+        "slugLocked": "The web address can't change after the product has been published.",
+        "categoryUnknown": "Choose an existing category.",
+        "imageUnknown": "This image is neither on the product nor an uploaded file.",
+        "stockRequired": "An active product needs stock. Set its stock in the products list first.",
+        "sampleStatusLocked": "A sample product can only be coming soon."
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "new": "New category",
+      "table": {
+        "nameId": "Name (Indonesian)",
+        "nameEn": "Name (English)",
+        "slug": "Web address",
+        "position": "Position",
+        "products": "Products"
+      },
+      "slug": "Web address",
+      "nameId": "Name, Indonesian",
+      "nameEn": "Name, English",
+      "position": "Position",
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Saved",
+      "empty": {
+        "title": "No categories yet",
+        "body": "Create the first category above."
+      },
+      "errorSummary": "Some fields need attention. Check the messages beside them.",
+      "errors": {
+        "slugTaken": "Another category already uses this web address.",
+        "slugFormat": "Use lowercase letters, numbers and single hyphens.",
+        "tooShort": "Enter at least {minimum} characters.",
+        "tooLong": "Use at most {maximum} characters.",
+        "numberMin": "Enter at least {minimum}.",
+        "numberMax": "Enter at most {maximum}.",
+        "required": "This field is required.",
+        "wholeNumber": "Enter a whole number.",
+        "invalid": "Check this field."
+      }
+    },
+    "uploads": {
+      "label": "Add an image",
+      "help": "JPEG, PNG or WebP, at most 2 MB, at least 800×800 and square. 1200×1200 is recommended.",
+      "uploading": "Uploading…",
+      "full": "This product already has the maximum number of images.",
+      "errors": {
+        "unauthorized": "Your session has expired. Sign in again, then upload the image.",
+        "forbidden": "The upload was refused. Reload the page and try again.",
+        "lengthRequired": "The upload was refused. Reload the page and try again.",
+        "tooLarge": "The file is larger than 2 MB.",
+        "validation": "Choose exactly one image file.",
+        "unsupportedFormat": "Only JPEG, PNG and WebP images are accepted.",
+        "unreadable": "The image could not be read. Export it again and retry.",
+        "animated": "Animated images are not accepted.",
+        "tooSmall": "The image must be at least {minSide}×{minSide} pixels.",
+        "notSquare": "The image must be square, within {tolerancePercent}%.",
+        "failed": "The upload failed. Try again."
+      }
+    },
+    "stockInline": {
+      "label": "Stock for {name}",
+      "edit": "Edit",
+      "target": "New quantity",
+      "note": "Reason",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Saved",
+      "cancel": "Cancel",
+      "low": "{count} left",
+      "out": "Out of stock"
+    }
+  },
+  "category": {
+    "metadata": {
+      "title": "{name} — Tokoshopee",
+      "description": "Shop {name} at Tokoshopee. Order without an account, pay online through Midtrans or cash on delivery in selected provinces, and see shipping before you pay."
+    }
+  },
+  "card": {
+    "comingSoonPrice": "Coming soon",
+    "outOfStock": "Out of stock",
+    "discount": "-{n}%",
+    "compareAtSr": "Previous price"
+  },
+  "ui": {
+    "loading": "Processing…",
+    "optional": "(optional)"
+  },
+  "search": {
+    "metadata": {
+      "title": "Search products | Tokoshopee",
+      "description": "Search Tokoshopee for soft, non-slip sandals you can pay for online through Midtrans or by cash on delivery, with shipping shown before you pay for anything."
+    },
+    "label": "Search products",
+    "placeholder": "Search Tokoshopee",
+    "submit": "Search",
+    "promptTitle": "Search products",
+    "promptBody": "Type a product name or type in the search box above.",
+    "resultsTitle": "Results for “{q}”",
+    "resultsCount": "{count, plural, one {# product found} other {# products found}}",
+    "emptyTitle": "No products found",
+    "emptyBody": "Try another word, or browse every product on the homepage.",
+    "emptyAction": "Back to shopping"
+  }
+}

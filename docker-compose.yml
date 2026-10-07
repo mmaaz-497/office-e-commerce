@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tokoshopee
+      POSTGRES_PASSWORD: tokoshopee_dev
+      POSTGRES_DB: tokoshopee
+    ports:
+      # Bound to loopback only — never expose PostgreSQL publicly, in dev or prod.
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - tokoshopee_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tokoshopee -d tokoshopee"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  tokoshopee_db_data:

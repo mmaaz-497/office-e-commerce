@@ -1,0 +1,17 @@
+# Cron entries for Tokoshopee (research.md R-009, R-017; FR-026, SC-005).
+# Install with `crontab -e` as the same user that runs the app (so it can
+# read .env for JOB_SECRET and DATABASE_URL). Copy this file's two lines in —
+# do not run `crontab deploy/crontab.example` directly, since that replaces
+# the whole crontab rather than adding to it.
+
+# Expiry job every 5 minutes. This is the primary enforcement mechanism for
+# SC-005 ("expires within 5 minutes"); lazy evaluation on read (also in the
+# domain layer) is the safety net for orders nobody revisits, not a
+# substitute for this cron entry — see ADR-0002. Replace tokoshopee.com and
+# $JOB_SECRET with the real domain and the production secret from .env.
+*/5 * * * * curl -fsS -X POST https://tokoshopee.com/api/jobs/expire-orders -H "Authorization: Bearer $JOB_SECRET" >> /var/log/tokoshopee/expire-orders.log 2>&1
+
+# Nightly backup at 03:00 server time — pg_dump, then copied off this server
+# (deploy/backup.sh). Logged so a failed rclone copy doesn't fail silently
+# until the day it's needed.
+0 3 * * * /opt/tokoshopee/deploy/backup.sh >> /var/log/tokoshopee/backup.log 2>&1
