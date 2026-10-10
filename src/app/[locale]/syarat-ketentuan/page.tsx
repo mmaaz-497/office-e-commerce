@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { ContentPage, ContentParagraph, ContentSection } from "@/components/content/ContentPage";
+import {
+  ContentPage,
+  ContentParagraph,
+  ContentSection,
+  emailTag,
+} from "@/components/content/ContentPage";
 import { asAppLocale } from "@/i18n/pathnames";
 import { routeMetadata } from "@/infrastructure/seo/metadata";
 
 /**
- * Syarat & Ketentuan / Terms (FR-068, spec D-003). Store legal name, address
- * and contact email are PLACEHOLDER values until the client supplies them;
- * replacing them is a release blocker on the quickstart.md checklist.
+ * Syarat & Ketentuan / Terms (FR-068, spec D-003). Store legal name and
+ * address are PLACEHOLDER values until the client supplies them; replacing
+ * them is a release blocker on the quickstart.md checklist. The contact email
+ * comes from store.config.ts.
  */
 export async function generateMetadata({
   params,
@@ -34,7 +40,7 @@ export default async function TermsPage() {
       <ContentSection heading={t("seller.heading")}>
         <ContentParagraph>{t("seller.legalName")}</ContentParagraph>
         <ContentParagraph>{t("seller.address")}</ContentParagraph>
-        <ContentParagraph>{t("seller.contactEmail")}</ContentParagraph>
+        <ContentParagraph>{t.rich("seller.contactEmail", emailTag)}</ContentParagraph>
       </ContentSection>
 
       <ContentSection heading={t("orders.heading")}>

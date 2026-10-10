@@ -5,6 +5,7 @@ import {
   ContentPage,
   ContentParagraph,
   ContentSection,
+  emailTag,
 } from "@/components/content/ContentPage";
 import { asAppLocale } from "@/i18n/pathnames";
 import { routeMetadata } from "@/infrastructure/seo/metadata";
@@ -15,7 +16,7 @@ import { routeMetadata } from "@/infrastructure/seo/metadata";
  * are handled by hand: the system records a free-text refund reference and
  * makes no refund API call, so promising an automatic refund here would be a
  * claim the software does not keep. The return window is 7 days; the
- * contact email is PLACEHOLDER until the client supplies it.
+ * contact email comes from store.config.ts.
  */
 export async function generateMetadata({
   params,
@@ -48,7 +49,7 @@ export default async function ReturnPolicyPage() {
       </ContentSection>
 
       <ContentSection heading={t("how.heading")}>
-        <ContentList items={[t("how.s1"), t("how.s2"), t("how.s3")]} />
+        <ContentList items={[t.rich("how.s1", emailTag), t("how.s2"), t("how.s3")]} />
       </ContentSection>
 
       <ContentSection heading={t("refunds.heading")}>
@@ -62,7 +63,7 @@ export default async function ReturnPolicyPage() {
       </ContentSection>
 
       <ContentSection heading={t("contact.heading")}>
-        <ContentParagraph>{t("contact.body")}</ContentParagraph>
+        <ContentParagraph>{t.rich("contact.body", emailTag)}</ContentParagraph>
       </ContentSection>
     </ContentPage>
   );

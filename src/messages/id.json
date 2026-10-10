@@ -352,7 +352,8 @@
       "shipping": "Ongkir tampil sebelum bayar"
     },
     "copyright": "© {year} Tokoshopee. Seluruh hak cipta dilindungi.",
-    "backToTop": "Kembali ke atas"
+    "backToTop": "Kembali ke atas",
+    "contactEmail": "Kirim email ke {email}"
   },
   "howToOrder": {
     "metadata": {
@@ -382,7 +383,7 @@
     },
     "help": {
       "heading": "Butuh Bantuan?",
-      "body": "Hubungi kami di [PLACEHOLDER: alamat email kontak toko]."
+      "body": "Hubungi kami di <email></email>."
     }
   },
   "terms": {
@@ -396,7 +397,7 @@
       "heading": "Identitas Penjual",
       "legalName": "Nama badan usaha: [PLACEHOLDER: nama badan usaha toko]",
       "address": "Alamat: [PLACEHOLDER: alamat lengkap toko]",
-      "contactEmail": "Email kontak: [PLACEHOLDER: alamat email kontak toko]"
+      "contactEmail": "Email kontak: <email></email>"
     },
     "orders": {
       "heading": "Pesanan",
@@ -438,7 +439,7 @@
       "heading": "Pengelola Data",
       "legalName": "Nama badan usaha: [PLACEHOLDER: nama badan usaha toko]",
       "address": "Alamat: [PLACEHOLDER: alamat lengkap toko]",
-      "contactEmail": "Email kontak: [PLACEHOLDER: alamat email kontak toko]"
+      "contactEmail": "Email kontak: <email></email>"
     },
     "collected": {
       "heading": "Data yang Kami Kumpulkan",
@@ -469,7 +470,7 @@
     },
     "rights": {
       "heading": "Hak Anda",
-      "body": "Anda dapat meminta salinan, perbaikan, atau penghapusan data pribadi Anda dengan menghubungi kami di [PLACEHOLDER: alamat email kontak toko]. Penghapusan tidak berlaku bagi data yang wajib kami simpan untuk pembukuan."
+      "body": "Anda dapat meminta salinan, perbaikan, atau penghapusan data pribadi Anda dengan menghubungi kami di <email></email>. Penghapusan tidak berlaku bagi data yang wajib kami simpan untuk pembukuan."
     }
   },
   "returns": {
@@ -491,7 +492,7 @@
     },
     "how": {
       "heading": "Cara Mengajukan",
-      "s1": "Hubungi kami di [PLACEHOLDER: alamat email kontak toko] dengan nomor pesanan Anda dan foto barang.",
+      "s1": "Hubungi kami di <email></email> dengan nomor pesanan Anda dan foto barang.",
       "s2": "Tunggu konfirmasi dari kami sebelum mengirim barang kembali.",
       "s3": "Kirim barang ke alamat yang kami berikan pada konfirmasi tersebut."
     },
@@ -507,7 +508,7 @@
     },
     "contact": {
       "heading": "Kontak",
-      "body": "Pertanyaan mengenai pengembalian dapat Anda kirim ke [PLACEHOLDER: alamat email kontak toko]."
+      "body": "Pertanyaan mengenai pengembalian dapat Anda kirim ke <email></email>."
     }
   },
   "notFound": {

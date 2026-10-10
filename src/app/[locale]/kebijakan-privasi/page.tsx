@@ -5,6 +5,7 @@ import {
   ContentPage,
   ContentParagraph,
   ContentSection,
+  emailTag,
 } from "@/components/content/ContentPage";
 import { asAppLocale } from "@/i18n/pathnames";
 import { routeMetadata } from "@/infrastructure/seo/metadata";
@@ -13,8 +14,9 @@ import { routeMetadata } from "@/infrastructure/seo/metadata";
  * Kebijakan Privasi / Privacy Policy (FR-068, Constitution Principle IX).
  * The "what we collect" list is written from what the system actually stores
  * — order contact and address fields, the review, and the IP address the rate
- * limiter keys on — not from a generic template. Store legal name, address
- * and contact email remain PLACEHOLDER until the client supplies them.
+ * limiter keys on — not from a generic template. Store legal name and address
+ * remain PLACEHOLDER until the client supplies them; the contact email comes
+ * from store.config.ts.
  */
 export async function generateMetadata({
   params,
@@ -41,7 +43,7 @@ export default async function PrivacyPolicyPage() {
       <ContentSection heading={t("controller.heading")}>
         <ContentParagraph>{t("controller.legalName")}</ContentParagraph>
         <ContentParagraph>{t("controller.address")}</ContentParagraph>
-        <ContentParagraph>{t("controller.contactEmail")}</ContentParagraph>
+        <ContentParagraph>{t.rich("controller.contactEmail", emailTag)}</ContentParagraph>
       </ContentSection>
 
       <ContentSection heading={t("collected.heading")}>
@@ -76,7 +78,7 @@ export default async function PrivacyPolicyPage() {
       </ContentSection>
 
       <ContentSection heading={t("rights.heading")}>
-        <ContentParagraph>{t("rights.body")}</ContentParagraph>
+        <ContentParagraph>{t.rich("rights.body", emailTag)}</ContentParagraph>
       </ContentSection>
     </ContentPage>
   );

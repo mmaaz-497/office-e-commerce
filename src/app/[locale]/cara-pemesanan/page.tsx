@@ -5,14 +5,14 @@ import {
   ContentPage,
   ContentParagraph,
   ContentSection,
+  emailTag,
 } from "@/components/content/ContentPage";
 import { asAppLocale } from "@/i18n/pathnames";
 import { routeMetadata } from "@/infrastructure/seo/metadata";
 
 /**
  * Cara Pemesanan / How to Order (FR-068). Every string comes from the message
- * catalogues, and the contact address is a PLACEHOLDER until the owner
- * supplies it — see the release checklist in quickstart.md.
+ * catalogues; the contact address comes from store.config.ts.
  */
 export async function generateMetadata({
   params,
@@ -54,7 +54,7 @@ export default async function HowToOrderPage() {
       </ContentSection>
 
       <ContentSection heading={t("help.heading")}>
-        <ContentParagraph>{t("help.body")}</ContentParagraph>
+        <ContentParagraph>{t.rich("help.body", emailTag)}</ContentParagraph>
       </ContentSection>
     </ContentPage>
   );

@@ -352,7 +352,8 @@
       "shipping": "Shipping shown before you pay"
     },
     "copyright": "© {year} Tokoshopee. All rights reserved.",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "contactEmail": "Email {email}"
   },
   "howToOrder": {
     "metadata": {
@@ -382,7 +383,7 @@
     },
     "help": {
       "heading": "Need Help?",
-      "body": "Contact us at [PLACEHOLDER: store contact email]."
+      "body": "Contact us at <email></email>."
     }
   },
   "terms": {
@@ -396,7 +397,7 @@
       "heading": "Seller Details",
       "legalName": "Legal name: [PLACEHOLDER: store legal name]",
       "address": "Address: [PLACEHOLDER: store full address]",
-      "contactEmail": "Contact email: [PLACEHOLDER: store contact email]"
+      "contactEmail": "Contact email: <email></email>"
     },
     "orders": {
       "heading": "Orders",
@@ -438,7 +439,7 @@
       "heading": "Data Controller",
       "legalName": "Legal name: [PLACEHOLDER: store legal name]",
       "address": "Address: [PLACEHOLDER: store full address]",
-      "contactEmail": "Contact email: [PLACEHOLDER: store contact email]"
+      "contactEmail": "Contact email: <email></email>"
     },
     "collected": {
       "heading": "What We Collect",
@@ -469,7 +470,7 @@
     },
     "rights": {
       "heading": "Your Rights",
-      "body": "You can request a copy of, a correction to, or the deletion of your personal data by contacting us at [PLACEHOLDER: store contact email]. Deletion does not extend to data we are required to keep for bookkeeping."
+      "body": "You can request a copy of, a correction to, or the deletion of your personal data by contacting us at <email></email>. Deletion does not extend to data we are required to keep for bookkeeping."
     }
   },
   "returns": {
@@ -491,7 +492,7 @@
     },
     "how": {
       "heading": "How to Request a Return",
-      "s1": "Contact us at [PLACEHOLDER: store contact email] with your order number and photographs of the item.",
+      "s1": "Contact us at <email></email> with your order number and photographs of the item.",
       "s2": "Wait for our confirmation before sending anything back.",
       "s3": "Send the item to the address we give you in that confirmation."
     },
@@ -507,7 +508,7 @@
     },
     "contact": {
       "heading": "Contact",
-      "body": "Questions about returns can be sent to [PLACEHOLDER: store contact email]."
+      "body": "Questions about returns can be sent to <email></email>."
     }
   },
   "notFound": {

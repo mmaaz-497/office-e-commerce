@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Wordmark } from "@/components/ui/Wordmark";
+import { STORE_CONTACT_EMAIL } from "@/config/store.config";
 import { listStorefrontCategories } from "@/infrastructure/db/catalogue";
 import { localeHref } from "@/i18n/pathnames";
 import type { AppLocale, InternalPathname } from "@/i18n/routing";
@@ -15,7 +16,8 @@ import type { AppLocale, InternalPathname } from "@/i18n/routing";
  *
  * Belanja lists the storefront categories, so with JavaScript off — when the
  * header drawer cannot open — the same links are still one scroll away
- * (research R-509). It makes no business claim: no name, address or email.
+ * (research R-509). The contact email from store.config.ts is the only business
+ * detail shown; legal name and address stay off until the client supplies them.
  */
 const HELP_ROUTES: ReadonlyArray<{ internal: InternalPathname; messageKey: string }> = [
   { internal: "/cara-pemesanan", messageKey: "howToOrder" },
@@ -89,6 +91,15 @@ export async function Footer({ locale }: { locale: AppLocale }) {
                 </li>
               ))}
             </ul>
+
+            <a
+              href={`mailto:${STORE_CONTACT_EMAIL}`}
+              aria-label={t("contactEmail", { email: STORE_CONTACT_EMAIL })}
+              className={`${LINK} mt-3 gap-3 break-all`}
+            >
+              <Icon name="mail" className="text-accent h-4 w-4 shrink-0" />
+              {STORE_CONTACT_EMAIL}
+            </a>
           </div>
 
           <nav aria-label={t("navLabel")} className="contents">
