@@ -7,7 +7,6 @@ const UNIT_PRICE = 169999;
 const shipping = new FlatZoneShippingProvider({
   pairsPerKg: 2,
   zoneRatesIDR: { JK: 10000, JB: 15000, PP: 20000 },
-  codFeeIDR: 5000,
   codDisabledProvinces: ["PP"],
 });
 
@@ -28,15 +27,14 @@ describe("quoteOrder", () => {
           });
 
           expect(quote.subtotal).toBe(UNIT_PRICE * quantity);
-          expect(quote.total).toBe(quote.subtotal + quote.shippingCost + quote.codFee);
-          expect(quote.codFee).toBe(paymentMethod === "COD" ? 5000 : 0);
+          // COD is free: the total never depends on the payment method.
+          expect(quote.total).toBe(quote.subtotal + quote.shippingCost);
 
           for (const value of [
             quote.unitPrice,
             quote.quantity,
             quote.subtotal,
             quote.shippingCost,
-            quote.codFee,
             quote.billableWeightKg,
             quote.total,
           ]) {

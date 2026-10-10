@@ -11,10 +11,10 @@ figures the previous section describes as invented.
 ## Commercial and content placeholders
 
 - [ ] **`grep -r PLACEHOLDER src/config/ src/messages/` returns nothing.** As of this writing it
-      returns 44 hits in `shipping.config.ts` (every zone rate, the COD fee, and the
-      COD-disabled province list) and 11 hits in each message file (store legal name, address,
-      contact email, and the return window, each repeated across `howToOrder`, `terms`,
-      `privacy`, and `returns`). **The store charges invented shipping rates and displays a
+      returns 43 hits in `shipping.config.ts` (every zone rate and the COD-disabled province
+      list; COD is free, so there is no COD fee) and 10 hits in each message file (store legal
+      name, address and contact email, each repeated across `howToOrder`, `terms`, `privacy`,
+      and `returns`; the return window is set to 7 days). **The store charges invented shipping rates and displays a
       fake legal address until every one of these is replaced with a client-supplied figure.**
 - [ ] Opening stock set to the real figure via the admin stock page (not left at whatever the
       dev seed produced).

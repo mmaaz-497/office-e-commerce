@@ -4,7 +4,6 @@ import { FlatZoneShippingProvider } from "@/domain/shipping/flat-zone-provider";
 const provider = new FlatZoneShippingProvider({
   pairsPerKg: 2,
   zoneRatesIDR: { JK: 10000 },
-  codFeeIDR: 5000,
   codDisabledProvinces: [],
 });
 

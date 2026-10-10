@@ -10,7 +10,6 @@ export interface FlatZoneShippingConfig {
   pairsPerKg: number;
   /** Province code -> IDR rate per billable kilogram. */
   zoneRatesIDR: Readonly<Record<string, number>>;
-  codFeeIDR: number;
   codDisabledProvinces: readonly string[];
 }
 
@@ -35,8 +34,7 @@ export class FlatZoneShippingProvider implements ShippingProvider {
 
     const billableWeightKg = Math.ceil(quantity / this.config.pairsPerKg);
     const shippingCost = rate * billableWeightKg;
-    const codFee = paymentMethod === "COD" ? this.config.codFeeIDR : 0;
 
-    return { shippingCost, codFee, billableWeightKg };
+    return { shippingCost, billableWeightKg };
   }
 }

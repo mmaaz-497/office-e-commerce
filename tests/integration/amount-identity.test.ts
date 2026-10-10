@@ -66,7 +66,7 @@ describe("three-way amount identity (integration)", () => {
             where: { orderNumber: result.orderNumber },
           });
           const summaryTotal =
-            order.unitPriceIDR * order.quantity + order.shippingCostIDR + order.codFeeIDR;
+            order.unitPriceIDR * order.quantity + order.shippingCostIDR;
 
           expect(Number.isInteger(order.totalIDR)).toBe(true);
           expect(summaryTotal).toBe(order.totalIDR);

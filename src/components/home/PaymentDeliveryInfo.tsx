@@ -9,8 +9,8 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 /**
  * The payment and delivery facts (contracts/storefront.md, row 7; R-512).
  * Every statement is a rule checkout and the shipping provider enforce, read
- * from configuration, so the copy follows the config with no edit. No rate or
- * fee amount is shown while those are placeholders (FR-024).
+ * from configuration, so the copy follows the config with no edit. No rate
+ * amount is shown while those are placeholders (FR-024). COD has no fee.
  */
 export async function PaymentDeliveryInfo() {
   const t = await getTranslations("home.paymentDelivery");
@@ -26,7 +26,7 @@ export async function PaymentDeliveryInfo() {
 
   const facts: ReadonlyArray<{ key: string; icon: IconName; text: string }> = [
     { key: "online", icon: "shield", text: t("online") },
-    { key: "cod", icon: "wallet", text: `${cod} ${t("codFee")}` },
+    { key: "cod", icon: "wallet", text: `${cod} ${t("codFree")}` },
     { key: "shipping", icon: "truck", text: t("shipping") },
   ];
 

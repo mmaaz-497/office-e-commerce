@@ -22,7 +22,6 @@ export type LookupOrderView = {
   quantity: number;
   unitPriceIDR: number;
   shippingCostIDR: number;
-  codFeeIDR: number;
   totalIDR: number;
   trackingNumber: string | null;
   createdAt: Date;
@@ -54,7 +53,6 @@ function toLookupView(order: NonNullable<OrderWithEvents>): LookupOrderView {
     quantity: order.quantity,
     unitPriceIDR: order.unitPriceIDR,
     shippingCostIDR: order.shippingCostIDR,
-    codFeeIDR: order.codFeeIDR,
     totalIDR: order.totalIDR,
     trackingNumber: order.trackingNumber,
     createdAt: order.createdAt,

@@ -19,7 +19,6 @@ const zoneRatesIDR = Object.fromEntries(
 const clientShippingProvider = new FlatZoneShippingProvider({
   pairsPerKg: parsedShippingConfig.pairsPerKg,
   zoneRatesIDR,
-  codFeeIDR: parsedShippingConfig.codFeeIDR,
   codDisabledProvinces: parsedShippingConfig.codDisabledProvinces,
 });
 

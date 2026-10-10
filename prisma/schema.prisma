@@ -103,7 +103,9 @@ model Order {
   // Snapshot — frozen at order creation, never recomputed from the catalogue (FR-018).
   unitPriceIDR     Int
   shippingCostIDR  Int
-  codFeeIDR        Int
+  /// Legacy: COD is free, so new orders never set this and it defaults to 0.
+  /// Kept so orders placed while a COD fee existed still reconcile with totalIDR.
+  codFeeIDR        Int @default(0)
   totalIDR         Int
   billableWeightKg Int
 

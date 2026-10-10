@@ -63,8 +63,8 @@ export function CheckoutForm({
 
   const codAvailable = address.provinceCode ? isCodAvailable(address.provinceCode) : true;
 
-  // Selecting a COD-disabled province removes the COD option and clears the
-  // COD fee (FR-010) — falls back to ONLINE automatically.
+  // Selecting a COD-disabled province removes the COD option (FR-010) —
+  // falls back to ONLINE automatically.
   const effectivePaymentMethod = codAvailable ? paymentMethod : "ONLINE";
 
   const breakdown = useMemo(() => {

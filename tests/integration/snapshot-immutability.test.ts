@@ -58,7 +58,6 @@ function realShippingProvider(): FlatZoneShippingProvider {
     zoneRatesIDR: Object.fromEntries(
       Object.entries(shippingConfig.zones).map(([code, zone]) => [code, zone.rateIDR]),
     ),
-    codFeeIDR: shippingConfig.codFeeIDR,
     codDisabledProvinces: shippingConfig.codDisabledProvinces,
   });
 }
@@ -82,7 +81,6 @@ function mutatedShippingProvider(): FlatZoneShippingProvider {
       ),
       [PROVINCE_CODE]: 999_000,
     },
-    codFeeIDR: shippingConfig.codFeeIDR,
     codDisabledProvinces: shippingConfig.codDisabledProvinces,
   });
 }
@@ -119,7 +117,6 @@ describe("price-snapshot immutability across every order status (integration)", 
       const snapshot = {
         unitPriceIDR: originalBreakdown.unitPrice,
         shippingCostIDR: originalBreakdown.shippingCost,
-        codFeeIDR: originalBreakdown.codFee,
         totalIDR: originalBreakdown.total,
         billableWeightKg: originalBreakdown.billableWeightKg,
       };
@@ -142,7 +139,6 @@ describe("price-snapshot immutability across every order status (integration)", 
             quantity,
             unitPriceIDR: snapshot.unitPriceIDR,
             shippingCostIDR: snapshot.shippingCostIDR,
-            codFeeIDR: snapshot.codFeeIDR,
             totalIDR: snapshot.totalIDR,
             billableWeightKg: snapshot.billableWeightKg,
           }),
@@ -174,7 +170,6 @@ describe("price-snapshot immutability across every order status (integration)", 
         if (lookupResult.ok) {
           expect(lookupResult.order.unitPriceIDR).toBe(snapshot.unitPriceIDR);
           expect(lookupResult.order.shippingCostIDR).toBe(snapshot.shippingCostIDR);
-          expect(lookupResult.order.codFeeIDR).toBe(snapshot.codFeeIDR);
           expect(lookupResult.order.totalIDR).toBe(snapshot.totalIDR);
         }
 
@@ -183,7 +178,6 @@ describe("price-snapshot immutability across every order status (integration)", 
         if (detail) {
           expect(detail.order.unitPriceIDR).toBe(snapshot.unitPriceIDR);
           expect(detail.order.shippingCostIDR).toBe(snapshot.shippingCostIDR);
-          expect(detail.order.codFeeIDR).toBe(snapshot.codFeeIDR);
           expect(detail.order.totalIDR).toBe(snapshot.totalIDR);
           expect(detail.order.billableWeightKg).toBe(snapshot.billableWeightKg);
         }

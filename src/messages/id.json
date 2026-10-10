@@ -79,7 +79,7 @@
       "online": "Bayar online lewat Midtrans.",
       "codAll": "Bayar di tempat (COD) tersedia untuk semua provinsi.",
       "codExcept": "Bayar di tempat (COD) tersedia, kecuali untuk alamat di {provinces}.",
-      "codFee": "Biaya COD, bila ada, tampil di ringkasan pesanan sebelum pesanan dibuat.",
+      "codFree": "COD gratis, tanpa biaya tambahan.",
       "shipping": "Ongkos kirim dihitung dari provinsi tujuan dan tampil sebelum Anda membayar."
     },
     "quickAccess": {
@@ -101,7 +101,7 @@
     "items": {
       "cod": {
         "q": "Apakah bisa bayar di tempat (COD)?",
-        "a": "Bisa, untuk provinsi yang kami layani dengan COD. Saat Anda mengisi alamat, pilihan COD muncul dengan sendirinya bila tersedia di provinsi tersebut, lengkap dengan biaya COD-nya. Bila tidak tersedia, pesanan tetap bisa dibuat dengan pembayaran online."
+        "a": "Bisa, untuk provinsi yang kami layani dengan COD, dan gratis tanpa biaya tambahan. Saat Anda mengisi alamat, pilihan COD muncul dengan sendirinya bila tersedia di provinsi tersebut. Bila tidak tersedia, pesanan tetap bisa dibuat dengan pembayaran online."
       },
       "ongkir": {
         "q": "Berapa ongkos kirimnya?",
@@ -113,7 +113,7 @@
       },
       "pengembalian": {
         "q": "Bagaimana kalau barangnya tidak sesuai?",
-        "a": "Barang yang rusak, cacat, atau tidak sesuai pesanan bisa diajukan untuk pengembalian dalam batas waktu yang tercantum di halaman Kebijakan Pengembalian. Hubungi kami dengan nomor pesanan dan foto barang, lalu tunggu konfirmasi kami sebelum mengirim barang kembali."
+        "a": "Barang yang rusak, cacat, atau tidak sesuai pesanan bisa diajukan untuk pengembalian paling lambat 7 hari setelah pesanan Anda terima. Hubungi kami dengan nomor pesanan dan foto barang, lalu tunggu konfirmasi kami sebelum mengirim barang kembali."
       },
       "lacak": {
         "q": "Bagaimana cara melacak pesanan saya?",
@@ -175,9 +175,9 @@
     "ratingLine": "({count} ulasan)",
     "trust": {
       "online": "Bayar online lewat Midtrans",
-      "codAll": "Bisa bayar di tempat (COD)",
-      "codSome": "Bisa bayar di tempat (COD), kecuali beberapa provinsi",
-      "returns": "Kebijakan pengembalian"
+      "codAll": "Bisa bayar di tempat (COD), gratis",
+      "codSome": "Bisa bayar di tempat (COD) gratis, kecuali beberapa provinsi",
+      "returns": "Pengembalian dalam 7 hari"
     }
   },
   "trust": {
@@ -202,7 +202,6 @@
     "summary": {
       "subtotal": "Subtotal",
       "shipping": "Ongkos Kirim",
-      "codFee": "Biaya COD",
       "total": "Total"
     },
     "form": {
@@ -316,7 +315,6 @@
       "quantity": "Jumlah",
       "unitPrice": "Harga Satuan",
       "shipping": "Ongkos Kirim",
-      "codFee": "Biaya COD",
       "total": "Total",
       "trackingNumber": "Nomor Resi",
       "trackingNumberPending": "Belum tersedia",
@@ -350,7 +348,7 @@
     "payment": {
       "title": "Pembayaran & pengiriman",
       "online": "Bayar online lewat Midtrans",
-      "cod": "COD di provinsi terpilih",
+      "cod": "COD gratis di provinsi terpilih",
       "shipping": "Ongkir tampil sebelum bayar"
     },
     "copyright": "© {year} Tokoshopee. Seluruh hak cipta dilindungi.",
@@ -368,13 +366,13 @@
       "s1": "Pilih jumlah pada halaman produk, lalu tekan Beli Sekarang.",
       "s2": "Isi nama, nomor HP/WhatsApp, dan alamat pengiriman lengkap.",
       "s3": "Pilih metode pembayaran: bayar online, atau bayar di tempat (COD) bila tersedia untuk provinsi Anda.",
-      "s4": "Periksa ringkasan pesanan — harga barang, ongkos kirim, dan biaya COD bila ada — lalu buat pesanan.",
+      "s4": "Periksa ringkasan pesanan — harga barang dan ongkos kirim — lalu buat pesanan.",
       "s5": "Simpan nomor pesanan Anda. Nomor pesanan dan nomor HP diperlukan untuk mengecek status pesanan."
     },
     "payment": {
       "heading": "Pembayaran",
       "online": "Pembayaran online diproses melalui Midtrans. Anda membayar dengan metode yang tersedia di halaman pembayaran Midtrans.",
-      "cod": "Bayar di tempat (COD) berarti Anda membayar kepada kurir saat pesanan tiba. COD tidak tersedia di semua provinsi dan dikenakan biaya COD, yang ditampilkan pada ringkasan pesanan sebelum Anda memesan.",
+      "cod": "Bayar di tempat (COD) berarti Anda membayar kepada kurir saat pesanan tiba. COD gratis tanpa biaya tambahan, tetapi tidak tersedia di semua provinsi.",
       "expiry": "Pesanan online yang belum dibayar akan kedaluwarsa secara otomatis, dan stok yang ditahan dilepaskan kembali."
     },
     "delivery": {
@@ -390,7 +388,7 @@
   "terms": {
     "metadata": {
       "title": "Syarat & Ketentuan | Tokoshopee",
-      "description": "Baca syarat dan ketentuan belanja di Tokoshopee: proses pemesanan, harga, ongkos kirim, biaya COD, pembatalan, ulasan, dan tanggung jawab penjual sebelum berbelanja."
+      "description": "Baca syarat dan ketentuan belanja di Tokoshopee: proses pemesanan, harga, ongkos kirim, COD gratis, pembatalan, ulasan, dan tanggung jawab penjual sebelum belanja."
     },
     "title": "Syarat & Ketentuan",
     "intro": "Dengan memesan di toko ini, Anda menyetujui syarat dan ketentuan berikut.",
@@ -410,7 +408,7 @@
       "heading": "Harga dan Biaya",
       "currency": "Seluruh harga ditampilkan dalam Rupiah (IDR) dalam nilai bulat, tanpa pecahan sen.",
       "shipping": "Ongkos kirim dihitung berdasarkan provinsi tujuan dan jumlah barang, dan ditampilkan sebelum pesanan dibuat.",
-      "cod": "Biaya COD, bila berlaku, ditampilkan terpisah pada ringkasan pesanan."
+      "cod": "Pembayaran di tempat (COD) gratis dan tidak dikenakan biaya tambahan."
     },
     "cancellation": {
       "heading": "Pembatalan",
@@ -477,13 +475,13 @@
   "returns": {
     "metadata": {
       "title": "Kebijakan Pengembalian | Tokoshopee",
-      "description": "Ketahui jangka waktu, syarat kelayakan, dan cara mengajukan pengembalian atau pembatalan pesanan Sandal Gemoy, termasuk proses refund untuk pembayaran online."
+      "description": "Ketahui batas waktu 7 hari, syarat kelayakan, dan cara mengajukan pengembalian atau pembatalan pesanan Sandal Gemoy, termasuk proses refund untuk pembayaran online."
     },
     "title": "Kebijakan Pengembalian",
     "intro": "Halaman ini menjelaskan kapan pesanan dapat dikembalikan dan bagaimana dana dikembalikan.",
     "window": {
       "heading": "Batas Waktu Pengembalian",
-      "body": "Pengajuan pengembalian kami terima paling lambat [PLACEHOLDER: jumlah hari batas pengembalian] hari setelah pesanan Anda terima."
+      "body": "Pengajuan pengembalian kami terima paling lambat 7 hari setelah pesanan Anda terima."
     },
     "eligibility": {
       "heading": "Syarat Pengembalian",

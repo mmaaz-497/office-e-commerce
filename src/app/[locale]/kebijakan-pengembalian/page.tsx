@@ -14,8 +14,8 @@ import { routeMetadata } from "@/infrastructure/seo/metadata";
  * Q-003). The refund section says plainly that refunds for online payments
  * are handled by hand: the system records a free-text refund reference and
  * makes no refund API call, so promising an automatic refund here would be a
- * claim the software does not keep. Return window and contact email are
- * PLACEHOLDER until the client supplies them.
+ * claim the software does not keep. The return window is 7 days; the
+ * contact email is PLACEHOLDER until the client supplies it.
  */
 export async function generateMetadata({
   params,

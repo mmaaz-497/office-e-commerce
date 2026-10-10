@@ -9,7 +9,6 @@ export interface ShippingQuoteInput {
 
 export interface ShippingQuote {
   shippingCost: IDR;
-  codFee: IDR;
   /** Quantity ÷ pairsPerKg, rounded UP to a whole kilogram (FR-007). */
   billableWeightKg: number;
 }

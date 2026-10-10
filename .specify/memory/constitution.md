@@ -1,4 +1,24 @@
 <!--
+SYNC IMPACT REPORT (v2.0.1)
+===========================
+Version change: 2.0.0 → 2.0.1
+Bump rationale: PATCH — wording only. Cash on delivery is now free (approved by the project
+owner on 2026-10-10), so the COD fee no longer exists as a commercial rule. No principle is
+added, removed or redefined.
+
+Modified principles:
+- III. Single Source of Truth per Data Class — "COD fee" dropped from the list of commercial
+  rules kept in configuration.
+- XI. Quality & Test Discipline — the mandatory shipping-calculation tests now name "COD
+  availability" instead of "COD fee"; COD gating stays under mandatory test.
+
+Unchanged: I, II, IV, V (NON-NEGOTIABLE), VI (NON-NEGOTIABLE), VII, VIII, IX, X; all other
+sections.
+
+Templates requiring updates: none.
+-->
+
+<!--
 SYNC IMPACT REPORT (v2.0.0)
 ===========================
 Version change: 1.0.0 → 2.0.0
@@ -125,7 +145,7 @@ defect.
 - **Transactional data** (orders, stock levels, stock-change log, reviews) lives in
   PostgreSQL.
 - **Commercial rules** (shipping zone rates, pairs-per-kg rule — default 2 pairs = 1 kg,
-  COD fee, COD-disabled zones) live in a configuration file, not in code branches and
+  COD-disabled zones) live in a configuration file, not in code branches and
   not in the database.
 
 Rationale: an unambiguous home per data class prevents drift between displayed price,
@@ -234,7 +254,7 @@ speculative is waste.
 - TypeScript MUST run in strict mode. `any`, non-null assertions on untrusted data, and
   `@ts-ignore` require an inline justification comment.
 - Automated tests are MANDATORY for: price calculation, shipping calculation
-  (including the pairs-per-kg rounding and COD fee), order status transitions, stock
+  (including the pairs-per-kg rounding and COD availability), order status transitions, stock
   transitions, and webhook handling (signature verification plus replay).
 - A change to any of the above areas MUST NOT merge without a test covering the new or
   changed behavior.
@@ -313,4 +333,4 @@ development guidance for agents lives in `CLAUDE.md` and MUST stay consistent wi
 constitution; if the two conflict, this constitution governs and `CLAUDE.md` MUST be
 corrected.
 
-**Version**: 2.0.0 | **Ratified**: 2026-09-19 | **Last Amended**: 2026-10-03
+**Version**: 2.0.1 | **Ratified**: 2026-09-19 | **Last Amended**: 2026-10-10

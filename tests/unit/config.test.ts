@@ -17,7 +17,6 @@ const VALID_ENV = {
 
 const VALID_SHIPPING = {
   pairsPerKg: 2,
-  codFeeIDR: 5000,
   zones: { "31": { rateIDR: 15000 }, "94": { rateIDR: 25000 } },
   codDisabledProvinces: ["94"],
 };
@@ -72,14 +71,6 @@ describe("envSchema", () => {
 describe("shippingConfigSchema", () => {
   it("accepts a valid shipping config", () => {
     expect(shippingConfigSchema.safeParse(VALID_SHIPPING).success).toBe(true);
-  });
-
-  it("rejects a float money value", () => {
-    const result = shippingConfigSchema.safeParse({
-      ...VALID_SHIPPING,
-      codFeeIDR: 5000.5,
-    });
-    expect(result.success).toBe(false);
   });
 
   it("rejects a float zone rate", () => {

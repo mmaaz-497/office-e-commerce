@@ -93,12 +93,6 @@ export function LookupForm() {
             <dt>{t("results.shipping")}</dt>
             <dd>{formatIDR(result.order.shippingCostIDR)}</dd>
           </div>
-          {result.order.codFeeIDR > 0 && (
-            <div className="flex justify-between">
-              <dt>{t("results.codFee")}</dt>
-              <dd>{formatIDR(result.order.codFeeIDR)}</dd>
-            </div>
-          )}
           <div className="border-cream-dark text-brown-dark flex justify-between border-t pt-2 text-base font-bold">
             <dt>{t("results.total")}</dt>
             <dd>{formatIDR(result.order.totalIDR)}</dd>

@@ -2,7 +2,8 @@ import { z } from "zod";
 
 /**
  * Every commercial value below is a PLACEHOLDER (FR-011a) — replace with the
- * client's real courier rates, COD fee and COD-disabled list before launch.
+ * client's real courier rates and COD-disabled list before launch. COD
+ * carries no fee.
  * The release checklist greps for the literal string PLACEHOLDER and refuses
  * to proceed while any instance remains.
  */
@@ -10,9 +11,6 @@ import { z } from "zod";
 export const rawShippingConfig = {
   // PLACEHOLDER — pairs of slippers per billable kilogram.
   pairsPerKg: 2,
-
-  // PLACEHOLDER — COD surcharge in whole IDR.
-  codFeeIDR: 5000,
 
   // PLACEHOLDER — one entry per province, rate in whole IDR per billable kg.
   zones: {
@@ -74,7 +72,6 @@ const zoneSchema = z.object({
 export const shippingConfigSchema = z
   .object({
     pairsPerKg: z.number().int().positive(),
-    codFeeIDR: z.number().int().nonnegative(),
     zones: z.record(z.string(), zoneSchema),
     codDisabledProvinces: z.array(z.string()),
   })

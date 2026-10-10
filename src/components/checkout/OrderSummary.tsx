@@ -21,15 +21,9 @@ export function OrderSummary({ breakdown }: { breakdown: PriceBreakdown }) {
         <dt>{t("shipping")}</dt>
         <dd>{formatIDR(breakdown.shippingCost)}</dd>
       </div>
-      {breakdown.codFee > 0 && (
-        <div className="flex justify-between">
-          <dt>{t("codFee")}</dt>
-          <dd>{formatIDR(breakdown.codFee)}</dd>
-        </div>
-      )}
       <div className="border-cream-dark text-brown-dark flex justify-between border-t pt-2 text-base font-bold">
         <dt>{t("total")}</dt>
-        <dd>{formatIDR(lineTotal + breakdown.shippingCost + breakdown.codFee)}</dd>
+        <dd>{formatIDR(lineTotal + breakdown.shippingCost)}</dd>
       </div>
     </dl>
   );

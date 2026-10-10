@@ -177,7 +177,7 @@ The audit is code-level; see Context.
 
 1. **Placeholder business information is shown to customers.**
    - Legal pages render "[PLACEHOLDER: nama badan usaha / alamat / email]" (`src/messages/id.json:375-377,417-419`, and en).
-   - Every shipping rate and the COD fee is a placeholder (`src/config/shipping.config.ts`).
+   - Every shipping rate is a placeholder (`src/config/shipping.config.ts`). COD is free (no fee, since 2026-10-10).
    - This is the biggest trust break, and it's a content problem rather than a design one. See §7.
 2. **Stock is invisible.**
    - There is no stock state on the product page or anywhere else on the storefront.
@@ -774,7 +774,7 @@ Short descriptions describe shape, material and use only. No performance or comp
 
 ## 7. Open questions (blocking)
 1. **Business details:** legal entity name, address and contact email. They show as `[PLACEHOLDER]` on the legal pages today. Phase 3's footer and trust block leave contact details out until these exist.
-2. **Real shipping rates and COD fee:** every rate is a placeholder today. Phase 3 and 4 delivery info shows rates as computed at checkout; there will be no "ongkir mulai Rp X" claim until they are real.
+2. **Real shipping rates:** every rate is a placeholder today (COD is free, so no COD fee is needed). Phase 3 and 4 delivery info shows rates as computed at checkout; there will be no "ongkir mulai Rp X" claim until they are real.
 3. **Logo:** only a text wordmark exists. Is there a logo or icon file? If not, the wordmark is restyled in the new font. The cream/brown palette is assumed to stay, as Constitution II requires.
 4. **Sample products:** approve the 10 names above, the category "Sandal" / "Sandals", and the 10 tinted name-and-wordmark placeholder images. All of these can be edited from the dashboard later.
 

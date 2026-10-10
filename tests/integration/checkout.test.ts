@@ -58,7 +58,7 @@ describe("submitCheckout (integration)", () => {
     expect(order.quantity).toBe(2);
     expect(order.unitPriceIDR).toBe(169999);
     expect(order.totalIDR).toBe(
-      order.unitPriceIDR * order.quantity + order.shippingCostIDR + order.codFeeIDR,
+      order.unitPriceIDR * order.quantity + order.shippingCostIDR,
     );
     expect(order.stockDecremented).toBe(false); // ONLINE orders decrement on ->PAID, not at creation
     expect(order.expiresAt).not.toBeNull();
@@ -154,6 +154,24 @@ describe("submitCheckout (integration)", () => {
     expect(orders).toHaveLength(0);
   });
 
+  it("charges a COD order exactly what an online order costs — COD is free", async () => {
+    const { submitCheckout } = await import("@/app/actions/checkout");
+
+    const online = await submitCheckout(JAKARTA_INPUT);
+    const cod = await submitCheckout({ ...JAKARTA_INPUT, paymentMethod: "COD" });
+
+    expect(online.ok && cod.ok).toBe(true);
+    if (!online.ok || !cod.ok) return;
+
+    const [onlineOrder, codOrder] = await Promise.all([
+      prisma.order.findUniqueOrThrow({ where: { orderNumber: online.orderNumber } }),
+      prisma.order.findUniqueOrThrow({ where: { orderNumber: cod.orderNumber } }),
+    ]);
+    expect(codOrder.paymentMethod).toBe("COD");
+    expect(codOrder.codFeeIDR).toBe(0);
+    expect(codOrder.totalIDR).toBe(onlineOrder.totalIDR);
+  });
+
   it("ignores a client-supplied amount — the server-computed total wins", async () => {
     const { submitCheckout } = await import("@/app/actions/checkout");
 
@@ -173,7 +191,7 @@ describe("submitCheckout (integration)", () => {
     expect(order.unitPriceIDR).toBe(169999);
     expect(order.totalIDR).toBeGreaterThan(1);
     expect(order.totalIDR).toBe(
-      order.unitPriceIDR * order.quantity + order.shippingCostIDR + order.codFeeIDR,
+      order.unitPriceIDR * order.quantity + order.shippingCostIDR,
     );
   });
 });

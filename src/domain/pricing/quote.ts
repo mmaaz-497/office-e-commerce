@@ -7,7 +7,6 @@ export interface PriceBreakdown {
   quantity: number;
   subtotal: IDR;
   shippingCost: IDR;
-  codFee: IDR;
   billableWeightKg: number;
   total: IDR;
 }
@@ -34,20 +33,21 @@ export function quoteOrder(input: QuoteOrderInput): PriceBreakdown {
   const { unitPrice, quantity, provinceCode, paymentMethod, shipping } = input;
 
   const subtotal = unitPrice * quantity;
-  const { shippingCost, codFee, billableWeightKg } = shipping.calculate({
+  const { shippingCost, billableWeightKg } = shipping.calculate({
     provinceCode,
     quantity,
     paymentMethod,
   });
-  const total = subtotal + shippingCost + codFee;
+  // COD is free: the payment method changes availability, never the total.
+  const total = subtotal + shippingCost;
 
-  return { unitPrice, quantity, subtotal, shippingCost, codFee, billableWeightKg, total };
+  return { unitPrice, quantity, subtotal, shippingCost, billableWeightKg, total };
 }
 
 /** Guards the snapshot invariant on every write (FR-018). */
 export function assertTotalsConsistent(b: PriceBreakdown): void {
   const expectedSubtotal = b.unitPrice * b.quantity;
-  const expectedTotal = expectedSubtotal + b.shippingCost + b.codFee;
+  const expectedTotal = expectedSubtotal + b.shippingCost;
 
   if (b.subtotal !== expectedSubtotal || b.total !== expectedTotal) {
     throw new Error(

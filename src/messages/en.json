@@ -79,7 +79,7 @@
       "online": "Pay online through Midtrans.",
       "codAll": "Cash on delivery (COD) is available in every province.",
       "codExcept": "Cash on delivery (COD) is available, except for addresses in {provinces}.",
-      "codFee": "Any COD fee is shown in the order summary before the order is placed.",
+      "codFree": "COD is free, with no extra fee.",
       "shipping": "Shipping is calculated from the destination province and shown before you pay."
     },
     "quickAccess": {
@@ -101,7 +101,7 @@
     "items": {
       "cod": {
         "q": "Can I pay cash on delivery (COD)?",
-        "a": "Yes, for the provinces where we offer it. As you fill in your address, the COD option appears by itself when it is available there, along with its COD fee. Where it is not available, you can still order with an online payment."
+        "a": "Yes, for the provinces where we offer it, and it is free with no extra fee. As you fill in your address, the COD option appears by itself when it is available there. Where it is not available, you can still order with an online payment."
       },
       "ongkir": {
         "q": "How much is shipping?",
@@ -113,7 +113,7 @@
       },
       "pengembalian": {
         "q": "What if the item is not what I expected?",
-        "a": "Items that arrive damaged, faulty or not as ordered can be submitted for a return within the window stated on the Return Policy page. Contact us with your order number and photos of the item, and wait for our confirmation before sending anything back."
+        "a": "Items that arrive damaged, faulty or not as ordered can be submitted for a return up to 7 days after you receive the order. Contact us with your order number and photos of the item, and wait for our confirmation before sending anything back."
       },
       "lacak": {
         "q": "How do I track my order?",
@@ -175,9 +175,9 @@
     "ratingLine": "({count} reviews)",
     "trust": {
       "online": "Pay online via Midtrans",
-      "codAll": "Cash on delivery (COD) available",
-      "codSome": "Cash on delivery (COD) available, except in some provinces",
-      "returns": "Return policy"
+      "codAll": "Free cash on delivery (COD)",
+      "codSome": "Free cash on delivery (COD), except in some provinces",
+      "returns": "7-day returns"
     }
   },
   "trust": {
@@ -202,7 +202,6 @@
     "summary": {
       "subtotal": "Subtotal",
       "shipping": "Shipping",
-      "codFee": "COD Fee",
       "total": "Total"
     },
     "form": {
@@ -316,7 +315,6 @@
       "quantity": "Quantity",
       "unitPrice": "Unit Price",
       "shipping": "Shipping",
-      "codFee": "COD Fee",
       "total": "Total",
       "trackingNumber": "Tracking Number",
       "trackingNumberPending": "Not yet available",
@@ -350,7 +348,7 @@
     "payment": {
       "title": "Payment & delivery",
       "online": "Pay online through Midtrans",
-      "cod": "COD in selected provinces",
+      "cod": "Free COD in selected provinces",
       "shipping": "Shipping shown before you pay"
     },
     "copyright": "© {year} Tokoshopee. All rights reserved.",
@@ -368,13 +366,13 @@
       "s1": "Choose a quantity on the product page, then press Buy Now.",
       "s2": "Fill in your name, phone/WhatsApp number and full delivery address.",
       "s3": "Choose a payment method: pay online, or cash on delivery (COD) where it is available for your province.",
-      "s4": "Check the order summary — item price, shipping and the COD fee where it applies — then place the order.",
+      "s4": "Check the order summary — item price and shipping — then place the order.",
       "s5": "Save your order number. The order number and your phone number are what you need to check the order's status."
     },
     "payment": {
       "heading": "Payment",
       "online": "Online payments are processed through Midtrans. You pay using any method offered on the Midtrans payment page.",
-      "cod": "Cash on delivery (COD) means you pay the courier when the order arrives. COD is not available in every province and carries a COD fee, shown in the order summary before you place the order.",
+      "cod": "Cash on delivery (COD) means you pay the courier when the order arrives. COD is free with no extra fee, but it is not available in every province.",
       "expiry": "An online order that is not paid expires automatically, and the stock held for it is released."
     },
     "delivery": {
@@ -390,7 +388,7 @@
   "terms": {
     "metadata": {
       "title": "Terms & Conditions | Tokoshopee",
-      "description": "Read Tokoshopee's terms for shopping: order formation, pricing, shipping costs, Cash on Delivery fees, cancellation rules, reviews, and seller liability details."
+      "description": "Read Tokoshopee's terms for shopping: order formation, pricing, shipping costs, free Cash on Delivery, cancellation rules, reviews, and seller liability details."
     },
     "title": "Terms & Conditions",
     "intro": "By placing an order with this store, you agree to the terms below.",
@@ -410,7 +408,7 @@
       "heading": "Prices and Fees",
       "currency": "All prices are shown in Indonesian Rupiah (IDR) as whole amounts, with no fractional units.",
       "shipping": "Shipping is calculated from the destination province and the quantity ordered, and is shown before the order is placed.",
-      "cod": "The COD fee, where it applies, is shown separately in the order summary."
+      "cod": "Cash on delivery (COD) is free and carries no extra fee."
     },
     "cancellation": {
       "heading": "Cancellation",
@@ -477,13 +475,13 @@
   "returns": {
     "metadata": {
       "title": "Returns Policy | Tokoshopee",
-      "description": "Learn the time window, eligibility rules, and process for returning or cancelling a Gemoy Slippers order, including the refund process for online payments."
+      "description": "Learn the 7-day window, eligibility rules, and process for returning or cancelling a Gemoy Slippers order, including the refund process for online payments."
     },
     "title": "Return Policy",
     "intro": "This page explains when an order can be returned and how money is refunded.",
     "window": {
       "heading": "Return Window",
-      "body": "We accept return requests up to [PLACEHOLDER: return window in days] days after you receive the order."
+      "body": "We accept return requests up to 7 days after you receive the order."
     },
     "eligibility": {
       "heading": "What Can Be Returned",

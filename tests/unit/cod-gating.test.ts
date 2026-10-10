@@ -5,17 +5,16 @@ import { CodUnavailableError } from "@/domain/errors";
 const provider = new FlatZoneShippingProvider({
   pairsPerKg: 2,
   zoneRatesIDR: { JK: 10000, PP: 20000 },
-  codFeeIDR: 5000,
   codDisabledProvinces: ["PP"],
 });
 
-describe("COD gating and fee application", () => {
-  it("applies the COD fee only when paymentMethod is COD", () => {
+describe("COD gating", () => {
+  it("charges COD exactly the same as online — COD is free", () => {
     const online = provider.calculate({ provinceCode: "JK", quantity: 2, paymentMethod: "ONLINE" });
     const cod = provider.calculate({ provinceCode: "JK", quantity: 2, paymentMethod: "COD" });
 
-    expect(online.codFee).toBe(0);
-    expect(cod.codFee).toBe(5000);
+    expect(cod).toEqual(online);
+    expect(cod).not.toHaveProperty("codFee");
   });
 
   it("isCodAvailable is false for every configured disabled province", () => {

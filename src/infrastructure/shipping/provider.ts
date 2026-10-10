@@ -13,7 +13,6 @@ function buildShippingProvider(): FlatZoneShippingProvider {
   return new FlatZoneShippingProvider({
     pairsPerKg: shippingConfig.pairsPerKg,
     zoneRatesIDR,
-    codFeeIDR: shippingConfig.codFeeIDR,
     codDisabledProvinces: shippingConfig.codDisabledProvinces,
   });
 }

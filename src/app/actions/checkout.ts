@@ -114,7 +114,6 @@ export async function submitCheckout(rawInput: unknown): Promise<CheckoutResult>
         quantity: input.quantity,
         unitPriceIDR: breakdown.unitPrice,
         shippingCostIDR: breakdown.shippingCost,
-        codFeeIDR: breakdown.codFee,
         totalIDR: breakdown.total,
         billableWeightKg: breakdown.billableWeightKg,
         expiresAt,
