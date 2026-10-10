@@ -56,7 +56,7 @@ export async function Footer({ locale }: { locale: AppLocale }) {
 
   const column = (heading: string, items: { href: string; label: string }[]) => (
     <div>
-      <h3 className="text-footer-fg mb-2 text-sm font-semibold">{heading}</h3>
+      <h3 className="text-footer-fg mb-3 text-sm font-semibold">{heading}</h3>
       <ul className="flex flex-col text-sm">
         {items.map((item) => (
           <li key={item.href}>
@@ -69,33 +69,42 @@ export async function Footer({ locale }: { locale: AppLocale }) {
     </div>
   );
 
+  // The accent rule along the top is the Design System's "highlight bar"; the
+  // assurance row repeats facts shown at checkout, never business claims.
   return (
-    <footer className="bg-ink text-footer-muted mt-16 lg:mt-24">
-      <Container className="pt-12 pb-6 lg:pt-16">
-        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:gap-12">
+    <footer className="bg-ink text-footer-muted border-accent mt-16 border-t-4 lg:mt-24">
+      <Container>
+        <section aria-labelledby="footer-assurance" className="border-footer-muted/20 border-b py-8">
+          <h2 id="footer-assurance" className="sr-only">
+            {t("payment.title")}
+          </h2>
+          <ul className="grid gap-4 sm:grid-cols-3 sm:gap-6">
+            {PAYMENT_FACTS.map(({ key, icon }) => (
+              <li key={key} className="flex items-center gap-3">
+                <span className="bg-footer-fg/10 text-accent inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md">
+                  <Icon name={icon} className="h-5 w-5" />
+                </span>
+                <span className="text-footer-fg text-sm font-medium">{t(`payment.${key}`)}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <div className="grid gap-10 pt-12 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:gap-12 lg:pt-14">
           <div className="max-w-sm sm:col-span-2 md:col-span-1">
             <Link
               href={localeHref("/", locale)}
               aria-label="Tokoshopee"
               className="inline-flex min-h-11 items-center"
             >
-              <Wordmark tone="light" />
+              <Wordmark mark tone="light" />
             </Link>
             <p className="mt-4 text-sm leading-relaxed">{t("tagline")}</p>
-
-            <ul className="mt-6 flex flex-col gap-3">
-              {PAYMENT_FACTS.map(({ key, icon }) => (
-                <li key={key} className="flex items-center gap-3 text-sm">
-                  <Icon name={icon} className="text-accent h-4 w-4 shrink-0" />
-                  {t(`payment.${key}`)}
-                </li>
-              ))}
-            </ul>
 
             <a
               href={`mailto:${STORE_CONTACT_EMAIL}`}
               aria-label={t("contactEmail", { email: STORE_CONTACT_EMAIL })}
-              className={`${LINK} mt-3 gap-3 break-all`}
+              className="border-footer-muted/30 text-footer-fg hover:border-accent hover:text-accent mt-6 inline-flex min-h-11 max-w-full items-center gap-3 rounded-md border px-4 text-sm break-all transition-colors duration-150 ease-out"
             >
               <Icon name="mail" className="text-accent h-4 w-4 shrink-0" />
               {STORE_CONTACT_EMAIL}
@@ -121,11 +130,14 @@ export async function Footer({ locale }: { locale: AppLocale }) {
           </nav>
         </div>
 
-        <div className="border-footer-muted/20 mt-12 flex flex-col items-center justify-between gap-2 border-t pt-4 text-sm sm:flex-row">
-          <p className="flex min-h-11 items-center">
+        <div className="border-footer-muted/20 mt-12 flex flex-col items-center justify-between gap-3 border-t py-6 text-sm sm:flex-row">
+          <p className="flex min-h-11 items-center text-center">
             {t("copyright", { year: new Date().getFullYear() })}
           </p>
-          <a href="#top" className={`${LINK} gap-2`}>
+          <a
+            href="#top"
+            className="border-footer-muted/30 hover:border-accent hover:text-accent inline-flex min-h-11 items-center gap-2 rounded-md border px-4 transition-colors duration-150 ease-out"
+          >
             {t("backToTop")}
             <Icon name="arrowRight" className="h-4 w-4 -rotate-90" />
           </a>

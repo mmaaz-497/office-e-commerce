@@ -23,11 +23,16 @@ import { Wordmark } from "@/components/ui/Wordmark";
 
 export type NavLink = { href: string; label: string };
 
+// The underline is a pseudo-element, so marking the current page cannot
+// shift the row: border-strong on hover, primary on the current page.
 const ROW_LINK =
-  "inline-flex h-11 items-center px-3 text-sm font-medium text-ink-2 transition-colors duration-150 ease-out hover:text-ink aria-[current=page]:text-primary";
+  "relative inline-flex h-11 items-center px-3 text-sm font-medium text-ink-2 transition-colors duration-150 ease-out after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:rounded-sm after:bg-transparent after:transition-colors after:duration-150 hover:text-ink hover:after:bg-border-strong aria-[current=page]:text-primary aria-[current=page]:after:bg-primary";
 
 const DRAWER_LINK =
-  "flex h-12 items-center px-4 text-base text-ink transition-colors duration-150 ease-out hover:bg-surface-muted aria-[current=page]:font-semibold aria-[current=page]:text-primary";
+  "group flex h-12 items-center justify-between gap-3 px-4 text-base text-ink transition-colors duration-150 ease-out hover:bg-surface-muted aria-[current=page]:bg-primary-soft aria-[current=page]:font-semibold aria-[current=page]:text-primary";
+
+const ICON_BUTTON =
+  "inline-flex h-11 items-center justify-center gap-2 rounded-md text-ink-2 transition-colors duration-150 ease-out hover:bg-surface-muted hover:text-ink";
 
 const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -132,6 +137,13 @@ export function HeaderBar({
 
   // The drawer's help list adds Cek Pesanan, which the main row carries on
   // wider screens, between the two help links.
+  const chevron = (
+    <Icon
+      name="arrowRight"
+      className="text-ink-3 group-hover:text-ink-2 h-4 w-4 shrink-0 transition-colors duration-150 ease-out"
+    />
+  );
+
   const drawerHelp = [...helpLinks.slice(0, 1), checkOrder, ...helpLinks.slice(1)];
 
   return (
@@ -146,7 +158,7 @@ export function HeaderBar({
             aria-label="Tokoshopee"
             className="inline-flex h-11 shrink-0 items-center"
           >
-            <Wordmark className="text-xl md:text-2xl" />
+            <Wordmark mark className="text-xl md:text-2xl" />
           </Link>
 
           <div data-slot="search" className="hidden h-11 min-w-0 flex-1 md:block">
@@ -154,6 +166,15 @@ export function HeaderBar({
           </div>
 
           <div className="ml-auto flex items-center gap-2 md:ml-0">
+            <Link
+              href={checkOrder.href}
+              aria-current={current(checkOrder.href)}
+              className={`${ICON_BUTTON} px-3 text-sm font-medium max-md:hidden aria-[current=page]:text-primary`}
+            >
+              <Icon name="receipt" className="h-5 w-5 shrink-0" />
+              <span className="max-xl:sr-only">{checkOrder.label}</span>
+            </Link>
+
             {buy && (
               <ButtonLink href={buy.href} className="max-md:hidden">
                 {buy.label}
@@ -169,7 +190,7 @@ export function HeaderBar({
               aria-expanded={open}
               aria-controls="site-drawer"
               aria-label={open ? labels.closeMenu : labels.openMenu}
-              className="text-ink hover:bg-surface-muted inline-flex h-11 w-11 items-center justify-center rounded-md transition-colors duration-150 ease-out lg:hidden"
+              className={`${ICON_BUTTON} text-ink w-11 lg:hidden`}
             >
               <Icon name="menu" className="h-6 w-6" />
             </button>
@@ -177,8 +198,13 @@ export function HeaderBar({
         </Container>
 
         <nav aria-label={labels.nav} className="border-border hidden border-t lg:block">
-          <Container className="flex items-center">
-            <ul className="-ml-3 flex flex-wrap items-center">
+          <Container className="flex items-center gap-3">
+            <span className="text-ink flex h-11 shrink-0 items-center gap-2 text-sm font-semibold">
+              <Icon name="grid" className="text-primary h-4 w-4" />
+              {labels.categories}
+            </span>
+            <span aria-hidden className="bg-border h-4 w-px shrink-0" />
+            <ul className="flex flex-wrap items-center">
               {categories.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} aria-current={current(link.href)} className={ROW_LINK}>
@@ -210,8 +236,11 @@ export function HeaderBar({
             className="bg-surface fixed inset-y-0 right-0 flex w-[min(20rem,85vw)] flex-col overflow-y-auto shadow-md"
           >
             <div className="border-border flex h-16 shrink-0 items-center justify-between border-b pr-2 pl-4">
-              <h2 id="site-drawer-title" className="text-ink text-lg font-semibold">
-                {labels.menuTitle}
+              <h2 id="site-drawer-title" className="text-ink flex items-center gap-2 text-lg font-semibold">
+                <span aria-hidden>
+                  <Wordmark mark className="text-lg" />
+                </span>
+                <span className="sr-only">{labels.menuTitle}</span>
               </h2>
               <button
                 ref={closeButton}
@@ -224,12 +253,12 @@ export function HeaderBar({
               </button>
             </div>
 
-            <nav aria-label={labels.nav} className="flex flex-col gap-4 py-4">
+            <nav aria-label={labels.nav} className="divide-border flex flex-col divide-y">
               {categories.length > 0 && (
-                <section aria-labelledby="site-drawer-categories">
+                <section aria-labelledby="site-drawer-categories" className="py-4">
                   <h3
                     id="site-drawer-categories"
-                    className="text-ink-3 px-4 pb-1 text-sm font-semibold"
+                    className="text-ink-3 px-4 pb-2 text-sm font-semibold"
                   >
                     {labels.categories}
                   </h3>
@@ -242,14 +271,15 @@ export function HeaderBar({
                           className={DRAWER_LINK}
                         >
                           {link.label}
+                          {chevron}
                         </Link>
                       </li>
                     ))}
                   </ul>
                 </section>
               )}
-              <section aria-labelledby="site-drawer-help">
-                <h3 id="site-drawer-help" className="text-ink-3 px-4 pb-1 text-sm font-semibold">
+              <section aria-labelledby="site-drawer-help" className="py-4">
+                <h3 id="site-drawer-help" className="text-ink-3 px-4 pb-2 text-sm font-semibold">
                   {labels.help}
                 </h3>
                 <ul>
@@ -261,6 +291,7 @@ export function HeaderBar({
                         className={DRAWER_LINK}
                       >
                         {link.label}
+                        {chevron}
                       </Link>
                     </li>
                   ))}

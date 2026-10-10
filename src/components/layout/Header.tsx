@@ -62,7 +62,8 @@ export async function Header({ locale }: { locale: AppLocale }) {
     <>
       <AnnouncementBar
         message={t("announce.noAccount")}
-        links={[...helpLinks, checkOrder]}
+        // Cek Pesanan is not repeated here: the sticky bar carries it from md.
+        links={helpLinks}
         label={t("nav.help")}
       />
       <HeaderBar
