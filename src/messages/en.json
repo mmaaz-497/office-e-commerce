@@ -31,7 +31,9 @@
       "categories": "Categories",
       "help": "Help",
       "menuTitle": "Menu",
-      "buy": "Buy"
+      "buy": "Buy",
+      "shipsTo": "Ships to",
+      "shipsToArea": "all of Indonesia"
     },
     "announce": {
       "noAccount": "Order without creating an account"

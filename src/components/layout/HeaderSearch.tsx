@@ -35,10 +35,6 @@ function SearchForm({
       <label htmlFor={inputId} className="sr-only">
         {labels.label}
       </label>
-      <Icon
-        name="search"
-        className="text-ink-3 pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2"
-      />
       <input
         id={inputId}
         type="search"
@@ -48,11 +44,13 @@ function SearchForm({
         enterKeyHint="search"
         autoComplete="off"
         placeholder={labels.placeholder}
-        className="border-border-strong bg-surface text-ink placeholder:text-ink-3 hover:border-ink-3 focus:border-primary h-11 w-full min-w-0 rounded-l-md border border-r-0 pr-3 pl-10 text-base transition-colors duration-150 ease-out"
+        className="peer border-border-strong bg-surface text-ink placeholder:text-ink-3 hover:border-ink-3 focus:border-primary h-11 w-full min-w-0 rounded-md border pr-3 pl-12 text-base transition-colors duration-150 ease-out"
       />
+      {/* The magnifier is the submit button, as in the marketplace search
+          bars: one clean field, still submittable by pointer as well as Enter. */}
       <button
         type="submit"
-        className="bg-primary hover:bg-primary-hover active:bg-primary-active inline-flex h-11 w-12 shrink-0 items-center justify-center rounded-r-md text-white transition-colors duration-150 ease-out"
+        className="text-ink-3 hover:text-primary peer-focus:text-primary absolute inset-y-0 left-0 inline-flex w-11 items-center justify-center rounded-l-md transition-colors duration-150 ease-out"
       >
         <Icon name="search" className="h-5 w-5" />
         <span className="sr-only">{labels.submit}</span>

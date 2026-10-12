@@ -31,7 +31,9 @@
       "categories": "Kategori",
       "help": "Bantuan",
       "menuTitle": "Menu",
-      "buy": "Beli"
+      "buy": "Beli",
+      "shipsTo": "Dikirim ke",
+      "shipsToArea": "seluruh Indonesia"
     },
     "announce": {
       "noAccount": "Pesan tanpa perlu membuat akun"

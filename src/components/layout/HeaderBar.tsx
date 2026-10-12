@@ -34,6 +34,9 @@ const DRAWER_LINK =
 const ICON_BUTTON =
   "inline-flex h-11 items-center justify-center gap-2 rounded-md text-ink-2 transition-colors duration-150 ease-out hover:bg-surface-muted hover:text-ink";
 
+const MENU_LINK =
+  "flex h-11 items-center gap-3 rounded-md px-3 text-base text-ink transition-colors duration-150 ease-out hover:bg-surface-muted aria-[current=page]:bg-primary-soft aria-[current=page]:font-semibold aria-[current=page]:text-primary";
+
 const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 export function HeaderBar({
@@ -64,11 +67,17 @@ export function HeaderBar({
     openMenu: string;
     closeMenu: string;
     menuTitle: string;
+    /** "Dikirim ke" / "Ships to", followed by the bold area. */
+    shipsTo: string;
+    shipsToArea: string;
   };
 }) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [catalogOpen, setCatalogOpen] = useState(false);
+  const catalogRoot = useRef<HTMLDivElement>(null);
+  const catalogButton = useRef<HTMLButtonElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const panel = useRef<HTMLDivElement>(null);
@@ -83,7 +92,36 @@ export function HeaderBar({
 
   // A route change must close the drawer: its links navigate within the same
   // layout, so without this it would still cover the page just asked for.
-  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    setOpen(false);
+    setCatalogOpen(false);
+  }, [pathname]);
+
+  // The Kategori panel is a disclosure, not a modal: a press outside it or
+  // focus leaving it closes it, and Escape closes it and returns focus to its
+  // button.
+  useEffect(() => {
+    if (!catalogOpen) return;
+    const onPointer = (event: PointerEvent) => {
+      if (!catalogRoot.current?.contains(event.target as Node)) setCatalogOpen(false);
+    };
+    const onFocus = (event: FocusEvent) => {
+      if (!catalogRoot.current?.contains(event.target as Node)) setCatalogOpen(false);
+    };
+    const onKey = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setCatalogOpen(false);
+      catalogButton.current?.focus();
+    };
+    document.addEventListener("pointerdown", onPointer);
+    document.addEventListener("focusin", onFocus);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointer);
+      document.removeEventListener("focusin", onFocus);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [catalogOpen]);
 
   // Opening moves focus into the drawer; closing, however it happens, returns
   // it to the menu button — but not on first render, when nothing was open.
@@ -152,36 +190,85 @@ export function HeaderBar({
         data-scrolled={scrolled}
         className="border-border bg-surface sticky top-0 z-50 border-b transition-shadow duration-150 ease-out data-[scrolled=true]:shadow-sm"
       >
-        <Container className="flex h-14 items-center gap-2 sm:gap-4 md:h-16">
+        <Container className="flex h-14 items-center gap-2 sm:gap-4 md:h-16 lg:h-20 lg:gap-6">
           <Link
             href={homeHref}
             aria-label="Tokoshopee"
             className="inline-flex h-11 shrink-0 items-center"
           >
-            <Wordmark mark className="text-xl md:text-2xl" />
+            <Wordmark mark className="text-xl md:text-2xl lg:text-[1.75rem]" />
           </Link>
+
+          {categories.length > 0 && (
+            <div ref={catalogRoot} className="relative hidden shrink-0 lg:block">
+              <button
+                ref={catalogButton}
+                type="button"
+                onClick={() => setCatalogOpen((value) => !value)}
+                aria-expanded={catalogOpen}
+                aria-controls="site-categories"
+                className={`${ICON_BUTTON} text-ink aria-expanded:bg-surface-muted px-3 text-base font-medium`}
+              >
+                {labels.categories}
+                <Icon
+                  name="chevronDown"
+                  className={`h-4 w-4 transition-transform duration-150 ease-out ${catalogOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {catalogOpen && (
+                <div
+                  id="site-categories"
+                  className="border-border bg-surface absolute top-full left-0 z-10 mt-2 w-72 rounded-lg border p-2 shadow-md transition-opacity duration-200 ease-out starting:opacity-0"
+                >
+                  <p className="text-ink-3 px-3 pt-1 pb-2 text-sm font-semibold">
+                    {labels.categories}
+                  </p>
+                  <ul>
+                    {categories.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          aria-current={current(link.href)}
+                          onClick={() => setCatalogOpen(false)}
+                          className={MENU_LINK}
+                        >
+                          <span className="bg-primary-soft text-primary inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md">
+                            <Icon name="grid" className="h-4 w-4" />
+                          </span>
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
 
           <div data-slot="search" className="hidden h-11 min-w-0 flex-1 md:block">
             {search?.desktop}
           </div>
 
-          <div className="ml-auto flex items-center gap-2 md:ml-0">
-            <Link
+          <div className="ml-auto flex items-center gap-2 md:ml-0 lg:gap-3">
+            {localeSwitcher}
+
+            <span aria-hidden className="bg-border mx-1 hidden h-8 w-px shrink-0 md:block" />
+
+            <ButtonLink
               href={checkOrder.href}
+              variant="secondary"
               aria-current={current(checkOrder.href)}
-              className={`${ICON_BUTTON} px-3 text-sm font-medium max-md:hidden aria-[current=page]:text-primary`}
+              className="max-md:hidden max-xl:w-11 max-xl:px-0"
             >
               <Icon name="receipt" className="h-5 w-5 shrink-0" />
               <span className="max-xl:sr-only">{checkOrder.label}</span>
-            </Link>
+            </ButtonLink>
 
             {buy && (
-              <ButtonLink href={buy.href} className="max-md:hidden">
+              <ButtonLink href={buy.href} className="max-md:hidden lg:px-6">
                 {buy.label}
               </ButtonLink>
             )}
-
-            {localeSwitcher}
 
             <button
               ref={menuButton}
@@ -197,13 +284,8 @@ export function HeaderBar({
           </div>
         </Container>
 
-        <nav aria-label={labels.nav} className="border-border hidden border-t lg:block">
-          <Container className="flex items-center gap-3">
-            <span className="text-ink flex h-11 shrink-0 items-center gap-2 text-sm font-semibold">
-              <Icon name="grid" className="text-primary h-4 w-4" />
-              {labels.categories}
-            </span>
-            <span aria-hidden className="bg-border h-4 w-px shrink-0" />
+        <Container className="-mt-2 hidden items-center justify-between gap-6 lg:flex">
+          <nav aria-label={labels.nav} className="-ml-3 min-w-0">
             <ul className="flex flex-wrap items-center">
               {categories.map((link) => (
                 <li key={link.href}>
@@ -213,8 +295,14 @@ export function HeaderBar({
                 </li>
               ))}
             </ul>
-          </Container>
-        </nav>
+          </nav>
+          <p className="text-ink-2 flex h-11 shrink-0 items-center gap-2 text-sm">
+            <Icon name="truck" className="text-primary h-5 w-5 shrink-0" />
+            <span>
+              {labels.shipsTo} <span className="text-ink font-semibold">{labels.shipsToArea}</span>
+            </span>
+          </p>
+        </Container>
 
         <Container className="pb-2 md:hidden">
           <div data-slot="search" className="h-11">

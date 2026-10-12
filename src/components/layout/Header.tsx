@@ -83,6 +83,8 @@ export async function Header({ locale }: { locale: AppLocale }) {
           openMenu: t("nav.openMenu"),
           closeMenu: t("nav.closeMenu"),
           menuTitle: t("nav.menuTitle"),
+          shipsTo: t("nav.shipsTo"),
+          shipsToArea: t("nav.shipsToArea"),
         }}
         localeSwitcher={
           <Suspense fallback={<LocaleSwitcherFallback />}>
