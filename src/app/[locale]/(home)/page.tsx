@@ -81,7 +81,8 @@ export default async function HomePage({
   ]);
 
   // Both grids appear only from SHOWCASE_MINIMUM items, computed from this
-  // render's data; the featured product is never repeated (R-708).
+  // render's data; the featured product counts toward the "more on sale"
+  // minimum but is never repeated in it (R-708).
   const plan = planHomeSections({ products, featuredId: featured.id });
 
   // The featured product is the first on sale; with nothing on sale it is a

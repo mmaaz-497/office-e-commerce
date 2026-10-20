@@ -8,7 +8,8 @@ import { resetDb, seedCategory, seedProduct } from "./helpers/db";
  * 006 T049, revised by 007 T026 (FR-022, research R-708). The homepage's
  * "more on sale" grid holds the ACTIVE products other than the featured one,
  * and the Segera hadir grid the COMING_SOON ones; each appears only from
- * SHOWCASE_MINIMUM (2) items, computed from the real readers on each render,
+ * SHOWCASE_MINIMUM (2) items (for "more on sale", the featured product
+ * counts toward it), computed from the real readers on each render,
  * so flipping the data shows or hides them with no code change.
  *
  * The steps build on each other, in order, against the test database only.
@@ -58,12 +59,14 @@ describe("homepage section thresholds (integration, 007 US2)", () => {
     expect(sections.comingSoonGrid).toHaveLength(3);
   });
 
-  it("a second ACTIVE product is still below the minimum once the featured one is left out", async () => {
-    extraActiveIds.push((await seed("aktif-dua", "ACTIVE")).id);
+  it("a second ACTIVE product meets the minimum: a grid of the one that is not featured", async () => {
+    const second = await seed("aktif-dua", "ACTIVE");
+    extraActiveIds.push(second.id);
 
-    const { sections } = await plan();
+    const { featured, sections } = await plan();
 
-    expect(sections.moreOnSale).toEqual([]);
+    expect(featured.id).toBe(firstActiveId);
+    expect(sections.moreOnSale.map((product) => product.id)).toEqual([second.id]);
   });
 
   it("a third ACTIVE product in a second category shows the grid, never repeating the featured one", async () => {
@@ -83,8 +86,11 @@ describe("homepage section thresholds (integration, 007 US2)", () => {
     expect(categories.map((category) => category.slug)).toEqual(["sandal", "tas"]);
   });
 
-  it("hides the grid again when one of them goes back to DRAFT", async () => {
-    await prisma.product.update({ where: { id: extraActiveIds[1] }, data: { status: "DRAFT" } });
+  it("hides the grid again when only the featured product is left ACTIVE", async () => {
+    await prisma.product.updateMany({
+      where: { id: { in: extraActiveIds } },
+      data: { status: "DRAFT" },
+    });
 
     const { categories, sections } = await plan();
 

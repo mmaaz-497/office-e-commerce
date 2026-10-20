@@ -1,12 +1,14 @@
 import type { ProductStatus } from "./status";
 
 /**
- * The homepage section thresholds (006 FR-022c, R-507; revised by 007 R-708):
+ * The homepage section thresholds (006 FR-022c, R-507; revised by 007 R-708,
+ * then so that the featured product counts toward the "more on sale" minimum):
  * one named rule, computed from each render's data. A section whose list is
  * empty renders nothing (honest content).
  *
  * The featured product has its own full block on the homepage, so the "more on
- * sale" grid holds the other ACTIVE products. Categories now appear in the
+ * sale" grid holds the other ACTIVE products, but the minimum counts every
+ * ACTIVE product, featured included: two on sale show a grid of one. Categories now appear in the
  * quick-access row, which has no threshold, so they are no longer planned here.
  *
  * Pure: no Next.js, no Prisma (ESLint domain rule).
@@ -23,7 +25,7 @@ export function hasPublishedReviews(stats: { count: number }): boolean {
 }
 
 export interface HomeSectionsPlan<P> {
-  /** ACTIVE products other than the featured one; none below the minimum. */
+  /** ACTIVE products other than the featured one; none while fewer than the minimum are ACTIVE. */
   moreOnSale: P[];
   /** COMING_SOON products in catalogue order; none below the minimum. */
   comingSoonGrid: P[];
@@ -36,12 +38,11 @@ export function planHomeSections<P extends { id: string; status: ProductStatus }
   products: readonly P[];
   featuredId: string | null;
 }): HomeSectionsPlan<P> {
-  const others = products.filter(
-    (product) => product.status === "ACTIVE" && product.id !== featuredId,
-  );
+  const active = products.filter((product) => product.status === "ACTIVE");
+  const others = active.filter((product) => product.id !== featuredId);
   const comingSoon = products.filter((product) => product.status === "COMING_SOON");
   return {
-    moreOnSale: meetsShowcaseMinimum(others.length) ? others : [],
+    moreOnSale: meetsShowcaseMinimum(active.length) ? others : [],
     comingSoonGrid: meetsShowcaseMinimum(comingSoon.length) ? comingSoon : [],
   };
 }

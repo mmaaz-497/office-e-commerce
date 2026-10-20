@@ -13,7 +13,8 @@ import type { ProductStatus } from "@/domain/catalogue/status";
  * 006 T014, revised by 007 T024 — the homepage section thresholds (FR-022,
  * research R-708). The featured product has its own full block, so the
  * "more on sale" grid holds the other ACTIVE products; both grids appear only
- * from SHOWCASE_MINIMUM items.
+ * from SHOWCASE_MINIMUM items, and for "more on sale" the featured product
+ * counts toward it.
  */
 
 const product = (id: string, status: ProductStatus) => ({ id, status });
@@ -23,7 +24,7 @@ const samples = (n: number) => Array.from({ length: n }, (_, i) => product(`s${i
 describe("planHomeSections — more on sale", () => {
   it.each([
     [1, 0],
-    [2, 0],
+    [2, 1],
     [3, 2],
     [4, 3],
   ])("%i ACTIVE products (one featured) give a grid of %i", (count, expected) => {
@@ -38,6 +39,7 @@ describe("planHomeSections — more on sale", () => {
 
   it("with no featured product, every ACTIVE product counts", () => {
     expect(planHomeSections({ products: actives(2), featuredId: null }).moreOnSale).toHaveLength(2);
+    expect(planHomeSections({ products: actives(1), featuredId: null }).moreOnSale).toEqual([]);
   });
 });
 
@@ -79,7 +81,7 @@ describe("planHomeSections — DRAFT", () => {
 
   it("does not count toward the minimum", () => {
     const plan = planHomeSections({
-      products: [...actives(2), product("d1", "DRAFT"), product("d2", "DRAFT")],
+      products: [...actives(1), product("d1", "DRAFT"), product("d2", "DRAFT")],
       featuredId: "a0",
     });
     expect(plan.moreOnSale).toEqual([]);
