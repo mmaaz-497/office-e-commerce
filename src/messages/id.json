@@ -832,6 +832,20 @@
         "currentStock": "Stok saat ini",
         "stockHelp": "Stok diubah dari daftar produk atau halaman Stok, bukan dari formulir ini."
       },
+      "draftNotice": {
+        "title": "Produk ini tidak terlihat di toko.",
+        "body": "Terbitkan agar pembeli dapat melihatnya.",
+        "missing": "Masih diperlukan sebelum bisa dijual (versi tersimpan terakhir):",
+        "ready": "Semua syarat terpenuhi. Ubah Status menjadi {active} lalu simpan untuk menerbitkannya.",
+        "requirements": {
+          "price": "Harga jual.",
+          "image": "Minimal satu gambar, dengan teks alt dalam kedua bahasa.",
+          "contentId": "Konten bahasa Indonesia: nama minimal 3 karakter dan deskripsi singkat 20–200 karakter.",
+          "contentEn": "Konten bahasa Inggris: nama minimal 3 karakter dan deskripsi singkat 20–200 karakter.",
+          "stock": "Catatan stok. Atur stoknya di daftar produk.",
+          "otherFields": "Perbaiki kolom lain yang ditandai formulir saat Anda menyimpan."
+        }
+      },
       "markReal": {
         "button": "Tandai sebagai produk asli",
         "title": "Tandai sebagai produk asli?",

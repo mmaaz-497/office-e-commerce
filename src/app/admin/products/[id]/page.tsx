@@ -8,9 +8,11 @@ import {
 } from "@/infrastructure/db/admin-catalogue";
 import { adminProductIdSchema } from "@/app/actions/admin/schemas";
 import { allowedStatusesFor } from "@/domain/catalogue/publish-gate";
+import { missingPublishRequirements } from "@/domain/catalogue/publish-requirements";
 import type { ProductInput } from "@/domain/catalogue/product-schema";
 import type { ProductStatus } from "@/domain/catalogue/status";
 import { getAdminErrorMessages } from "@/components/admin/admin-error-messages";
+import { Alert } from "@/components/ui/Alert";
 import {
   ProductForm,
   type ProductFormInitial,
@@ -91,6 +93,13 @@ export default async function AdminProductEditPage({
     DRAFT: t("status.DRAFT"),
   };
   const name = product.translations.find((row) => row.locale === "en")?.name ?? product.slug;
+  const initial = toFormInitial(product);
+  // A DRAFT is never listed (status.ts): say so, and what saving it as ACTIVE
+  // would still refuse, checked against the saved product by the same schema.
+  const missing =
+    product.status === "DRAFT"
+      ? missingPublishRequirements(initial.product, product.stockLevel !== null)
+      : null;
 
   return (
     <main className={`${pageClass} max-w-5xl`}>
@@ -101,6 +110,24 @@ export default async function AdminProductEditPage({
         <p className="text-ink-3 text-sm">{t("edit.title")}</p>
         <h1 className="text-ink text-2xl font-bold lg:text-[32px] lg:leading-10">{name}</h1>
       </div>
+
+      {missing && (
+        <Alert tone="info" title={t("draftNotice.title")}>
+          <p>{t("draftNotice.body")}</p>
+          {missing.length > 0 ? (
+            <>
+              <p className="mt-3 font-semibold">{t("draftNotice.missing")}</p>
+              <ul className="mt-1 list-disc pl-5">
+                {missing.map((requirement) => (
+                  <li key={requirement}>{t(`draftNotice.requirements.${requirement}`)}</li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p className="mt-3">{t("draftNotice.ready", { active: statusLabels.ACTIVE })}</p>
+          )}
+        </Alert>
+      )}
 
       <section className="border-border bg-surface-muted flex flex-col gap-1 rounded-lg border p-4">
         <p className="text-ink text-base">
@@ -121,7 +148,7 @@ export default async function AdminProductEditPage({
       />
 
       <ProductForm
-        initial={toFormInitial(product)}
+        initial={initial}
         categories={categories.map((c) => ({ id: c.id, name: c.nameEn }))}
         allowedStatuses={allowedStatusesFor(product)}
         slugLocked={product.publishedAt !== null}

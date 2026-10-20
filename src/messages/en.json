@@ -832,6 +832,20 @@
         "currentStock": "Current stock",
         "stockHelp": "Stock is changed from the products list or the Stock page, never from this form."
       },
+      "draftNotice": {
+        "title": "This product is not visible in the store.",
+        "body": "Publish it to show it to shoppers.",
+        "missing": "Still needed before it can go on sale (as last saved):",
+        "ready": "It meets every requirement. Set Status to {active} and save to publish it.",
+        "requirements": {
+          "price": "A selling price.",
+          "image": "At least one image, with alt text in both languages.",
+          "contentId": "Indonesian content: a name of at least 3 characters and a short description of 20–200 characters.",
+          "contentEn": "English content: a name of at least 3 characters and a short description of 20–200 characters.",
+          "stock": "A stock record. Set its stock in the products list.",
+          "otherFields": "Fix the other fields the form marks when you save."
+        }
+      },
       "markReal": {
         "button": "Mark as a real product",
         "title": "Mark as a real product?",
