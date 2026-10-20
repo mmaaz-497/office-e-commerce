@@ -187,7 +187,11 @@ export default async function HomePage({
       {plan.moreOnSale.length > 0 && (
         <section aria-labelledby="home-featured" className="py-10 lg:py-16">
           <Container>
-            <SectionHeader id="home-featured" title={t("home.featured.title")} />
+            <SectionHeader
+              id="home-featured"
+              title={t("home.featured.title")}
+              action={{ href: localeHref("/produk", appLocale), label: t("home.featured.viewAll") }}
+            />
             <ProductGrid>{plan.moreOnSale.map((product) => card(product, GRID_SIZES))}</ProductGrid>
           </Container>
         </section>

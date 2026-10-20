@@ -51,6 +51,7 @@ export interface ProductView {
   video: { src: string; poster: string; alt: string } | null;
   soldCountBaseline: number;
   isSample: boolean;
+  createdAt: Date;
 }
 
 export class CatalogueEmptyError extends Error {
@@ -120,6 +121,7 @@ function toView(row: ProductRow, locale: AppLocale): ProductView | null {
         : null,
     soldCountBaseline: row.soldCountBaseline,
     isSample: row.isSample,
+    createdAt: row.createdAt,
   };
 }
 

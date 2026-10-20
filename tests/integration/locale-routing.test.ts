@@ -142,6 +142,33 @@ describe("locale routing (integration)", () => {
     });
   });
 
+  // The all-products page: /produk and /en/products, beside /en/product/[slug].
+  describe("the all-products page has a localised pathname", () => {
+    it("rewrites the English slug onto the produk folder that exists on disk", () => {
+      const response = middleware(request("/en/products?sort=price-asc"));
+      expect(response.headers.get("location")).toBeNull();
+      const rewrite = response.headers.get("x-middleware-rewrite");
+      expect(new URL(rewrite!).pathname).toBe("/en/produk");
+      expect(new URL(rewrite!).searchParams.get("sort")).toBe("price-asc");
+    });
+
+    it("builds the localised href and switches between the two", () => {
+      expect(localeHref("/produk", "id")).toBe("/id/produk");
+      expect(localeHref("/produk", "en")).toBe("/en/products");
+      expect(switchLocalePath("/id/produk", "en")).toBe("/en/products");
+      expect(switchLocalePath("/en/products", "id")).toBe("/id/produk");
+    });
+
+    it("keeps a product page a product page in both languages", () => {
+      expect(switchLocalePath("/id/produk/slippers-gemoy", "en")).toBe(
+        "/en/product/slippers-gemoy",
+      );
+      expect(switchLocalePath("/en/product/slippers-gemoy", "id")).toBe(
+        "/id/produk/slippers-gemoy",
+      );
+    });
+  });
+
   // 007 T042: the search results page.
   describe("the search page has a localised pathname", () => {
     it("rewrites the English search slug onto the cari folder that exists on disk", () => {

@@ -13,7 +13,8 @@
       "viewDetail": "Lihat detail produk"
     },
     "featured": {
-      "title": "Produk pilihan"
+      "title": "Produk pilihan",
+      "viewAll": "Lihat semua"
     },
     "comingSoon": {
       "title": "Segera hadir",
@@ -33,7 +34,8 @@
       "menuTitle": "Menu",
       "buy": "Beli",
       "shipsTo": "Dikirim ke",
-      "shipsToArea": "seluruh Indonesia"
+      "shipsToArea": "seluruh Indonesia",
+      "allProducts": "Semua Produk"
     },
     "announce": {
       "noAccount": "Pesan tanpa perlu membuat akun"
@@ -1006,6 +1008,29 @@
       "title": "{name} — Tokoshopee",
       "description": "Belanja {name} di Tokoshopee. Pesan tanpa membuat akun, bayar online lewat Midtrans atau COD di provinsi terpilih, dan ongkir tampil sebelum Anda bayar."
     }
+  },
+  "allProducts": {
+    "metadata": {
+      "title": "Semua produk | Tokoshopee",
+      "description": "Lihat semua produk Tokoshopee: sandal yang sudah bisa dipesan dan yang segera hadir. Pesan tanpa akun, bayar online lewat Midtrans atau COD di provinsi terpilih."
+    },
+    "title": "Semua produk",
+    "count": "{count} produk",
+    "sortLabel": "Urutkan",
+    "sort": {
+      "newest": "Terbaru",
+      "priceAsc": "Harga terendah",
+      "priceDesc": "Harga tertinggi"
+    },
+    "pagination": {
+      "label": "Halaman produk",
+      "previous": "Sebelumnya",
+      "next": "Berikutnya",
+      "status": "Halaman {page} dari {count}"
+    },
+    "emptyTitle": "Belum ada produk",
+    "emptyBody": "Produk akan tampil di sini begitu tersedia.",
+    "emptyAction": "Kembali ke beranda"
   },
   "card": {
     "comingSoonPrice": "Segera hadir",

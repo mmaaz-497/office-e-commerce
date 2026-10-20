@@ -12,6 +12,7 @@ import { defineRouting } from "next-intl/routing";
  */
 export const pathnames = {
   "/": "/",
+  "/produk": { id: "/produk", en: "/products" },
   "/produk/[slug]": { id: "/produk/[slug]", en: "/product/[slug]" },
   "/kategori/[slug]": { id: "/kategori/[slug]", en: "/category/[slug]" },
   "/cari": { id: "/cari", en: "/search" },

@@ -69,6 +69,7 @@ export async function Header({ locale }: { locale: AppLocale }) {
       <HeaderBar
         homeHref={localeHref("/", locale)}
         checkOrder={checkOrder}
+        allProducts={{ href: localeHref("/produk", locale), label: t("nav.allProducts") }}
         buy={buy}
         categories={categories.map((category) => ({
           href: localeHref("/kategori/[slug]", locale, { slug: category.slug }),

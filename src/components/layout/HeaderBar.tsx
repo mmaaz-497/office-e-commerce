@@ -42,6 +42,7 @@ const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1
 export function HeaderBar({
   homeHref,
   checkOrder,
+  allProducts,
   buy,
   categories,
   helpLinks,
@@ -51,6 +52,8 @@ export function HeaderBar({
 }: {
   homeHref: string;
   checkOrder: NavLink;
+  /** Semua Produk: first in the category row and the drawer, shown with or without categories. */
+  allProducts: NavLink;
   /** The "Beli" shortcut to the homepage product block; null when nothing is on sale. */
   buy: NavLink | null;
   categories: NavLink[];
@@ -170,8 +173,11 @@ export function HeaderBar({
     }
   };
 
+  // Semua Produk matches exactly: /id/produk/<slug> is a product page, not the list.
   const current = (href: string) =>
-    pathname === href || pathname.startsWith(`${href}/`) ? "page" : undefined;
+    pathname === href || (href !== allProducts.href && pathname.startsWith(`${href}/`))
+      ? "page"
+      : undefined;
 
   // The drawer's help list adds Cek Pesanan, which the main row carries on
   // wider screens, between the two help links.
@@ -258,7 +264,7 @@ export function HeaderBar({
               href={checkOrder.href}
               variant="secondary"
               aria-current={current(checkOrder.href)}
-              className="max-md:hidden max-xl:w-11 max-xl:px-0"
+              className="max-xl:w-11 max-xl:px-0 max-md:hidden"
             >
               <Icon name="receipt" className="h-5 w-5 shrink-0" />
               <span className="max-xl:sr-only">{checkOrder.label}</span>
@@ -287,7 +293,7 @@ export function HeaderBar({
         <Container className="-mt-2 hidden items-center justify-between gap-6 lg:flex">
           <nav aria-label={labels.nav} className="-ml-3 min-w-0">
             <ul className="flex flex-wrap items-center">
-              {categories.map((link) => (
+              {[allProducts, ...categories].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} aria-current={current(link.href)} className={ROW_LINK}>
                     {link.label}
@@ -324,7 +330,10 @@ export function HeaderBar({
             className="bg-surface fixed inset-y-0 right-0 flex w-[min(20rem,85vw)] flex-col overflow-y-auto shadow-md"
           >
             <div className="border-border flex h-16 shrink-0 items-center justify-between border-b pr-2 pl-4">
-              <h2 id="site-drawer-title" className="text-ink flex items-center gap-2 text-lg font-semibold">
+              <h2
+                id="site-drawer-title"
+                className="text-ink flex items-center gap-2 text-lg font-semibold"
+              >
                 <span aria-hidden>
                   <Wordmark mark className="text-lg" />
                 </span>
@@ -342,30 +351,28 @@ export function HeaderBar({
             </div>
 
             <nav aria-label={labels.nav} className="divide-border flex flex-col divide-y">
-              {categories.length > 0 && (
-                <section aria-labelledby="site-drawer-categories" className="py-4">
-                  <h3
-                    id="site-drawer-categories"
-                    className="text-ink-3 px-4 pb-2 text-sm font-semibold"
-                  >
-                    {labels.categories}
-                  </h3>
-                  <ul>
-                    {categories.map((link) => (
-                      <li key={link.href}>
-                        <Link
-                          href={link.href}
-                          aria-current={current(link.href)}
-                          className={DRAWER_LINK}
-                        >
-                          {link.label}
-                          {chevron}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
+              <section aria-labelledby="site-drawer-categories" className="py-4">
+                <h3
+                  id="site-drawer-categories"
+                  className="text-ink-3 px-4 pb-2 text-sm font-semibold"
+                >
+                  {labels.categories}
+                </h3>
+                <ul>
+                  {[allProducts, ...categories].map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        aria-current={current(link.href)}
+                        className={DRAWER_LINK}
+                      >
+                        {link.label}
+                        {chevron}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
               <section aria-labelledby="site-drawer-help" className="py-4">
                 <h3 id="site-drawer-help" className="text-ink-3 px-4 pb-2 text-sm font-semibold">
                   {labels.help}

@@ -28,6 +28,7 @@ const MESSAGES = { id, en } as const;
 /** Every internal route mapped to the message namespace its page reads for metadata. */
 const ROUTE_NAMESPACE: Record<InternalPathname, string> = {
   "/": "home",
+  "/produk": "allProducts",
   "/produk/[slug]": "product",
   "/kategori/[slug]": "category",
   "/cari": "search",

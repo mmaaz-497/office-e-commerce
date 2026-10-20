@@ -13,7 +13,8 @@
       "viewDetail": "View product details"
     },
     "featured": {
-      "title": "Featured products"
+      "title": "Featured products",
+      "viewAll": "See all"
     },
     "comingSoon": {
       "title": "Coming soon",
@@ -33,7 +34,8 @@
       "menuTitle": "Menu",
       "buy": "Buy",
       "shipsTo": "Ships to",
-      "shipsToArea": "all of Indonesia"
+      "shipsToArea": "all of Indonesia",
+      "allProducts": "All Products"
     },
     "announce": {
       "noAccount": "Order without creating an account"
@@ -1006,6 +1008,29 @@
       "title": "{name} — Tokoshopee",
       "description": "Shop {name} at Tokoshopee. Order without an account, pay online through Midtrans or cash on delivery in selected provinces, and see shipping before you pay."
     }
+  },
+  "allProducts": {
+    "metadata": {
+      "title": "All products | Tokoshopee",
+      "description": "Browse every Tokoshopee product: sandals you can order today and those coming soon. Order without an account, pay online through Midtrans or cash on delivery."
+    },
+    "title": "All products",
+    "count": "{count, plural, one {# product} other {# products}}",
+    "sortLabel": "Sort by",
+    "sort": {
+      "newest": "Newest",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low"
+    },
+    "pagination": {
+      "label": "Product pages",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {count}"
+    },
+    "emptyTitle": "No products yet",
+    "emptyBody": "Products will appear here as soon as they are available.",
+    "emptyAction": "Back to the homepage"
   },
   "card": {
     "comingSoonPrice": "Coming soon",
