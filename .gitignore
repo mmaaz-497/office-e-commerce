@@ -47,5 +47,11 @@ next-env.d.ts
 # local verification screenshots (006 and later)
 /screenshots/
 
+# database dumps and backups (migration .sql files stay tracked)
+*.dump
+*.sql.gz
+*.backup
+/backups/
+
 
 CLAUDE.md
