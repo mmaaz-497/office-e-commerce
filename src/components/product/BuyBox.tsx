@@ -100,6 +100,7 @@ export async function BuyBox({
           productSlug={product.slug}
           priceIDR={product.priceIDR}
           maxQuantity={maxQuantity}
+          sizes={product.sizes}
         />
       )}
 

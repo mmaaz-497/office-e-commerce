@@ -40,6 +40,11 @@ export default async function AdminOrderDetailPage({
         </div>
         <div>{t("quantity")}</div>
         <div>{order.quantity}</div>
+        <div>{t("size")}</div>
+        {/* What the packer reads: the size frozen at order time, never the current catalogue. */}
+        <div className={order.size ? "text-base font-bold tabular-nums" : "text-brown/70"}>
+          {order.size ?? t("noSize")}
+        </div>
         <div>{t("total")}</div>
         <div>{formatIDR(order.totalIDR)}</div>
         {order.trackingNumber && (

@@ -122,17 +122,18 @@ export default async function AdminOrdersPage({
           }
         />
       ) : (
-        /* Wrapped, not the bare table: a 6-column table is wider than 360px,
+        /* Wrapped, not the bare table: a 7-column table is wider than 360px,
            and scrolling this region keeps the page itself from scrolling
            horizontally (T126, SC-001). */
         <div className="border-line bg-shell overflow-x-auto rounded-xl border">
-          <table className="w-full min-w-[40rem] text-left text-sm">
+          <table className="w-full min-w-[44rem] text-left text-sm">
             <thead>
               <tr className="border-line text-brown/70 border-b text-xs">
                 <th className="p-3 font-medium">{t("table.orderNumber")}</th>
                 <th className="p-3 font-medium">{t("table.status")}</th>
                 <th className="p-3 font-medium">{t("table.paymentMethod")}</th>
                 <th className="p-3 font-medium">{t("table.customer")}</th>
+                <th className="p-3 font-medium">{t("table.size")}</th>
                 <th className="p-3 text-right font-medium">{t("table.total")}</th>
                 <th className="p-3 text-right font-medium">{t("table.placed")}</th>
               </tr>
@@ -154,6 +155,9 @@ export default async function AdminOrdersPage({
                   <td className="text-brown p-3">{tPayment(order.paymentMethod)}</td>
                   <td className="text-brown-dark max-w-[12rem] truncate p-3">
                     <span title={order.customerName}>{order.customerName}</span>
+                  </td>
+                  <td className="text-brown-dark p-3 font-semibold tabular-nums">
+                    {order.size ?? "—"}
                   </td>
                   <td className="text-brown-dark p-3 text-right font-semibold tabular-nums">
                     {formatIDR(order.totalIDR)}

@@ -7,12 +7,26 @@ import type { PriceBreakdown } from "@/domain/pricing/quote";
  * computed from `breakdown` itself here, never passed in separately, so the
  * two can never drift apart on screen.
  */
-export function OrderSummary({ breakdown }: { breakdown: PriceBreakdown }) {
+export function OrderSummary({
+  breakdown,
+  size = null,
+}: {
+  breakdown: PriceBreakdown;
+  /** The chosen size, so the buyer sees it once more before placing the order. */
+  size?: string | null;
+}) {
   const t = useTranslations("checkout.summary");
+  const tForm = useTranslations("checkout.form");
   const lineTotal = breakdown.unitPrice * breakdown.quantity;
 
   return (
     <dl className="border-cream-dark flex flex-col gap-2 rounded-lg border p-4 text-sm">
+      {size !== null && (
+        <div className="flex justify-between">
+          <dt>{tForm("size")}</dt>
+          <dd className="font-semibold tabular-nums">{size}</dd>
+        </div>
+      )}
       <div className="flex justify-between">
         <dt>{t("subtotal")}</dt>
         <dd>{formatIDR(lineTotal)}</dd>

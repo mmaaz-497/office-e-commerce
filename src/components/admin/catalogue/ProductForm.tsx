@@ -2,11 +2,18 @@
 
 import { useRouter } from "next/navigation";
 import { useId, useState, type ReactNode } from "react";
+import { formatSizeList, parseSizeList } from "@/domain/catalogue/sizes";
 import { saveProduct } from "@/app/actions/admin/products";
 import { productInputSchema, type ProductInput } from "@/domain/catalogue/product-schema";
 import type { ProductStatus } from "@/domain/catalogue/status";
 import { formatIDR } from "@/domain/money";
-import { fillTemplate, resolveFieldError, toFieldErrors, type FieldError } from "./form-errors";
+import {
+  fieldErrorsAt,
+  fillTemplate,
+  resolveFieldError,
+  toFieldErrors,
+  type FieldError,
+} from "./form-errors";
 import {
   ImageUploader,
   type ImageListLabels,
@@ -27,7 +34,8 @@ import {
 /** The raw admin.productForm message tree, passed down unresolved (see fillTemplate). */
 export type ProductFormLabels = (typeof import("@/messages/en.json"))["admin"]["productForm"];
 /** The admin.products.unpublish message tree (005 R-404). */
-export type UnpublishLabels = (typeof import("@/messages/en.json"))["admin"]["products"]["unpublish"];
+export type UnpublishLabels =
+  (typeof import("@/messages/en.json"))["admin"]["products"]["unpublish"];
 
 export interface ProductFormInitial {
   productId?: string;
@@ -61,6 +69,8 @@ type FormState = {
   position: string;
   priceIDR: string;
   compareAtPriceIDR: string;
+  /** Comma-separated as typed; parsed into the stored list on save. */
+  sizes: string;
   images: ProductImageValue[];
   translations: Record<Locale, TranslationState>;
 };
@@ -87,6 +97,7 @@ function toState(initial: ProductFormInitial): FormState {
     position: String(initial.position),
     priceIDR: p.priceIDR === null ? "" : String(p.priceIDR),
     compareAtPriceIDR: p.compareAtPriceIDR === null ? "" : String(p.compareAtPriceIDR),
+    sizes: formatSizeList(p.sizes ?? []),
     images: p.images.map((image) => ({ ...image })),
     translations: { id: translation("id"), en: translation("en") },
   };
@@ -123,6 +134,7 @@ function toProductInput(state: FormState, initial: ProductInput): ProductInput {
     status: state.status,
     priceIDR: toNumber(state.priceIDR),
     compareAtPriceIDR: toNumber(state.compareAtPriceIDR),
+    sizes: parseSizeList(state.sizes),
     images: state.images,
     video: initial.video,
     translations: { id: translation("id"), en: translation("en") },
@@ -132,6 +144,7 @@ function toProductInput(state: FormState, initial: ProductInput): ProductInput {
 /** Paths that have a control on this form; errors anywhere else are listed in the summary. */
 const RENDERED_PATHS = [
   /^(slug|sku|categoryId|status|position|priceIDR|compareAtPriceIDR)$/,
+  /^sizes(.d+)?$/,
   /^images(\.\d+(\.(altId|altEn))?)?$/,
   /^translations\.(id|en)\.(name|shortDescription|longDescription|seoTitle|seoDescription)$/,
   /^translations\.(id|en)\.highlights(\.\d+)?$/,
@@ -204,8 +217,11 @@ export function ProductForm({
   const [saved, setSaved] = useState(false);
 
   const fieldMessages = labels.errors as Record<string, string>;
-  const messagesFor = (path: string) =>
-    (fieldErrors[path] ?? []).map((err) => resolveFieldError(err, fieldMessages));
+  const messagesFor = (path: string) => [
+    ...new Set(
+      fieldErrorsAt(fieldErrors, path).map((err) => resolveFieldError(err, fieldMessages)),
+    ),
+  ];
   const idFor = (path: string) => `${formId}-${path.replace(/\./g, "-")}`;
 
   function edit(patch: Partial<FormState>) {
@@ -542,6 +558,22 @@ export function ProductForm({
               help: pricePreview(state.compareAtPriceIDR) ?? labels.compareAtHelp,
               optional: true,
             },
+          )}
+          {field(
+            "sizes",
+            labels.sizes,
+            (props) => (
+              <input
+                {...props}
+                className={inputClass}
+                value={state.sizes}
+                autoCapitalize="characters"
+                spellCheck={false}
+                placeholder="36, 38, 40, 42"
+                onChange={(event) => edit({ sizes: event.target.value })}
+              />
+            ),
+            { help: labels.sizesHelp, optional: true },
           )}
         </div>
       </fieldset>

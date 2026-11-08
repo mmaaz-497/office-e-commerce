@@ -84,3 +84,19 @@ export function resolveFieldError(err: FieldError, messages: Record<string, stri
   const template = messages[err.key] ?? messages.invalid ?? err.key;
   return fillTemplate(template, err.values);
 }
+
+/**
+ * The errors one form control shows. A path with no errors gives []. The
+ * sizes control is a single text input for the whole list, so it also shows
+ * errors on one entry ("sizes.2").
+ */
+export function fieldErrorsAt(
+  fieldErrors: Readonly<Record<string, FieldError[]>>,
+  path: string,
+): FieldError[] {
+  const paths =
+    path === "sizes"
+      ? Object.keys(fieldErrors).filter((key) => key === "sizes" || key.startsWith("sizes."))
+      : [path];
+  return paths.flatMap((key) => fieldErrors[key] ?? []);
+}

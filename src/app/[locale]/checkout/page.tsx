@@ -6,6 +6,7 @@ import { asAppLocale, localeHref } from "@/i18n/pathnames";
 import { env } from "@/config";
 import { routeMetadata } from "@/infrastructure/seo/metadata";
 import { resolveCheckoutProduct } from "@/infrastructure/db/catalogue";
+import { preselectedSize } from "@/domain/catalogue/sizes";
 
 export async function generateMetadata({
   params,
@@ -27,11 +28,15 @@ export default async function CheckoutPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ product?: string | string[]; quantity?: string }>;
+  searchParams: Promise<{
+    product?: string | string[];
+    quantity?: string;
+    size?: string | string[];
+  }>;
 }) {
   const { locale } = await params;
   const appLocale = asAppLocale(locale);
-  const { product: productParam, quantity } = await searchParams;
+  const { product: productParam, quantity, size: sizeParam } = await searchParams;
   const initialQuantity = Math.min(10, Math.max(1, Number(quantity) || 1));
 
   // The product comes from the database, never from the client (contracts/checkout.md).
@@ -51,6 +56,9 @@ export default async function CheckoutPage({
       initialQuantity={initialQuantity}
       productSlug={product.slug}
       productName={product.name}
+      sizes={product.sizes}
+      // A ?size= the product does not offer is dropped, not trusted (the server re-checks).
+      initialSize={preselectedSize(product.sizes, sizeParam)}
       // resolveCheckoutProduct returns only products on sale, which have a price.
       unitPriceIDR={product.priceIDR!}
       midtransClientKey={env.MIDTRANS_CLIENT_KEY}

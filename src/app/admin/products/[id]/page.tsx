@@ -64,6 +64,7 @@ function toFormInitial(product: AdminProduct): ProductFormInitial {
           ? { url: product.videoUrl, posterUrl: product.videoPosterUrl }
           : null,
       translations: { id: translation("id"), en: translation("en") },
+      sizes: product.sizes,
     },
   };
 }

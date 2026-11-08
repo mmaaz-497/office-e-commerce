@@ -48,6 +48,7 @@ export default async function AdminProductNewPage() {
       images: [],
       video: null,
       translations: { id: EMPTY_TRANSLATION, en: EMPTY_TRANSLATION },
+      sizes: [],
     },
   };
   const statusLabels: Record<ProductStatus, string> = {

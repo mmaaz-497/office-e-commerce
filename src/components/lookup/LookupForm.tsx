@@ -85,6 +85,12 @@ export function LookupForm() {
             <dt>{t("results.quantity")}</dt>
             <dd>{result.order.quantity}</dd>
           </div>
+          {result.order.size !== null && (
+            <div className="flex justify-between">
+              <dt>{t("results.size")}</dt>
+              <dd className="font-semibold tabular-nums">{result.order.size}</dd>
+            </div>
+          )}
           <div className="flex justify-between">
             <dt>{t("results.unitPrice")}</dt>
             <dd>{formatIDR(result.order.unitPriceIDR)}</dd>

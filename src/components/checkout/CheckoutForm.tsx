@@ -1,9 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { QuantitySelector } from "@/components/product/QuantitySelector";
+import { SizeSelector, focusSizeGroup } from "@/components/product/SizeSelector";
 import { AddressFields, type AddressValue } from "@/components/checkout/AddressFields";
 import { OrderSummary } from "@/components/checkout/OrderSummary";
 import { SnapTrigger } from "@/components/checkout/SnapTrigger";
@@ -21,6 +22,8 @@ export function CheckoutForm({
   locale,
   initialQuantity,
   productSlug,
+  sizes,
+  initialSize,
   unitPriceIDR,
   midtransClientKey,
   midtransIsProduction,
@@ -30,6 +33,10 @@ export function CheckoutForm({
   productSlug: string;
   /** Not rendered yet: the checkout markup is unchanged in Phase 2a. */
   productName: string;
+  /** The sizes on offer; empty means no size choice. */
+  sizes: readonly string[];
+  /** The size chosen on the product page, already checked against `sizes`. */
+  initialSize: string | null;
   unitPriceIDR: number;
   midtransClientKey: string;
   midtransIsProduction: boolean;
@@ -40,7 +47,11 @@ export function CheckoutForm({
   const tError = useTranslations();
   const router = useRouter();
 
+  const tProduct = useTranslations("product");
   const [quantity, setQuantity] = useState(initialQuantity);
+  const [size, setSize] = useState<string | null>(initialSize);
+  const [sizeMissing, setSizeMissing] = useState(false);
+  const sizeGroup = useRef<HTMLFieldSetElement>(null);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -83,12 +94,18 @@ export function CheckoutForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (sizes.length > 0 && size === null) {
+      setSizeMissing(true);
+      focusSizeGroup(sizeGroup.current);
+      return;
+    }
     setSubmitting(true);
     setResult(null);
 
     const response = await submitCheckout({
       productSlug,
       quantity,
+      size: size ?? undefined,
       name,
       phone,
       email: email || undefined,
@@ -111,6 +128,24 @@ export function CheckoutForm({
 
   return (
     <form onSubmit={handleSubmit} className="mx-auto flex max-w-lg flex-col gap-4 p-4">
+      {sizes.length > 0 && (
+        <div className="flex flex-col gap-1">
+          <SizeSelector
+            ref={sizeGroup}
+            name="checkout-size"
+            sizes={sizes}
+            value={size}
+            onChange={(next) => {
+              setSize(next);
+              setSizeMissing(false);
+            }}
+            label={t("form.size")}
+            error={sizeMissing ? tProduct("size.required") : null}
+          />
+          {initialSize !== null && <p className="text-ink-3 text-sm">{t("form.sizeChange")}</p>}
+        </div>
+      )}
+
       <label className="flex flex-col gap-1">
         <span className="text-sm font-medium">{t("form.name")}</span>
         <input
@@ -187,7 +222,7 @@ export function CheckoutForm({
         />
       </label>
 
-      {breakdown && <OrderSummary breakdown={breakdown} />}
+      {breakdown && <OrderSummary breakdown={breakdown} size={size} />}
 
       {result && !result.ok && (
         <p role="alert" className="text-sm text-red-700">
