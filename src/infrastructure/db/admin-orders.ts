@@ -37,6 +37,8 @@ export type OrderListRow = {
   status: OrderStatus;
   paymentMethod: PaymentMethod;
   customerName: string;
+  /** The size frozen on the order; null when the product offered none. */
+  size: string | null;
   totalIDR: number;
   createdAt: Date;
 };
@@ -69,6 +71,7 @@ export async function getOrderList(filters: OrderListFilters): Promise<OrderList
       status: true,
       paymentMethod: true,
       customerName: true,
+      size: true,
       totalIDR: true,
       createdAt: true,
     },

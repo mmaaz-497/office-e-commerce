@@ -99,6 +99,10 @@ model Order {
   product             Product? @relation(fields: [productId], references: [id], onDelete: Restrict)
   /// Indonesian product name at order time — frozen like the price snapshot.
   productNameSnapshot String?
+  /// The size the customer chose, frozen like the name snapshot so the right
+  /// size ships even if the product's size list changes later. null when the
+  /// product offered no sizes at order time, and on every earlier order.
+  size                String?
 
   // Snapshot — frozen at order creation, never recomputed from the catalogue (FR-018).
   unitPriceIDR     Int
@@ -323,6 +327,10 @@ model Product {
   videoUrl          String?
   videoPosterUrl    String?
   soldCountBaseline Int           @default(0)
+  /// The sizes on offer, in display order (e.g. ["36","38","40","42"]).
+  /// Empty: the product has no size choice. Validated by productInputSchema.
+  /// Stock is per product, not per size.
+  sizes             String[]      @default([])
   publishedAt       DateTime?
   createdAt         DateTime      @default(now())
   updatedAt         DateTime      @updatedAt

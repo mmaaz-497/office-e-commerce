@@ -45,6 +45,8 @@ export interface ProductView {
   longDescription: string;
   highlights: string[];
   specs: Array<{ label: string; value: string }>;
+  /** The sizes on offer, in display order; empty when there is no size choice. */
+  sizes: string[];
   seoTitle: string | null;
   seoDescription: string | null;
   images: ProductImageView[];
@@ -106,6 +108,7 @@ function toView(row: ProductRow, locale: AppLocale): ProductView | null {
     longDescription: translation.longDescription,
     highlights: translation.highlights,
     specs: Array.isArray(translation.specs) ? translation.specs.filter(isSpecRow) : [],
+    sizes: row.sizes,
     seoTitle: translation.seoTitle,
     seoDescription: translation.seoDescription,
     images: row.images.map((image) => ({

@@ -47,13 +47,13 @@
       "empukNyaman": "Thick foam that softens every step, comfortable from morning to night.",
       "antiSlip": "A textured sole that keeps your footing sure on slippery tiled floors.",
       "designLucu": "A gemoy design that makes staying home nicer and still looks good on.",
-      "allSize": "One size for everyone, so there is no number to pick when you order."
+      "allSize": "Pick the size that fits on the product page; the size you choose is recorded on your order."
     },
     "benefitTitles": {
       "empukNyaman": "Soft & comfy",
       "antiSlip": "Anti-slip",
       "designLucu": "Cute design",
-      "allSize": "One size fits all"
+      "allSize": "Choice of sizes"
     },
     "steps": {
       "eyebrow": "How to order",
@@ -113,7 +113,7 @@
       },
       "ukuran": {
         "q": "What sizes are available?",
-        "a": "Gemoy Slippers are made in one size for all, so there is no number to choose when you order."
+        "a": "The available sizes are shown on the product page. Choose your size before you tap Buy now; it is recorded on the order and shown on the order lookup page."
       },
       "pengembalian": {
         "q": "What if the item is not what I expected?",
@@ -182,6 +182,11 @@
       "codAll": "Free cash on delivery (COD)",
       "codSome": "Free cash on delivery (COD), except in some provinces",
       "returns": "7-day returns"
+    },
+    "size": {
+      "label": "Size",
+      "required": "Please choose a size first.",
+      "selected": "Size {size}"
     }
   },
   "trust": {
@@ -219,7 +224,9 @@
       "codUnavailableExplanation": "COD is not available for this province. Please choose online payment.",
       "note": "Note (optional)",
       "submitting": "Processing...",
-      "submit": "Place Order"
+      "submit": "Place Order",
+      "size": "Size",
+      "sizeChange": "You can still change the size here before placing the order."
     }
   },
   "confirmation": {
@@ -283,7 +290,9 @@
     "slugLocked": "The web address can't change after the product has been published.",
     "sampleStatusLocked": "A sample product can only be coming soon. Mark it as a real product first.",
     "sampleStockLocked": "A sample product's stock can't be set. Mark it as a real product first.",
-    "unpublishNeedsConfirmation": "Confirm before taking this product off sale."
+    "unpublishNeedsConfirmation": "Confirm before taking this product off sale.",
+    "sizeRequired": "Please choose a size first.",
+    "sizeUnavailable": "That size is not available. Please choose another."
   },
   "orderStatus": {
     "PENDING_PAYMENT": "Awaiting Payment",
@@ -322,7 +331,8 @@
       "total": "Total",
       "trackingNumber": "Tracking Number",
       "trackingNumberPending": "Not yet available",
-      "timeline": "Status Timeline"
+      "timeline": "Status Timeline",
+      "size": "Size"
     },
     "cancellation": {
       "cancelButton": "Cancel Order",
@@ -368,7 +378,7 @@
     "intro": "Order straight from the product page. You do not need to create an account.",
     "steps": {
       "heading": "Ordering Steps",
-      "s1": "Choose a quantity on the product page, then press Buy Now.",
+      "s1": "Choose a size and quantity on the product page, then tap Buy now.",
       "s2": "Fill in your name, phone/WhatsApp number and full delivery address.",
       "s3": "Choose a payment method: pay online, or cash on delivery (COD) where it is available for your province.",
       "s4": "Check the order summary — item price and shipping — then place the order.",
@@ -678,7 +688,8 @@
         "paymentMethod": "Payment Method",
         "customer": "Customer",
         "total": "Total",
-        "placed": "Placed"
+        "placed": "Placed",
+        "size": "Size"
       },
       "periods": {
         "all": "All time",
@@ -717,7 +728,9 @@
         "approveCancellation": "Approve Cancellation",
         "rejectCancellation": "Reject Cancellation",
         "submitting": "Processing..."
-      }
+      },
+      "size": "Size",
+      "noSize": "None (product has no size choice)"
     },
     "stock": {
       "title": "Stock",
@@ -946,8 +959,11 @@
         "categoryUnknown": "Choose an existing category.",
         "imageUnknown": "This image is neither on the product nor an uploaded file.",
         "stockRequired": "An active product needs stock. Set its stock in the products list first.",
-        "sampleStatusLocked": "A sample product can only be coming soon."
-      }
+        "sampleStatusLocked": "A sample product can only be coming soon.",
+        "sizesDuplicate": "List each size only once."
+      },
+      "sizes": "Available sizes",
+      "sizesHelp": "Separate with commas, for example 36, 38, 40, 42. Leave empty if the product has no size choice. When filled in, buyers must pick one."
     },
     "categories": {
       "title": "Categories",

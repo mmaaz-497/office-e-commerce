@@ -160,6 +160,7 @@ async function createProduct(
       status: effective.status,
       priceIDR: effective.priceIDR,
       compareAtPriceIDR: effective.compareAtPriceIDR,
+      sizes: effective.sizes ?? [],
       categoryId,
       position,
       publishedAt: effective.status === "ACTIVE" ? new Date() : null,
@@ -282,6 +283,9 @@ export async function saveProduct(rawInput: unknown): Promise<SaveProductResult>
           status: effective.status,
           priceIDR: effective.priceIDR,
           compareAtPriceIDR: effective.compareAtPriceIDR,
+          // Absent keeps the stored list: only the form, which always sends
+          // the field, changes sizes.
+          sizes: effective.sizes ?? current.sizes,
           categoryId,
           position,
           ...(effective.status === "ACTIVE" && current.publishedAt === null

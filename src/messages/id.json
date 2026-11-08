@@ -47,13 +47,13 @@
       "empukNyaman": "Busa tebal yang meredam langkah, nyaman dipakai dari pagi sampai malam.",
       "antiSlip": "Telapak bertekstur supaya pijakan tetap mantap di lantai keramik yang licin.",
       "designLucu": "Desain gemoy yang bikin betah di rumah dan enak dilihat saat dipakai.",
-      "allSize": "Satu ukuran untuk semua, jadi Anda tidak perlu memilih nomor saat memesan."
+      "allSize": "Pilih ukuran yang pas di halaman produk; ukuran pilihan Anda tercatat di pesanan."
     },
     "benefitTitles": {
       "empukNyaman": "Empuk & nyaman",
       "antiSlip": "Anti slip",
       "designLucu": "Desain lucu",
-      "allSize": "All size untuk semua"
+      "allSize": "Pilihan ukuran"
     },
     "steps": {
       "eyebrow": "Cara pesan",
@@ -113,7 +113,7 @@
       },
       "ukuran": {
         "q": "Tersedia ukuran apa saja?",
-        "a": "Sandal Gemoy dibuat all size — satu ukuran untuk semua — sehingga Anda tidak perlu memilih nomor ketika memesan."
+        "a": "Ukuran yang tersedia tampil di halaman produk. Pilih ukuran Anda sebelum menekan Beli Sekarang; ukuran itu tercatat di pesanan dan bisa Anda lihat di halaman Cek Pesanan."
       },
       "pengembalian": {
         "q": "Bagaimana kalau barangnya tidak sesuai?",
@@ -182,6 +182,11 @@
       "codAll": "Bisa bayar di tempat (COD), gratis",
       "codSome": "Bisa bayar di tempat (COD) gratis, kecuali beberapa provinsi",
       "returns": "Pengembalian dalam 7 hari"
+    },
+    "size": {
+      "label": "Ukuran",
+      "required": "Pilih ukuran terlebih dahulu.",
+      "selected": "Ukuran {size}"
     }
   },
   "trust": {
@@ -219,7 +224,9 @@
       "codUnavailableExplanation": "COD tidak tersedia untuk provinsi ini. Silakan pilih pembayaran online.",
       "note": "Catatan (opsional)",
       "submitting": "Memproses...",
-      "submit": "Buat Pesanan"
+      "submit": "Buat Pesanan",
+      "size": "Ukuran",
+      "sizeChange": "Ukuran bisa diganti di sini sebelum membuat pesanan."
     }
   },
   "confirmation": {
@@ -283,7 +290,9 @@
     "slugLocked": "Alamat web tidak dapat diubah setelah produk diterbitkan.",
     "sampleStatusLocked": "Produk contoh hanya dapat berstatus segera hadir. Tandai sebagai produk asli terlebih dahulu.",
     "sampleStockLocked": "Stok produk contoh tidak dapat diatur. Tandai sebagai produk asli terlebih dahulu.",
-    "unpublishNeedsConfirmation": "Konfirmasi dulu sebelum menghentikan penjualan produk ini."
+    "unpublishNeedsConfirmation": "Konfirmasi dulu sebelum menghentikan penjualan produk ini.",
+    "sizeRequired": "Pilih ukuran terlebih dahulu.",
+    "sizeUnavailable": "Ukuran yang dipilih tidak tersedia. Pilih ukuran lain."
   },
   "orderStatus": {
     "PENDING_PAYMENT": "Menunggu Pembayaran",
@@ -322,7 +331,8 @@
       "total": "Total",
       "trackingNumber": "Nomor Resi",
       "trackingNumberPending": "Belum tersedia",
-      "timeline": "Riwayat Status"
+      "timeline": "Riwayat Status",
+      "size": "Ukuran"
     },
     "cancellation": {
       "cancelButton": "Batalkan Pesanan",
@@ -368,7 +378,7 @@
     "intro": "Pesan langsung dari halaman produk. Anda tidak perlu membuat akun.",
     "steps": {
       "heading": "Langkah Pemesanan",
-      "s1": "Pilih jumlah pada halaman produk, lalu tekan Beli Sekarang.",
+      "s1": "Pilih ukuran dan jumlah pada halaman produk, lalu tekan Beli Sekarang.",
       "s2": "Isi nama, nomor HP/WhatsApp, dan alamat pengiriman lengkap.",
       "s3": "Pilih metode pembayaran: bayar online, atau bayar di tempat (COD) bila tersedia untuk provinsi Anda.",
       "s4": "Periksa ringkasan pesanan — harga barang dan ongkos kirim — lalu buat pesanan.",
@@ -678,7 +688,8 @@
         "paymentMethod": "Metode Bayar",
         "customer": "Pelanggan",
         "total": "Total",
-        "placed": "Dibuat"
+        "placed": "Dibuat",
+        "size": "Ukuran"
       },
       "periods": {
         "all": "Sepanjang waktu",
@@ -717,7 +728,9 @@
         "approveCancellation": "Setujui Pembatalan",
         "rejectCancellation": "Tolak Pembatalan",
         "submitting": "Memproses..."
-      }
+      },
+      "size": "Ukuran",
+      "noSize": "Tidak ada (produk tanpa pilihan ukuran)"
     },
     "stock": {
       "title": "Stok",
@@ -946,8 +959,11 @@
         "categoryUnknown": "Pilih kategori yang ada.",
         "imageUnknown": "Gambar ini bukan milik produk dan bukan berkas unggahan.",
         "stockRequired": "Produk aktif memerlukan stok. Atur stok di daftar produk terlebih dahulu.",
-        "sampleStatusLocked": "Produk contoh hanya dapat berstatus segera hadir."
-      }
+        "sampleStatusLocked": "Produk contoh hanya dapat berstatus segera hadir.",
+        "sizesDuplicate": "Setiap ukuran cukup ditulis sekali."
+      },
+      "sizes": "Ukuran tersedia",
+      "sizesHelp": "Pisahkan dengan koma, misalnya 36, 38, 40, 42. Kosongkan bila produk tidak punya pilihan ukuran. Pembeli wajib memilih salah satu bila diisi."
     },
     "categories": {
       "title": "Kategori",

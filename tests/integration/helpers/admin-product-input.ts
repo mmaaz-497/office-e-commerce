@@ -57,6 +57,7 @@ export async function editInputFor(slug: string): Promise<SaveInput> {
       video:
         p.videoUrl && p.videoPosterUrl ? { url: p.videoUrl, posterUrl: p.videoPosterUrl } : null,
       translations: { id: translation("id"), en: translation("en") },
+      sizes: p.sizes,
     },
   };
 }

@@ -2,6 +2,7 @@ import { z } from "zod";
 import { shippingConfig } from "@/config";
 import regions from "@/data/regions.id.json";
 import { SLUG_PATTERN } from "@/domain/catalogue/product-schema";
+import { MAX_SIZE_LENGTH } from "@/domain/catalogue/sizes";
 
 const provinceCodes = new Set(shippingConfig.zones ? Object.keys(shippingConfig.zones) : []);
 const cityByCode = new Map(regions.cities.map((c) => [c.code, c]));
@@ -18,6 +19,8 @@ export const checkoutInputSchema = z
   .object({
     productSlug: z.string().regex(SLUG_PATTERN).max(80).optional(),
     quantity: z.number().int().min(1).max(10),
+    /** A label the server checks against the product's own sizes; never trusted as-is. */
+    size: z.string().max(MAX_SIZE_LENGTH).optional(),
     name: z.string().min(2).max(100),
     phone: z.string().min(9).max(20),
     email: z

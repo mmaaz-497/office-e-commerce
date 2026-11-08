@@ -20,6 +20,8 @@ export type LookupOrderView = {
   status: OrderStatus;
   paymentMethod: PaymentMethod;
   quantity: number;
+  /** The size frozen on the order; null when the product offered none. */
+  size: string | null;
   unitPriceIDR: number;
   shippingCostIDR: number;
   totalIDR: number;
@@ -51,6 +53,7 @@ function toLookupView(order: NonNullable<OrderWithEvents>): LookupOrderView {
     status: order.status,
     paymentMethod: order.paymentMethod,
     quantity: order.quantity,
+    size: order.size,
     unitPriceIDR: order.unitPriceIDR,
     shippingCostIDR: order.shippingCostIDR,
     totalIDR: order.totalIDR,

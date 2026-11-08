@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { SALEABLE_STATUSES, isListed } from "./status";
+import { MAX_SIZES, MAX_SIZE_LENGTH, SIZE_PATTERN } from "./sizes";
 
 /**
  * The one product validation schema — FR-013. Its consumers are the catalogue
@@ -68,8 +69,23 @@ export const productInputSchema = z
       .object({ url: z.string().startsWith("/"), posterUrl: z.string().startsWith("/") })
       .nullable(),
     translations: z.object({ id: translationSchema, en: translationSchema }),
+    /** Absent means none offered; builders that predate sizes need not set it. */
+    sizes: z
+      .array(z.string().trim().min(1).max(MAX_SIZE_LENGTH).regex(SIZE_PATTERN))
+      .max(MAX_SIZES)
+      .optional(),
   })
   .superRefine((product, ctx) => {
+    const sizes = product.sizes ?? [];
+    if (new Set(sizes).size !== sizes.length) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["sizes"],
+        message: "Each size can be listed once.",
+        params: { key: "sizesDuplicate" },
+      });
+    }
+
     if (product.compareAtPriceIDR !== null) {
       if (product.priceIDR === null) {
         ctx.addIssue({

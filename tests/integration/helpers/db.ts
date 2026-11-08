@@ -45,6 +45,7 @@ export async function seedProduct(options: {
   status: ProductStatus;
   priceIDR: number | null;
   stock?: number;
+  sizes?: string[];
 }): Promise<Product> {
   const category = await prisma.category.upsert({
     where: { slug: "sandal" },
@@ -56,6 +57,7 @@ export async function seedProduct(options: {
       slug: options.slug,
       status: options.status,
       priceIDR: options.priceIDR,
+      sizes: options.sizes ?? [],
       categoryId: category.id,
       position: 10,
       translations: {

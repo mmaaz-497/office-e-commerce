@@ -10,6 +10,7 @@ import { quoteOrder, assertTotalsConsistent } from "@/domain/pricing/quote";
 import { normalizePhone } from "@/domain/phone";
 import { CodUnavailableError } from "@/domain/errors";
 import { isOnSale } from "@/domain/catalogue/status";
+import { resolveSizeChoice } from "@/domain/catalogue/sizes";
 import { getProductStock, resolveCheckoutProduct } from "@/infrastructure/db/catalogue";
 import regions from "@/data/regions.id.json";
 
@@ -50,6 +51,13 @@ export async function submitCheckout(rawInput: unknown): Promise<CheckoutResult>
   }
   const catalogueProduct = resolution.product;
   const unitPrice = catalogueProduct.priceIDR!;
+
+  // The size is checked against the product's own list before stock or any
+  // order exists: a product with sizes cannot be ordered without one, and a
+  // label it does not offer is refused rather than shipped as a guess.
+  const sizeChoice = resolveSizeChoice(catalogueProduct.sizes, input.size);
+  if (sizeChoice.kind === "required") return { ok: false, errorKey: "errors.sizeRequired" };
+  if (sizeChoice.kind === "unavailable") return { ok: false, errorKey: "errors.sizeUnavailable" };
 
   const city = regions.cities.find((c) => c.code === input.cityCode);
   const province = regions.provinces.find((p) => p.code === input.provinceCode);
@@ -99,6 +107,7 @@ export async function submitCheckout(rawInput: unknown): Promise<CheckoutResult>
         paymentMethod: input.paymentMethod,
         product: { connect: { id: catalogueProduct.id } },
         productNameSnapshot: catalogueProduct.name,
+        size: sizeChoice.size,
         customerName: input.name,
         phone: input.phone,
         phoneNormalized,
