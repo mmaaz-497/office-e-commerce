@@ -28,16 +28,18 @@ Orders placed before this feature have no row and are never emailed.
 
 ## One-time setup
 
-1. Sign up at resend.com **with the address that should receive the emails** (by default the
-   store contact address, blooginga@gmail.com). Without your own verified domain, Resend only
-   delivers to the account's own address.
+1. Sign up at resend.com **with the address that should receive the emails**, the owner's
+   asadaliblogger0266@gmail.com (chosen 2026-11-08). Without your own verified domain, Resend
+   only delivers to the account's own address.
 2. In Resend → API Keys, create a key with "Sending access" and copy it (shown once).
-3. Add it to the server's `.env` (and your local `.env` if you want emails in development):
+3. Add both lines to the server's `.env` (and your local `.env` if you want emails in
+   development):
    ```
    RESEND_API_KEY="re_..."
+   ORDER_NOTIFY_EMAIL="asadaliblogger0266@gmail.com"
    ```
-   Optional: `ORDER_NOTIFY_EMAIL` (default: store contact address) and `EMAIL_FROM` (default:
-   `Tokoshopee <onboarding@resend.dev>`).
+   Without `ORDER_NOTIFY_EMAIL` the email goes to the store contact address
+   (blooginga@gmail.com). Optional: `EMAIL_FROM` (default: `Tokoshopee <onboarding@resend.dev>`).
 4. Restart the app: `pm2 restart tokoshopee`.
 5. Place a test order. If the email is in Spam, mark it "Not spam"; optionally add a Gmail filter
    that labels it "Pesanan baru".
