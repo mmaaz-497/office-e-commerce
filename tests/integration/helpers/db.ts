@@ -8,6 +8,7 @@ export async function resetDb(): Promise<void> {
   await prisma.stockChange.deleteMany();
   await prisma.review.deleteMany();
   await prisma.cancellationRequest.deleteMany();
+  await prisma.ownerNotification.deleteMany();
   await prisma.order.deleteMany();
   await prisma.stockLevel.deleteMany();
   // 003 catalogue — after everything that references a product (ON DELETE RESTRICT).

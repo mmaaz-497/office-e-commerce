@@ -1,9 +1,15 @@
 "use server";
 
+import { after } from "next/server";
 import { checkoutInputSchema } from "./schemas";
 import { prisma } from "@/infrastructure/db/prisma";
 import { createOrderWithRetry } from "@/infrastructure/db/create-order";
 import { createOrderTransactionPort } from "@/infrastructure/db/order-transaction";
+import {
+  ownerNotificationConfig,
+  recordOwnerNotification,
+  sendOwnerNotifications,
+} from "@/infrastructure/db/owner-notifications";
 import { MidtransProvider } from "@/infrastructure/payment/midtrans-provider";
 import { shippingProvider as shipping } from "@/infrastructure/shipping/provider";
 import { quoteOrder, assertTotalsConsistent } from "@/domain/pricing/quote";
@@ -15,6 +21,26 @@ import { getProductStock, resolveCheckoutProduct } from "@/infrastructure/db/cat
 import regions from "@/data/regions.id.json";
 
 const EXPIRY_HOURS = 24;
+
+/**
+ * Emails the owner about this order once the customer has their response, so
+ * the customer never waits on it and a failure cannot touch the order. Outside
+ * a request (tests, scripts) after() throws; the row stays pending and the
+ * expiry job sends it within minutes.
+ */
+function emailOwnerAfterResponse(orderId: string): void {
+  try {
+    after(async () => {
+      try {
+        await sendOwnerNotifications(ownerNotificationConfig(), { orderId });
+      } catch (err) {
+        console.error("Owner order email could not be sent now; the job will retry.", err);
+      }
+    });
+  } catch {
+    // No request scope: left for the expiry job.
+  }
+}
 
 export type CheckoutResult =
   | {
@@ -133,10 +159,15 @@ export async function submitCheckout(rawInput: unknown): Promise<CheckoutResult>
     await tx.orderStatusEvent.create({
       data: { orderId: created.id, fromStatus: null, toStatus: initialStatus, actor: "CUSTOMER" },
     });
+    // A COD order is placed the moment it exists, so its owner email is
+    // recorded with it. An online order is recorded below, once its payment
+    // session exists: before that it can still be cancelled on the spot.
+    if (input.paymentMethod === "COD") await recordOwnerNotification(tx, created.id);
     return created;
   });
 
   if (input.paymentMethod === "COD") {
+    emailOwnerAfterResponse(order.id);
     return { ok: true, orderNumber: order.orderNumber, paymentMethod: "COD" };
   }
 
@@ -200,10 +231,14 @@ export async function submitCheckout(rawInput: unknown): Promise<CheckoutResult>
     return { ok: false, errorKey: "errors.paymentProviderUnavailable" };
   }
 
-  await prisma.order.update({
-    where: { id: order.id },
-    data: { midtransOrderId: order.orderNumber },
+  await prisma.$transaction(async (tx) => {
+    await tx.order.update({
+      where: { id: order.id },
+      data: { midtransOrderId: order.orderNumber },
+    });
+    await recordOwnerNotification(tx, order.id);
   });
+  emailOwnerAfterResponse(order.id);
 
   return {
     ok: true,

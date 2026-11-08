@@ -83,3 +83,11 @@ process.env.DATABASE_URL = testDatabaseUrl;
 process.env.UPLOAD_DIR =
   process.env.TEST_UPLOAD_DIR?.trim() ||
   fs.mkdtempSync(path.join(os.tmpdir(), "tokoshopee-uploads-"));
+
+/**
+ * Owner order emails go through Resend when RESEND_API_KEY is set. A real key
+ * in the operator's .env must never make the suite email anyone, so it is
+ * cleared here, before @/config loads. Tests that exercise sending pass a fake
+ * sender to sendOwnerNotifications instead.
+ */
+process.env.RESEND_API_KEY = "";

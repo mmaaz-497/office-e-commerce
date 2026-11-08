@@ -1031,6 +1031,24 @@
       "cancel": "Batal",
       "low": "Sisa {count}",
       "out": "Stok habis"
+    },
+    "orderEmail": {
+      "subject": "Pesanan baru {orderNumber} · {total} · {payment}",
+      "heading": "Ada pesanan baru di Tokoshopee",
+      "time": "Waktu",
+      "product": "Produk",
+      "size": "Ukuran",
+      "quantity": "Jumlah",
+      "quantityValue": "{count} pasang",
+      "total": "Total",
+      "payment": "Pembayaran",
+      "paymentCod": "Bayar di tempat (COD)",
+      "paymentOnline": "Online, menunggu pembayaran",
+      "paymentCodShort": "COD",
+      "paymentOnlineShort": "Online",
+      "city": "Kota",
+      "viewOrder": "Lihat pesanan",
+      "footer": "Email ini dikirim otomatis untuk setiap pesanan baru. Nama, nomor HP dan alamat pembeli ada di halaman admin."
     }
   },
   "category": {

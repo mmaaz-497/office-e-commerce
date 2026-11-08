@@ -3,6 +3,10 @@ import { timingSafeEqual } from "node:crypto";
 import { prisma } from "@/infrastructure/db/prisma";
 import { checkAndExpireOrRescue } from "@/infrastructure/db/order-transaction";
 import { MidtransProvider } from "@/infrastructure/payment/midtrans-provider";
+import {
+  ownerNotificationConfig,
+  sendOwnerNotifications,
+} from "@/infrastructure/db/owner-notifications";
 import { env } from "@/config";
 
 const paymentProvider = new MidtransProvider();
@@ -77,5 +81,23 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   const rateLimitCutoff = new Date(Date.now() - RATE_LIMIT_RETENTION_DAYS * 24 * 60 * 60 * 1000);
   await prisma.rateLimit.deleteMany({ where: { windowStart: { lt: rateLimitCutoff } } });
 
-  return NextResponse.json({ expired, rescued, skipped, purged: purgeResult.count });
+  // The retry path for owner order emails: anything checkout could not send
+  // right away (Resend down, wrong key, server restarted) goes out here. Its
+  // failure must not fail the job's other work, which is already done.
+  let ownerEmails: { sent: number; failed: number } | "off" | "error" = "off";
+  try {
+    const result = await sendOwnerNotifications(ownerNotificationConfig());
+    if (result.enabled) ownerEmails = { sent: result.sent, failed: result.failed };
+  } catch (err) {
+    console.error("Owner order email sweep failed; it runs again next time.", err);
+    ownerEmails = "error";
+  }
+
+  return NextResponse.json({
+    expired,
+    rescued,
+    skipped,
+    purged: purgeResult.count,
+    ownerEmails,
+  });
 }

@@ -136,6 +136,7 @@ model Order {
   stockChanges        StockChange[]
   review              Review?
   cancellationRequest CancellationRequest?
+  ownerNotification   OwnerNotification?
 
   @@index([status])
   @@index([phoneNormalized])
@@ -224,6 +225,35 @@ model Review {
 
   @@index([published, reviewedAt])
   @@index([productId])
+}
+
+enum OwnerNotificationStatus {
+  PENDING
+  SENT
+  FAILED
+}
+
+/// The "email the owner about this order" reminder. Written in the same
+/// transaction that makes the order count as placed, so a placed order always
+/// has one; sent right after the response and retried by the expiry job.
+/// Its own table rather than a column on Order, so past orders never qualify.
+model OwnerNotification {
+  id String @id @default(cuid())
+
+  orderId String @unique
+  order   Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  status    OwnerNotificationStatus @default(PENDING)
+  attempts  Int                     @default(0)
+  lastError String?
+  /// Set while a sender holds the row, so two senders never email the same
+  /// order; a claim older than the lease is taken over (a crashed sender).
+  claimedAt DateTime?
+  sentAt    DateTime?
+
+  createdAt DateTime @default(now())
+
+  @@index([status, createdAt])
 }
 
 model CancellationRequest {

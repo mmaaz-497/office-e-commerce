@@ -1031,6 +1031,24 @@
       "cancel": "Cancel",
       "low": "{count} left",
       "out": "Out of stock"
+    },
+    "orderEmail": {
+      "subject": "New order {orderNumber} · {total} · {payment}",
+      "heading": "You have a new order on Tokoshopee",
+      "time": "Time",
+      "product": "Product",
+      "size": "Size",
+      "quantity": "Quantity",
+      "quantityValue": "{count} pairs",
+      "total": "Total",
+      "payment": "Payment",
+      "paymentCod": "Cash on delivery (COD)",
+      "paymentOnline": "Online, awaiting payment",
+      "paymentCodShort": "COD",
+      "paymentOnlineShort": "Online",
+      "city": "City",
+      "viewOrder": "View order",
+      "footer": "This email is sent automatically for every new order. The buyer's name, phone and address are on the admin page."
     }
   },
   "category": {

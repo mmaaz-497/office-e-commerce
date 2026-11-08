@@ -45,6 +45,26 @@ export const envSchema = z.object({
     .string()
     .min(1)
     .refine((v) => path.isAbsolute(v), { message: "UPLOAD_DIR must be an absolute path" }),
+  // Owner email on every placed order, sent through Resend. Unset (or empty)
+  // turns the email off: orders still record a reminder, nothing is sent, so
+  // development and tests never email anyone. Never commit a real key.
+  RESEND_API_KEY: z
+    .string()
+    .optional()
+    .transform((v) => (v?.trim() ? v.trim() : null)),
+  // Who receives it. Without a verified domain, Resend only delivers to the
+  // address the Resend account was created with, so keep the two the same.
+  // Unset means the store contact address (src/config/store.config.ts).
+  ORDER_NOTIFY_EMAIL: z
+    .string()
+    .optional()
+    .transform((v) => (v?.trim() ? v.trim() : null))
+    .pipe(z.email().nullable()),
+  // The sender. Resend's shared test sender works without any DNS setup.
+  EMAIL_FROM: z
+    .string()
+    .optional()
+    .transform((v) => (v?.trim() ? v.trim() : "Tokoshopee <onboarding@resend.dev>")),
 });
 
 export type EnvConfig = z.infer<typeof envSchema>;
