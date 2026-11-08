@@ -11,6 +11,12 @@ export interface FlatZoneShippingConfig {
   /** Province code -> IDR rate per billable kilogram. */
   zoneRatesIDR: Readonly<Record<string, number>>;
   codDisabledProvinces: readonly string[];
+  /**
+   * When true, every order ships for Rp 0, whatever the payment method. The
+   * province still has to be one the store delivers to, and the billable
+   * weight is still recorded for the courier.
+   */
+  freeShipping?: boolean;
 }
 
 export class FlatZoneShippingProvider implements ShippingProvider {
@@ -33,7 +39,7 @@ export class FlatZoneShippingProvider implements ShippingProvider {
     }
 
     const billableWeightKg = Math.ceil(quantity / this.config.pairsPerKg);
-    const shippingCost = rate * billableWeightKg;
+    const shippingCost = this.config.freeShipping ? 0 : rate * billableWeightKg;
 
     return { shippingCost, billableWeightKg };
   }

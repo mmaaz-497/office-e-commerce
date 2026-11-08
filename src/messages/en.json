@@ -84,7 +84,7 @@
       "codAll": "Cash on delivery (COD) is available in every province.",
       "codExcept": "Cash on delivery (COD) is available, except for addresses in {provinces}.",
       "codFree": "COD is free, with no extra fee.",
-      "shipping": "Shipping is calculated from the destination province and shown before you pay."
+      "shipping": "Free shipping on every order, whether you pay by COD or online."
     },
     "quickAccess": {
       "title": "Quick access",
@@ -109,7 +109,7 @@
       },
       "ongkir": {
         "q": "How much is shipping?",
-        "a": "Shipping is calculated from the destination province and the number of pairs you order, then shown in the order summary before you press Place Order. Nothing extra is added after the order is made."
+        "a": "It is free. We charge no shipping on any order, whether you pay by COD or online. The order summary shows shipping as Free before you press Place Order, and nothing extra is added after the order is made."
       },
       "ukuran": {
         "q": "What sizes are available?",
@@ -211,6 +211,7 @@
     "summary": {
       "subtotal": "Subtotal",
       "shipping": "Shipping",
+      "shippingFree": "Free",
       "total": "Total"
     },
     "form": {
@@ -328,6 +329,7 @@
       "quantity": "Quantity",
       "unitPrice": "Unit Price",
       "shipping": "Shipping",
+      "shippingFree": "Free",
       "total": "Total",
       "trackingNumber": "Tracking Number",
       "trackingNumberPending": "Not yet available",
@@ -363,7 +365,7 @@
       "title": "Payment & delivery",
       "online": "Pay online through Midtrans",
       "cod": "Free COD in selected provinces",
-      "shipping": "Shipping shown before you pay"
+      "shipping": "Free shipping on every order"
     },
     "copyright": "© {year} Tokoshopee. All rights reserved.",
     "backToTop": "Back to top",
@@ -381,7 +383,7 @@
       "s1": "Choose a size and quantity on the product page, then tap Buy now.",
       "s2": "Fill in your name, phone/WhatsApp number and full delivery address.",
       "s3": "Choose a payment method: pay online, or cash on delivery (COD) where it is available for your province.",
-      "s4": "Check the order summary — item price and shipping — then place the order.",
+      "s4": "Check the order summary — the item price, with free shipping — then place the order.",
       "s5": "Save your order number. The order number and your phone number are what you need to check the order's status."
     },
     "payment": {
@@ -392,7 +394,7 @@
     },
     "delivery": {
       "heading": "Delivery",
-      "body": "Shipping is calculated from the destination province and the quantity ordered, and is always shown before you complete the order.",
+      "body": "Shipping is free on every order, COD or online, to every province we deliver to.",
       "tracking": "Once the order has shipped, the tracking number appears on the Check Order page."
     },
     "help": {
@@ -403,7 +405,7 @@
   "terms": {
     "metadata": {
       "title": "Terms & Conditions | Tokoshopee",
-      "description": "Read Tokoshopee's terms for shopping: order formation, pricing, shipping costs, free Cash on Delivery, cancellation rules, reviews, and seller liability details."
+      "description": "Read Tokoshopee's terms for shopping: order formation, pricing, free shipping, free Cash on Delivery, cancellation rules, reviews, and seller liability details."
     },
     "title": "Terms & Conditions",
     "intro": "By placing an order with this store, you agree to the terms below.",
@@ -422,7 +424,7 @@
     "pricing": {
       "heading": "Prices and Fees",
       "currency": "All prices are shown in Indonesian Rupiah (IDR) as whole amounts, with no fractional units.",
-      "shipping": "Shipping is calculated from the destination province and the quantity ordered, and is shown before the order is placed.",
+      "shipping": "Shipping is free on every order, whether paid by COD or online. No delivery charge is added to the order total.",
       "cod": "Cash on delivery (COD) is free and carries no extra fee."
     },
     "cancellation": {
@@ -1054,7 +1056,7 @@
   "category": {
     "metadata": {
       "title": "{name} — Tokoshopee",
-      "description": "Shop {name} at Tokoshopee. Order without an account, pay online through Midtrans or cash on delivery in selected provinces, and see shipping before you pay."
+      "description": "Shop {name} at Tokoshopee. Order without an account, pay online through Midtrans or cash on delivery in selected provinces, with free shipping on every order."
     }
   },
   "allProducts": {
@@ -1093,7 +1095,7 @@
   "search": {
     "metadata": {
       "title": "Search products | Tokoshopee",
-      "description": "Search Tokoshopee for soft, non-slip sandals you can pay for online through Midtrans or by cash on delivery, with shipping shown before you pay for anything."
+      "description": "Search Tokoshopee for soft, non-slip sandals you can pay for online through Midtrans or by cash on delivery, with free shipping on every order."
     },
     "label": "Search products",
     "placeholder": "Search Tokoshopee",

@@ -774,7 +774,7 @@ Short descriptions describe shape, material and use only. No performance or comp
 
 ## 7. Open questions (blocking)
 1. **Business details:** legal entity name and address. They show as `[PLACEHOLDER]` on the legal pages today. The contact email is supplied (blooginga@gmail.com, `src/config/store.config.ts`, 2026-10-10) and is shown on the content pages and in the footer.
-2. **Real shipping rates:** every rate is a placeholder today (COD is free, so no COD fee is needed). Phase 3 and 4 delivery info shows rates as computed at checkout; there will be no "ongkir mulai Rp X" claim until they are real.
+2. **Real shipping rates:** answered 2026-11-08: shipping is free on every order, COD and online (`freeShipping: true` in `src/config/shipping.config.ts`), and the site copy says so. The placeholder zone rates are not charged; only the COD-disabled province list still needs the client's real figures.
 3. **Logo:** only a text wordmark exists. Is there a logo or icon file? If not, the wordmark is restyled in the new font. The cream/brown palette is assumed to stay, as Constitution II requires.
 4. **Sample products:** approve the 10 names above, the category "Sandal" / "Sandals", and the 10 tinted name-and-wordmark placeholder images. All of these can be edited from the dashboard later.
 

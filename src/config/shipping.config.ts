@@ -1,14 +1,20 @@
 import { z } from "zod";
 
 /**
- * Every commercial value below is a PLACEHOLDER (FR-011a) — replace with the
- * client's real courier rates and COD-disabled list before launch. COD
- * carries no fee.
- * The release checklist greps for the literal string PLACEHOLDER and refuses
- * to proceed while any instance remains.
+ * Shipping is free for every order, COD and online (owner's decision,
+ * 2026-11-08): `freeShipping` makes every quote Rp 0. The zone rates below are
+ * then not charged; they still define which provinces the store delivers to,
+ * and become the price again only if `freeShipping` is set to false.
+ *
+ * The rates and the COD-disabled list are PLACEHOLDERs (FR-011a). COD carries
+ * no fee. The release checklist greps for the literal string PLACEHOLDER and
+ * refuses to proceed while any instance remains.
  */
 
 export const rawShippingConfig = {
+  // Owner-confirmed: no shipping charge on any order.
+  freeShipping: true,
+
   // PLACEHOLDER — pairs of slippers per billable kilogram.
   pairsPerKg: 2,
 
@@ -71,6 +77,7 @@ const zoneSchema = z.object({
 
 export const shippingConfigSchema = z
   .object({
+    freeShipping: z.boolean(),
     pairsPerKg: z.number().int().positive(),
     zones: z.record(z.string(), zoneSchema),
     codDisabledProvinces: z.array(z.string()),

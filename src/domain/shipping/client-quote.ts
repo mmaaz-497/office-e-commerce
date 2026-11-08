@@ -20,6 +20,7 @@ const clientShippingProvider = new FlatZoneShippingProvider({
   pairsPerKg: parsedShippingConfig.pairsPerKg,
   zoneRatesIDR,
   codDisabledProvinces: parsedShippingConfig.codDisabledProvinces,
+  freeShipping: parsedShippingConfig.freeShipping,
 });
 
 export function liveQuote(args: {

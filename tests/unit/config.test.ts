@@ -16,6 +16,7 @@ const VALID_ENV = {
 };
 
 const VALID_SHIPPING = {
+  freeShipping: false,
   pairsPerKg: 2,
   zones: { "31": { rateIDR: 15000 }, "94": { rateIDR: 25000 } },
   codDisabledProvinces: ["94"],
@@ -71,6 +72,12 @@ describe("envSchema", () => {
 describe("shippingConfigSchema", () => {
   it("accepts a valid shipping config", () => {
     expect(shippingConfigSchema.safeParse(VALID_SHIPPING).success).toBe(true);
+  });
+
+  it("requires freeShipping to be stated, not assumed", () => {
+    const withoutFlag: Partial<typeof VALID_SHIPPING> = { ...VALID_SHIPPING };
+    delete withoutFlag.freeShipping;
+    expect(shippingConfigSchema.safeParse(withoutFlag).success).toBe(false);
   });
 
   it("rejects a float zone rate", () => {

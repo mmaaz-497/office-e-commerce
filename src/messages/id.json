@@ -84,7 +84,7 @@
       "codAll": "Bayar di tempat (COD) tersedia untuk semua provinsi.",
       "codExcept": "Bayar di tempat (COD) tersedia, kecuali untuk alamat di {provinces}.",
       "codFree": "COD gratis, tanpa biaya tambahan.",
-      "shipping": "Ongkos kirim dihitung dari provinsi tujuan dan tampil sebelum Anda membayar."
+      "shipping": "Gratis ongkir untuk setiap pesanan, baik COD maupun pembayaran online."
     },
     "quickAccess": {
       "title": "Akses cepat",
@@ -109,7 +109,7 @@
       },
       "ongkir": {
         "q": "Berapa ongkos kirimnya?",
-        "a": "Ongkos kirim dihitung dari provinsi tujuan dan jumlah pasang yang Anda pesan, lalu ditampilkan pada ringkasan pesanan sebelum Anda menekan Buat Pesanan. Tidak ada biaya tambahan yang muncul setelah pesanan dibuat."
+        "a": "Gratis. Kami tidak mengenakan ongkos kirim untuk pesanan apa pun, baik COD maupun pembayaran online. Ringkasan pesanan menampilkan ongkos kirim Gratis sebelum Anda menekan Buat Pesanan, dan tidak ada biaya tambahan yang muncul setelah pesanan dibuat."
       },
       "ukuran": {
         "q": "Tersedia ukuran apa saja?",
@@ -211,6 +211,7 @@
     "summary": {
       "subtotal": "Subtotal",
       "shipping": "Ongkos Kirim",
+      "shippingFree": "Gratis",
       "total": "Total"
     },
     "form": {
@@ -328,6 +329,7 @@
       "quantity": "Jumlah",
       "unitPrice": "Harga Satuan",
       "shipping": "Ongkos Kirim",
+      "shippingFree": "Gratis",
       "total": "Total",
       "trackingNumber": "Nomor Resi",
       "trackingNumberPending": "Belum tersedia",
@@ -363,7 +365,7 @@
       "title": "Pembayaran & pengiriman",
       "online": "Bayar online lewat Midtrans",
       "cod": "COD gratis di provinsi terpilih",
-      "shipping": "Ongkir tampil sebelum bayar"
+      "shipping": "Gratis ongkir untuk setiap pesanan"
     },
     "copyright": "© {year} Tokoshopee. Seluruh hak cipta dilindungi.",
     "backToTop": "Kembali ke atas",
@@ -381,7 +383,7 @@
       "s1": "Pilih ukuran dan jumlah pada halaman produk, lalu tekan Beli Sekarang.",
       "s2": "Isi nama, nomor HP/WhatsApp, dan alamat pengiriman lengkap.",
       "s3": "Pilih metode pembayaran: bayar online, atau bayar di tempat (COD) bila tersedia untuk provinsi Anda.",
-      "s4": "Periksa ringkasan pesanan — harga barang dan ongkos kirim — lalu buat pesanan.",
+      "s4": "Periksa ringkasan pesanan — harga barang, dengan ongkos kirim gratis — lalu buat pesanan.",
       "s5": "Simpan nomor pesanan Anda. Nomor pesanan dan nomor HP diperlukan untuk mengecek status pesanan."
     },
     "payment": {
@@ -392,7 +394,7 @@
     },
     "delivery": {
       "heading": "Pengiriman",
-      "body": "Ongkos kirim dihitung dari provinsi tujuan dan jumlah barang yang dipesan, dan selalu ditampilkan sebelum Anda menyelesaikan pesanan.",
+      "body": "Ongkos kirim gratis untuk setiap pesanan, baik COD maupun pembayaran online, ke semua provinsi yang kami layani.",
       "tracking": "Setelah pesanan dikirim, nomor resi tampil pada halaman Cek Pesanan."
     },
     "help": {
@@ -403,7 +405,7 @@
   "terms": {
     "metadata": {
       "title": "Syarat & Ketentuan | Tokoshopee",
-      "description": "Baca syarat dan ketentuan belanja di Tokoshopee: proses pemesanan, harga, ongkos kirim, COD gratis, pembatalan, ulasan, dan tanggung jawab penjual sebelum belanja."
+      "description": "Baca syarat dan ketentuan belanja di Tokoshopee: proses pemesanan, harga, gratis ongkir, COD gratis, pembatalan, ulasan, dan tanggung jawab penjual sebelum belanja."
     },
     "title": "Syarat & Ketentuan",
     "intro": "Dengan memesan di toko ini, Anda menyetujui syarat dan ketentuan berikut.",
@@ -422,7 +424,7 @@
     "pricing": {
       "heading": "Harga dan Biaya",
       "currency": "Seluruh harga ditampilkan dalam Rupiah (IDR) dalam nilai bulat, tanpa pecahan sen.",
-      "shipping": "Ongkos kirim dihitung berdasarkan provinsi tujuan dan jumlah barang, dan ditampilkan sebelum pesanan dibuat.",
+      "shipping": "Ongkos kirim gratis untuk setiap pesanan, baik COD maupun pembayaran online. Tidak ada biaya pengiriman yang ditambahkan pada total pesanan.",
       "cod": "Pembayaran di tempat (COD) gratis dan tidak dikenakan biaya tambahan."
     },
     "cancellation": {
@@ -1054,7 +1056,7 @@
   "category": {
     "metadata": {
       "title": "{name} — Tokoshopee",
-      "description": "Belanja {name} di Tokoshopee. Pesan tanpa membuat akun, bayar online lewat Midtrans atau COD di provinsi terpilih, dan ongkir tampil sebelum Anda bayar."
+      "description": "Belanja {name} di Tokoshopee. Pesan tanpa membuat akun, bayar online lewat Midtrans atau COD di provinsi terpilih, dengan gratis ongkir untuk setiap pesanan."
     }
   },
   "allProducts": {
@@ -1093,7 +1095,7 @@
   "search": {
     "metadata": {
       "title": "Cari produk | Tokoshopee",
-      "description": "Cari produk di Tokoshopee: sandal empuk dan anti slip, bisa dibayar online lewat Midtrans atau COD, dengan ongkos kirim yang tampil sebelum Anda membayar."
+      "description": "Cari produk di Tokoshopee: sandal empuk dan anti slip, bisa dibayar online lewat Midtrans atau COD, dengan gratis ongkir untuk setiap pesanan."
     },
     "label": "Cari produk",
     "placeholder": "Cari di Tokoshopee",

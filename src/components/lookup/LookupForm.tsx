@@ -97,7 +97,12 @@ export function LookupForm() {
           </div>
           <div className="flex justify-between">
             <dt>{t("results.shipping")}</dt>
-            <dd>{formatIDR(result.order.shippingCostIDR)}</dd>
+            {/* Orders placed before shipping became free keep their recorded cost. */}
+            {result.order.shippingCostIDR === 0 ? (
+              <dd className="text-success font-semibold">{t("results.shippingFree")}</dd>
+            ) : (
+              <dd>{formatIDR(result.order.shippingCostIDR)}</dd>
+            )}
           </div>
           <div className="border-cream-dark text-brown-dark flex justify-between border-t pt-2 text-base font-bold">
             <dt>{t("results.total")}</dt>

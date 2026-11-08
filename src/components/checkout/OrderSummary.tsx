@@ -33,7 +33,11 @@ export function OrderSummary({
       </div>
       <div className="flex justify-between">
         <dt>{t("shipping")}</dt>
-        <dd>{formatIDR(breakdown.shippingCost)}</dd>
+        {breakdown.shippingCost === 0 ? (
+          <dd className="text-success font-semibold">{t("shippingFree")}</dd>
+        ) : (
+          <dd>{formatIDR(breakdown.shippingCost)}</dd>
+        )}
       </div>
       <div className="border-cream-dark text-brown-dark flex justify-between border-t pt-2 text-base font-bold">
         <dt>{t("total")}</dt>

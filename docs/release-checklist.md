@@ -14,8 +14,11 @@ figures the previous section describes as invented.
       returns 43 hits in `shipping.config.ts` (every zone rate and the COD-disabled province
       list; COD is free, so there is no COD fee) and 4 hits in each message file (store legal
       name and address, each on `terms` and `privacy`). The contact email is set in
-      `src/config/store.config.ts` and the return window is 7 days. **The store charges invented shipping rates and displays a
-      fake legal address until every one of these is replaced with a client-supplied figure.**
+      `src/config/store.config.ts` and the return window is 7 days. Shipping is free
+      (`freeShipping: true`, owner's decision 2026-11-08), so the zone rates are not charged; they
+      only list the provinces the store delivers to, and the COD-disabled list still decides where
+      COD is offered. **The store displays a fake legal address, and applies an invented
+      COD-disabled list, until these are replaced with client-supplied facts.**
 - [ ] Opening stock set to the real figure via the admin stock page (not left at whatever the
       dev seed produced).
 - [ ] Sold-count baseline set via the admin settings page, or deliberately left at zero so the
