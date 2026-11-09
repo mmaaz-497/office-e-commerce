@@ -58,6 +58,12 @@ can stay, or be dropped with
 - **No email, rows stay `PENDING` with `lastError` 401 or 403:** the key is wrong, or the recipient
   is not the Resend account's address. Fix it in `.env` and restart; the next job run sends the
   pending ones.
+- **`lastError` 403 "You can only send testing emails to your own email address (…)":** the API
+  key belongs to a Resend account registered with a different address than `ORDER_NOTIFY_EMAIL`.
+  Either create the Resend account (and key) with the recipient's address, or verify a domain in
+  Resend and set `EMAIL_FROM` to an address on it (seen 2026-11-09).
+- **`lastError` "Resend unreachable: … timeout":** the connection to Resend stalled. Each send
+  already tries 3 times; the next job run tries again.
 - **Row `FAILED`:** check the log line `Owner email for TKS-... failed`. To retry it, set it back:
   `UPDATE "OwnerNotification" SET status = 'PENDING', attempts = 0 WHERE "orderId" = '...';`
 - **Daily limit reached (100 on the free plan):** orders still work; the rest are retried and go
